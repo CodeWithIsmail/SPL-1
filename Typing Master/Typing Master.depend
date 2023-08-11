@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1584205420 source:e:\spl-1\typing master\main.cpp
+	<iostream>
+
+1691763096 source:e:\spl-1\typing master\set_cursor.cpp
+	"set_cursor.h"
+	<windows.h>
+	<bits/stdc++.h>
+
+1691763096 source:e:\spl-1\typing master\startmenu.cpp
+	"set_cursor.h"
+	<iostream>
+	<conio.h>
+	<windows.h>
+	<time.h>
+	<bits/stdc++.h>
+
+1691763010 e:\spl-1\typing master\set_cursor.h
+
