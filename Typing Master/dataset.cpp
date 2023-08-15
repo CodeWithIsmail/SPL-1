@@ -9,39 +9,64 @@ using namespace std;
 
 string keyMapping(char input)
 {
-    map<char,string>keyMapping;
-
-    keyMapping['a']="left little finger";
-    keyMapping['s']="left ring finger";
-    keyMapping['d']="left middle finger";
-    keyMapping['f']="left index finger";
-    keyMapping['j']="right index finger";
-    keyMapping['k']="right middle finger";
-    keyMapping['l']="right ring finger";
-    keyMapping[';']="right little finger";
-    keyMapping['e']="left middle finger";
-    keyMapping['i']="right middle finger";
-    keyMapping['r']="left index finger";
-    keyMapping['u']="right index finger";
-    keyMapping['t']="left index finger";
-    keyMapping['o']="right ring finger";
-    keyMapping['c']="left middle finger";
-    keyMapping['e']="left middle finger";
-    keyMapping[',']="right middle finger";
-    keyMapping['h']="right index finger";
-    keyMapping['g']="left index finger";
-    keyMapping['n']="right index finger";
-    keyMapping['v']="left index finger";
-    keyMapping['w']="left ring finger";
-    keyMapping['m']="right index finger";
-    keyMapping['q']="left little finger";
-    keyMapping['p']="right little finger";
-    keyMapping['b']="left index finger";
-    keyMapping['y']="right index finger";
-    keyMapping['z']="left little finger";
-    keyMapping['p']="left ring finger";
-
-    return keyMapping[input];
+    if(input=='a')
+        return "left little finger";
+    if(input=='s')
+        return "left ring finger";
+    if(input=='d')
+        return "left middle finger";
+    if(input=='f')
+        return "left index finger";
+    if(input=='j')
+        return "right index finger";
+    if(input=='k')
+        return "right middle finger";
+    if(input=='l')
+        return "right ring finger";
+    if(input==';')
+        return "right little finger";
+    if(input=='e')
+        return "left middle finger";
+    if(input=='i')
+        return "right middle finger";
+    if(input=='r')
+        return "left index finger";
+    if(input=='u')
+        return "right index finger";
+    if(input=='t')
+        return "left index finger";
+    if(input=='o')
+        return "right ring finger";
+    if(input=='c')
+        return "left middle finger";
+    if(input=='e')
+        return "left middle finger";
+    if(input==',')
+        return "right middle finger";
+    if(input=='h')
+        return "right index finger";
+    if(input=='h')
+        return "left index finger";
+    if(input=='n')
+        return "right index finger";
+    if(input=='v')
+        return"left index finger";
+    if(input=='w')
+        return "left ring finger";
+    if(input=='m')
+        return "right index finger";
+    if(input=='q')
+        return "left little finger";
+    if(input=='p')
+        return "right little finger";
+    if(input=='b')
+        return "left index finger";
+    if(input=='y')
+        return "right index finger";
+    if(input=='z')
+        return "left little finger";
+    if(input=='p')
+        return "left ring finger";
 }
 
 void lesson(char input)
@@ -144,6 +169,6 @@ void keyDrill(char dataset[],int limit)
     cout<<"Enter 1 to return Main menu or any key to exit"<<endl;
     char check=getch();
     exit(0);
-  //  if(check=='1') StartMenu();
-  //  else exit(0);
+    //  if(check=='1') StartMenu();
+    //  else exit(0);
 }

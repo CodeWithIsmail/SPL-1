@@ -26,3 +26,11 @@
 1692109702 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
+1692109787 source:e:\spl-1\typing master\dataset.cpp
+	"dataset.h"
+	"set_cursor.h"
+	<windows.h>
+	<time.h>
+	<conio.h>
+	<bits/stdc++.h>
+
