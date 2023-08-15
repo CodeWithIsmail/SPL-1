@@ -1,0 +1,6 @@
+#ifndef STARTMENU_H_INCLUDED
+#define STARTMENU_H_INCLUDED
+
+void startMenu();
+
+#endif // STARTMENU_H_INCLUDED

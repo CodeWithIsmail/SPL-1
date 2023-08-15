@@ -4,7 +4,7 @@
 #include<time.h>
 #include<bits/stdc++.h>
 #include "set_cursor.h"
-#include "user_manual.h"
+#include "userManual.h"
 #include "dataset.h"
 
 char dataset1[8]= {'a','s','d','f','j','k','l',';'};
@@ -61,7 +61,7 @@ int main()
             // Games();
             break;
         case '4':
-            //UserManual();
+            UserManual(1);
             break;
         case '5':
             cout<<"Exiting the application...."<<endl;

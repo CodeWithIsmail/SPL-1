@@ -7,14 +7,14 @@
 	<windows.h>
 	<bits/stdc++.h>
 
-1692109728 source:e:\spl-1\typing master\startmenu.cpp
+1692124515 source:e:\spl-1\typing master\startmenu.cpp
 	<iostream>
 	<conio.h>
 	<windows.h>
 	<time.h>
 	<bits/stdc++.h>
 	"set_cursor.h"
-	"user_manual.h"
+	"userManual.h"
 	"dataset.h"
 
 1691763010 e:\spl-1\typing master\set_cursor.h
@@ -26,11 +26,19 @@
 1692109702 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1692109787 source:e:\spl-1\typing master\dataset.cpp
+1692123560 source:e:\spl-1\typing master\dataset.cpp
 	"dataset.h"
 	"set_cursor.h"
 	<windows.h>
 	<time.h>
 	<conio.h>
+	<bits/stdc++.h>
+
+1692124398 e:\spl-1\typing master\usermanual.h
+
+1692124551 source:e:\spl-1\typing master\usermanual.cpp
+	<windows.h>
+	<conio.h>
+	"userManual.h"
 	<bits/stdc++.h>
 

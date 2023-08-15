@@ -1,8 +1,9 @@
 #include<windows.h>
 #include<conio.h>
-#include<
-#include"user_manual.h"
+#include"userManual.h"
+//#include"
 #include<bits/stdc++.h>
+
 using namespace std;
 
 void UserManual(int x)
@@ -26,7 +27,7 @@ void UserManual(int x)
 
     cout<<"Enter 1 to return home or enter any other key to exit.";
     char choice=getch();
-    if(choice=='1')
-        StartMenu();
-    else exit(0);
+// if(choice=='1')
+//        StartMenu();
+//    else exit(0);
 }
