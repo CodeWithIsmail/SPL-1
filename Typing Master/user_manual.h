@@ -1,0 +1,7 @@
+#ifndef USER_MANUAL_H_INCLUDED
+#define USER_MANUAL_H_INCLUDED
+
+void UserManual();
+
+
+#endif // USER_MANUAL_H_INCLUDED

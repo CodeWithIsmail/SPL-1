@@ -33,8 +33,16 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="StartMenu.cpp" />
+		<Unit filename="dataset.cpp" />
+		<Unit filename="dataset.h" />
 		<Unit filename="set_Cursor.cpp" />
 		<Unit filename="set_cursor.h" />
+		<Unit filename="user_manual.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="user_manual.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

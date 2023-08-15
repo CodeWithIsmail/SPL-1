@@ -2,18 +2,27 @@
 1584205420 source:e:\spl-1\typing master\main.cpp
 	<iostream>
 
-1691763096 source:e:\spl-1\typing master\set_cursor.cpp
+1691858742 source:e:\spl-1\typing master\set_cursor.cpp
 	"set_cursor.h"
 	<windows.h>
 	<bits/stdc++.h>
 
-1691763096 source:e:\spl-1\typing master\startmenu.cpp
-	"set_cursor.h"
+1692109728 source:e:\spl-1\typing master\startmenu.cpp
 	<iostream>
 	<conio.h>
 	<windows.h>
 	<time.h>
 	<bits/stdc++.h>
+	"set_cursor.h"
+	"user_manual.h"
+	"dataset.h"
 
 1691763010 e:\spl-1\typing master\set_cursor.h
+
+1691764577 e:\spl-1\typing master\user_manual.h
+
+1691859282 e:\spl-1\typing master\keydrill.h
+
+1692109702 e:\spl-1\typing master\dataset.h
+	<bits/stdc++.h>
 

@@ -1,11 +1,26 @@
-#include"set_cursor.h"
 #include<iostream>
 #include<conio.h>
 #include<windows.h>
 #include<time.h>
 #include<bits/stdc++.h>
+#include "set_cursor.h"
+#include "user_manual.h"
+#include "dataset.h"
 
+char dataset1[8]= {'a','s','d','f','j','k','l',';'};
+char dataset2[10]= {'a','s','d','f','j','k','l',';','e','i'};
+char dataset3[12]= {'a','s','d','f','j','k','l',';','e','i','r','u'};
+char dataset4[14]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o'};
+char dataset6[16]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c',','};
+char dataset7[18]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c',',','g','h'};
+char dataset8[21]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c',',','g','h','v','n','?'};
+char dataset9[23]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c',',','g','h','v','n','?','w','m'};
+char dataset10[25]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c',',','g','h','v','n','?','w','m','q','p'};
+char dataset11[27]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c',',','g','h','v','n','?','w','m','q','p','b','y'};
+char dataset12[29]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c',',','g','h','v','n','?','w','m','q','p','b','y','z','x'};
+char datasetTotal[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 using namespace std;
+
 
 int main()
 {
@@ -39,6 +54,7 @@ int main()
             //TypingTutorial();
             break;
         case '2':
+           keyDrill(dataset1,8);
             //  Practice();
             break;
         case '3':
