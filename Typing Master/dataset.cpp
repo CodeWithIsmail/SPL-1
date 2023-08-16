@@ -7,7 +7,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
 string keyMapping(char input)
 {
     if(input=='a')
@@ -173,4 +172,75 @@ void keyDrill(char dataset[],int limit)
     if(check=='1') startMenu(0);
     else exit(0);
     //  else exit(0);
+}
+
+void wordDrill(char dataset[],int limit)
+{
+    int score=0,total=30;
+    gotoxy(10,5);
+    cout<<"Objective: Integrate new keys with keys already learned and add flow to your typing."<<endl;
+    gotoxy(10,8);
+    cout<<"Accuracy Goal: 94 %"<<endl;
+    gotoxy(10,10);
+    cout<<"Enter any key to start"<<endl;
+    srand(time(NULL));
+    char ch=getch();
+    system("cls");
+
+    for(int i=0; i<total; i++)
+    {
+        system("cls");
+        gotoxy(40,3);
+        cout<<"--------------------------";
+
+        gotoxy(40,4);
+        cout<<"|";
+        gotoxy(40,5);
+        cout<<"|";
+        gotoxy(40,6);
+        cout<<"|";
+
+        gotoxy(65,4);
+        cout<<"|";
+        gotoxy(65,5);
+        cout<<"|";
+        gotoxy(65,6);
+        cout<<"|";
+
+        gotoxy(40,7);
+        cout<<"--------------------------";
+
+        int size=3+rand()%5;
+        string out="";
+        srand(time(NULL));
+        for(int j=0; j<size; j++)
+        {
+            int index=rand()%limit;
+            out+=dataset[index];
+        }
+
+        gotoxy(53,5);
+        cout<<out<<endl;
+        string in;
+        gotoxy(53,9);
+        cin>>in;
+        if(in==out)
+            score++;
+    }
+    int accuracy=(score*100)/total;
+    system("cls");
+    gotoxy(40,5);
+    cout<<"Your score: "<<score;
+    gotoxy(40,7);
+    cout<<"Your accuracy: "<<accuracy<<" %";
+    gotoxy(40,9);
+    if(accuracy>=94)
+        cout<<"Very good";
+    else cout<<"Try more";
+    gotoxy(40,11);
+    cout<<"Enter 1 for return home menu or any key to exit";
+    ch=getch();
+    if(ch=='1')
+        startMenu(0);
+    else exit(0);
 }

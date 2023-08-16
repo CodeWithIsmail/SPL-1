@@ -36,10 +36,9 @@
 		<Unit filename="StartMenu.h" />
 		<Unit filename="dataset.cpp" />
 		<Unit filename="dataset.h" />
+		<Unit filename="main.cpp" />
 		<Unit filename="set_Cursor.cpp" />
 		<Unit filename="set_cursor.h" />
-		<Unit filename="userManual.cpp" />
-		<Unit filename="userManual.h" />
 		<Unit filename="user_manual.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

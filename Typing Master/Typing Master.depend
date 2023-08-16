@@ -8,15 +8,15 @@
 	<windows.h>
 	<bits/stdc++.h>
 
-1692196343 source:e:\spl-1\typing master\startmenu.cpp
+1692198913 source:e:\spl-1\typing master\startmenu.cpp
 	"StartMenu.h"
+	"TypingTutorial.h"
 	<iostream>
 	<conio.h>
 	<windows.h>
 	<time.h>
 	<bits/stdc++.h>
 	"set_cursor.h"
-	"user_manual.h"
 	"dataset.h"
 
 1691763010 e:\spl-1\typing master\set_cursor.h
@@ -25,10 +25,11 @@
 
 1691859282 e:\spl-1\typing master\keydrill.h
 
-1692109702 e:\spl-1\typing master\dataset.h
+1692198329 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1692123560 source:e:\spl-1\typing master\dataset.cpp
+1692198447 source:e:\spl-1\typing master\dataset.cpp
+	"StartMenu.h"
 	"dataset.h"
 	"set_cursor.h"
 	<windows.h>
@@ -45,4 +46,24 @@
 	<bits/stdc++.h>
 
 1692196327 e:\spl-1\typing master\startmenu.h
+
+1692198785 source:e:\spl-1\typing master\lesson1.cpp
+	"set_cursor.h"
+	"dataset.h"
+	"startMenu.h"
+	<bits/stdc++.h>
+	<conio.h>
+	<windows.h>
+
+1692198889 source:e:\spl-1\typing master\typingtutorial.cpp
+	"StartMenu.h"
+	"lesson1.h"
+	"set_cursor.h"
+	<windows.h>
+	<conio.h>
+	<bits/stdc++.h>
+
+1692197899 e:\spl-1\typing master\lesson1.h
+
+1692198785 e:\spl-1\typing master\typingtutorial.h
 

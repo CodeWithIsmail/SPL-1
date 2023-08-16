@@ -1,0 +1,6 @@
+#ifndef TYPINGTUTORIAL_H_INCLUDED
+#define TYPINGTUTORIAL_H_INCLUDED
+
+void TypingTutorial(int x);
+
+#endif // TYPINGTUTORIAL_H_INCLUDED
