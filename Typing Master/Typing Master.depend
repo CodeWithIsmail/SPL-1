@@ -1,25 +1,27 @@
 # depslib dependency file v1.0
-1584205420 source:e:\spl-1\typing master\main.cpp
-	<iostream>
+1692196132 source:e:\spl-1\typing master\main.cpp
+	"StartMenu.h"
+	<bits/stdc++.h>
 
 1691858742 source:e:\spl-1\typing master\set_cursor.cpp
 	"set_cursor.h"
 	<windows.h>
 	<bits/stdc++.h>
 
-1692124515 source:e:\spl-1\typing master\startmenu.cpp
+1692196343 source:e:\spl-1\typing master\startmenu.cpp
+	"StartMenu.h"
 	<iostream>
 	<conio.h>
 	<windows.h>
 	<time.h>
 	<bits/stdc++.h>
 	"set_cursor.h"
-	"userManual.h"
+	"user_manual.h"
 	"dataset.h"
 
 1691763010 e:\spl-1\typing master\set_cursor.h
 
-1691764577 e:\spl-1\typing master\user_manual.h
+1692124208 e:\spl-1\typing master\user_manual.h
 
 1691859282 e:\spl-1\typing master\keydrill.h
 
@@ -41,4 +43,6 @@
 	<conio.h>
 	"userManual.h"
 	<bits/stdc++.h>
+
+1692196327 e:\spl-1\typing master\startmenu.h
 

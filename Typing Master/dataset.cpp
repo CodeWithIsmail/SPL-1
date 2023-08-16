@@ -1,3 +1,4 @@
+#include "StartMenu.h"
 #include"dataset.h"
 #include"set_cursor.h"
 #include<windows.h>
@@ -72,7 +73,7 @@ string keyMapping(char input)
 void lesson(char input)
 {
     gotoxy(10,5);
-    cout<<"Now try typing '"<<input<<"' with "<<keyMapping[input]<<".";
+    cout<<"Now try typing '"<<input<<"' with "<<keyMapping(input)<<".";
 
     for(;;)
     {
@@ -147,7 +148,7 @@ void keyDrill(char dataset[],int limit)
                 gotoxy(40,9);
                 cout<<"Wrong Input. Try again.";
                 gotoxy(40,11);
-                cout<<"Use your "<<keyMapping[dataset[index]]<<".";
+                cout<<"Use your "<<keyMapping(dataset[index])<<".";
             }
         }
     }
@@ -168,7 +169,8 @@ void keyDrill(char dataset[],int limit)
     gotoxy(40,13);
     cout<<"Enter 1 to return Main menu or any key to exit"<<endl;
     char check=getch();
-    exit(0);
-    //  if(check=='1') StartMenu();
+    //  exit(0);
+    if(check=='1') startMenu(0);
+    else exit(0);
     //  else exit(0);
 }

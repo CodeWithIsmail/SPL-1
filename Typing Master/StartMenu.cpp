@@ -1,11 +1,13 @@
+#include"StartMenu.h"
 #include<iostream>
 #include<conio.h>
 #include<windows.h>
 #include<time.h>
 #include<bits/stdc++.h>
 #include "set_cursor.h"
-#include "userManual.h"
+#include "user_manual.h"
 #include "dataset.h"
+
 
 char dataset1[8]= {'a','s','d','f','j','k','l',';'};
 char dataset2[10]= {'a','s','d','f','j','k','l',';','e','i'};
@@ -22,7 +24,7 @@ char datasetTotal[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 using namespace std;
 
 
-int main()
+void startMenu(int x)
 {
     do
     {
@@ -61,7 +63,7 @@ int main()
             // Games();
             break;
         case '4':
-            UserManual(1);
+            UserManual(0);
             break;
         case '5':
             cout<<"Exiting the application...."<<endl;
