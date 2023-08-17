@@ -32,19 +32,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="FocusOnTheHomeRow.cpp" />
+		<Unit filename="FocusOnTheHomeRow.h" />
 		<Unit filename="StartMenu.cpp" />
 		<Unit filename="StartMenu.h" />
+		<Unit filename="TypingTutorial.cpp" />
+		<Unit filename="TypingTutorial.h" />
 		<Unit filename="dataset.cpp" />
 		<Unit filename="dataset.h" />
+		<Unit filename="indexFingerKeys.cpp" />
+		<Unit filename="indexFingerKeys.h" />
+		<Unit filename="lesson1.cpp" />
+		<Unit filename="lesson1.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="set_Cursor.cpp" />
 		<Unit filename="set_cursor.h" />
-		<Unit filename="user_manual.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="user_manual.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -1,5 +1,7 @@
 #include"StartMenu.h"
 #include"TypingTutorial.h"
+#include"FocusOnTheHomeRow.h"
+#include"indexFingerKeys.h"
 #include<iostream>
 #include<conio.h>
 #include<windows.h>
@@ -59,10 +61,12 @@ void startMenu(int x)
             TypingTutorial(0);
             break;
         case '2':
+           // lessonNew1(0);
          //  keyDrill(dataset1,8);
             //  Practice();
             break;
         case '3':
+           // lessonNew2(0);
             // Games();
             break;
         case '4':

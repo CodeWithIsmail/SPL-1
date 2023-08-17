@@ -8,7 +8,7 @@
 using namespace std;
 void typingBasics();
 void homeRow();
-char dataset1[8]= {'a','s','d','f','j','k','l',';'};
+char datasetNew1[8]= {'a','s','d','f','j','k','l',';'};
 
 void lesson1(int x)
 {
@@ -43,10 +43,10 @@ void lesson1(int x)
     homeRow();
         break;
     case '3':
-        keyDrill(dataset1,8);
+        keyDrill(datasetNew1,8);
         break;
     case '4':
-        wordDrill(dataset1,8);
+        wordDrill(datasetNew1,8);
         break;
     case '5':
         break;
@@ -142,5 +142,5 @@ void homeRow()
     c=getch();
     system("cls");
 
-    keyDrill(dataset1,8);
+    keyDrill(datasetNew1,8);
 }

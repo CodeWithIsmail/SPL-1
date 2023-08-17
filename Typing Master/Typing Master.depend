@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1692196132 source:e:\spl-1\typing master\main.cpp
+1692236635 source:e:\spl-1\typing master\main.cpp
 	"StartMenu.h"
 	<bits/stdc++.h>
 
@@ -8,9 +8,11 @@
 	<windows.h>
 	<bits/stdc++.h>
 
-1692198913 source:e:\spl-1\typing master\startmenu.cpp
+1692291398 source:e:\spl-1\typing master\startmenu.cpp
 	"StartMenu.h"
 	"TypingTutorial.h"
+	"FocusOnTheHomeRow.h"
+	"indexFingerKeys.h"
 	<iostream>
 	<conio.h>
 	<windows.h>
@@ -47,7 +49,7 @@
 
 1692196327 e:\spl-1\typing master\startmenu.h
 
-1692198785 source:e:\spl-1\typing master\lesson1.cpp
+1692236594 source:e:\spl-1\typing master\lesson1.cpp
 	"set_cursor.h"
 	"dataset.h"
 	"startMenu.h"
@@ -55,10 +57,14 @@
 	<conio.h>
 	<windows.h>
 
-1692198889 source:e:\spl-1\typing master\typingtutorial.cpp
+1692292762 source:e:\spl-1\typing master\typingtutorial.cpp
 	"StartMenu.h"
 	"lesson1.h"
 	"set_cursor.h"
+	"FocusOnTheHomeRow.h"
+	"indexFingerKeys.h"
+	"middleFingerKeys.h"
+	"ringFingerKeys.h"
 	<windows.h>
 	<conio.h>
 	<bits/stdc++.h>
@@ -66,4 +72,48 @@
 1692197899 e:\spl-1\typing master\lesson1.h
 
 1692198785 e:\spl-1\typing master\typingtutorial.h
+
+1692236570 source:e:\spl-1\typing master\focusonthehomerow.cpp
+	"set_cursor.h"
+	"dataset.h"
+	"startMenu.h"
+	"FocusOnTheHomeRow.h"
+	<bits/stdc++.h>
+	<conio.h>
+	<windows.h>
+
+1692236570 e:\spl-1\typing master\focusonthehomerow.h
+
+1692282442 e:\spl-1\typing master\indexfingerkeys.h
+
+1692292734 source:e:\spl-1\typing master\indexfingerkeys.cpp
+	"set_cursor.h"
+	"dataset.h"
+	"startMenu.h"
+	"indexFingerKeys.h"
+	<bits/stdc++.h>
+	<conio.h>
+	<windows.h>
+
+1692292734 source:e:\spl-1\typing master\middlefingerkeys.cpp
+	"set_cursor.h"
+	"dataset.h"
+	"startMenu.h"
+	"middleFingerKeys.h"
+	<bits/stdc++.h>
+	<conio.h>
+	<windows.h>
+
+1692291384 e:\spl-1\typing master\middlefingerkeys.h
+
+1692292762 source:e:\spl-1\typing master\ringfingerkeys.cpp
+	"set_cursor.h"
+	"dataset.h"
+	"startMenu.h"
+	"ringFingerKeys.h"
+	<bits/stdc++.h>
+	<conio.h>
+	<windows.h>
+
+1692292734 e:\spl-1\typing master\ringfingerkeys.h
 

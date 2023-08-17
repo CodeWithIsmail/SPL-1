@@ -7,6 +7,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+string keyMapping(char input);
+void lesson(char input);
+void keyDrill(char dataset[],int limit);
+void wordDrill(char dataset[],int limit);
 string keyMapping(char input)
 {
     if(input=='a')
@@ -45,7 +50,7 @@ string keyMapping(char input)
         return "right middle finger";
     if(input=='h')
         return "right index finger";
-    if(input=='h')
+    if(input=='g')
         return "left index finger";
     if(input=='n')
         return "right index finger";
@@ -65,14 +70,15 @@ string keyMapping(char input)
         return "right index finger";
     if(input=='z')
         return "left little finger";
-    if(input=='p')
+    if(input=='x')
         return "left ring finger";
 }
 
 void lesson(char input)
 {
     gotoxy(10,5);
-    cout<<"Now try typing '"<<input<<"' with "<<keyMapping(input)<<".";
+    string temp=keyMapping(input);
+    cout<<"Now try typing "<<input<<" with "<<temp<<".";
 
     for(;;)
     {

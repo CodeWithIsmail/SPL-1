@@ -1,0 +1,6 @@
+#ifndef RINGFINGERKEYS_H_INCLUDED
+#define RINGFINGERKEYS_H_INCLUDED
+
+void lessonNew4(int x);
+
+#endif // RINGFINGERKEYS_H_INCLUDED
