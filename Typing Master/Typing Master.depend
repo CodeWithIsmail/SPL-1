@@ -30,7 +30,7 @@
 1692198329 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1692198447 source:e:\spl-1\typing master\dataset.cpp
+1692293315 source:e:\spl-1\typing master\dataset.cpp
 	"StartMenu.h"
 	"dataset.h"
 	"set_cursor.h"
@@ -116,4 +116,15 @@
 	<windows.h>
 
 1692292734 e:\spl-1\typing master\ringfingerkeys.h
+
+1692293926 source:e:\spl-1\typing master\littlefingerkeys.cpp
+	"set_cursor.h"
+	"dataset.h"
+	"startMenu.h"
+	"littleFingerKeys.h"
+	<bits/stdc++.h>
+	<conio.h>
+	<windows.h>
+
+1692293999 e:\spl-1\typing master\littlefingerkeys.h
 

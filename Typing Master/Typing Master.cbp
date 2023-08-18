@@ -44,7 +44,13 @@
 		<Unit filename="indexFingerKeys.h" />
 		<Unit filename="lesson1.cpp" />
 		<Unit filename="lesson1.h" />
+		<Unit filename="littleFingerKeys.cpp" />
+		<Unit filename="littleFingerKeys.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="middleFingerKeys.cpp" />
+		<Unit filename="middleFingerKeys.h" />
+		<Unit filename="ringFingerKeys.cpp" />
+		<Unit filename="ringFingerKeys.h" />
 		<Unit filename="set_Cursor.cpp" />
 		<Unit filename="set_cursor.h" />
 		<Extensions>

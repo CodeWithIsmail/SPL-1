@@ -6,6 +6,8 @@
 #include"indexFingerKeys.h"
 #include"middleFingerKeys.h"
 #include"ringFingerKeys.h"
+#include"littleFingerKeys.h"
+
 #include<windows.h>
 #include<conio.h>
 #include<bits/stdc++.h>
@@ -78,6 +80,7 @@ void TypingTutorial(int x)
         //  lesson4();
         break;
     case '5':
+        lessonNew5(0);
         //  lesson5();
         break;
     case '6':
