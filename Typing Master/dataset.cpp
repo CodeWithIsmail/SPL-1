@@ -7,11 +7,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
 string keyMapping(char input);
 void lesson(char input);
 void keyDrill(char dataset[],int limit);
 void wordDrill(char dataset[],int limit);
+
 string keyMapping(char input)
 {
     if(input=='a')

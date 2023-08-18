@@ -30,7 +30,7 @@
 1692198329 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1692293315 source:e:\spl-1\typing master\dataset.cpp
+1692329712 source:e:\spl-1\typing master\dataset.cpp
 	"StartMenu.h"
 	"dataset.h"
 	"set_cursor.h"
@@ -57,7 +57,7 @@
 	<conio.h>
 	<windows.h>
 
-1692292762 source:e:\spl-1\typing master\typingtutorial.cpp
+1692329712 source:e:\spl-1\typing master\typingtutorial.cpp
 	"StartMenu.h"
 	"lesson1.h"
 	"set_cursor.h"
@@ -65,6 +65,8 @@
 	"indexFingerKeys.h"
 	"middleFingerKeys.h"
 	"ringFingerKeys.h"
+	"littleFingerKeys.h"
+	"commonWords.h"
 	<windows.h>
 	<conio.h>
 	<bits/stdc++.h>
@@ -127,4 +129,6 @@
 	<windows.h>
 
 1692293999 e:\spl-1\typing master\littlefingerkeys.h
+
+1692329712 e:\spl-1\typing master\commonwords.h
 

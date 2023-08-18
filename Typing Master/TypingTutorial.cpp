@@ -7,6 +7,7 @@
 #include"middleFingerKeys.h"
 #include"ringFingerKeys.h"
 #include"littleFingerKeys.h"
+#include"commonWords.h"
 
 #include<windows.h>
 #include<conio.h>
@@ -37,6 +38,7 @@ void TypingTutorial(int x)
     // cout<<"5. Capital letters and Period"<<endl;
     gotoxy(40,17);
     cout<<"6. Common words";
+
     //cout<<"6. Keys C and Comma"<<endl;
 //   gotoxy(40,19);
     //  cout<<"7. Keys G H and Apostrophe"<<endl;
@@ -84,6 +86,7 @@ void TypingTutorial(int x)
         //  lesson5();
         break;
     case '6':
+        mostCommonWord(0);
         //  lesson6();
         break;
     default :

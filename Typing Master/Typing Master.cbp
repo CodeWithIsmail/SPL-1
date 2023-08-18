@@ -38,6 +38,8 @@
 		<Unit filename="StartMenu.h" />
 		<Unit filename="TypingTutorial.cpp" />
 		<Unit filename="TypingTutorial.h" />
+		<Unit filename="commonWords.cpp" />
+		<Unit filename="commonWords.h" />
 		<Unit filename="dataset.cpp" />
 		<Unit filename="dataset.h" />
 		<Unit filename="indexFingerKeys.cpp" />
