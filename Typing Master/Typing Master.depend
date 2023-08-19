@@ -1,27 +1,25 @@
 # depslib dependency file v1.0
-1692236635 source:e:\spl-1\typing master\main.cpp
-	"StartMenu.h"
+1692369566 source:e:\spl-1\typing master\main.cpp
+	"LoginSystem.h"
 	<bits/stdc++.h>
 
-1691858742 source:e:\spl-1\typing master\set_cursor.cpp
+1692377870 source:e:\spl-1\typing master\set_cursor.cpp
 	"set_cursor.h"
 	<windows.h>
 	<bits/stdc++.h>
 
-1692291398 source:e:\spl-1\typing master\startmenu.cpp
+1692367915 source:e:\spl-1\typing master\startmenu.cpp
 	"StartMenu.h"
 	"TypingTutorial.h"
-	"FocusOnTheHomeRow.h"
-	"indexFingerKeys.h"
+	"FastTyperGame.h"
+	"set_cursor.h"
 	<iostream>
 	<conio.h>
 	<windows.h>
 	<time.h>
 	<bits/stdc++.h>
-	"set_cursor.h"
-	"dataset.h"
 
-1691763010 e:\spl-1\typing master\set_cursor.h
+1692377870 e:\spl-1\typing master\set_cursor.h
 
 1692124208 e:\spl-1\typing master\user_manual.h
 
@@ -57,25 +55,25 @@
 	<conio.h>
 	<windows.h>
 
-1692329712 source:e:\spl-1\typing master\typingtutorial.cpp
+1692371140 source:e:\spl-1\typing master\typingtutorial.cpp
 	"StartMenu.h"
-	"lesson1.h"
 	"set_cursor.h"
-	"FocusOnTheHomeRow.h"
-	"indexFingerKeys.h"
-	"middleFingerKeys.h"
-	"ringFingerKeys.h"
-	"littleFingerKeys.h"
-	"commonWords.h"
+	"TypingTutorial.h"
 	<windows.h>
 	<conio.h>
 	<bits/stdc++.h>
 
 1692197899 e:\spl-1\typing master\lesson1.h
 
-1692198785 e:\spl-1\typing master\typingtutorial.h
+1692370949 e:\spl-1\typing master\typingtutorial.h
+	"FocusOnTheHomeRow.h"
+	"indexFingerKeys.h"
+	"middleFingerKeys.h"
+	"ringFingerKeys.h"
+	"littleFingerKeys.h"
+	"commonWords.h"
 
-1692236570 source:e:\spl-1\typing master\focusonthehomerow.cpp
+1692371139 source:e:\spl-1\typing master\focusonthehomerow.cpp
 	"set_cursor.h"
 	"dataset.h"
 	"startMenu.h"
@@ -131,4 +129,35 @@
 1692293999 e:\spl-1\typing master\littlefingerkeys.h
 
 1692329712 e:\spl-1\typing master\commonwords.h
+
+1692370949 source:e:\spl-1\typing master\commonwords.cpp
+	<bits/stdc++.h>
+	<windows.h>
+	<conio.h>
+	"set_cursor.h"
+	"StartMenu.h"
+	"commonWords.h"
+
+1692355477 e:\spl-1\typing master\loginsystem.h
+
+1692355477 source:e:\spl-1\typing master\loginsystem.cpp
+	<bits/stdc++.h>
+	<windows.h>
+	<conio.h>
+	"set_cursor.h"
+	"StartMenu.h"
+	"LoginSystem.h"
+
+1692367915 e:\spl-1\typing master\fasttypergame.h
+
+1692414313 source:e:\spl-1\typing master\fasttypergame.cpp
+	"set_cursor.h"
+	"FastTyperGame.h"
+	"StartMenu.h"
+	<bits/stdc++.h>
+	<conio.h>
+	<windows.h>
+	<time.h>
+	<chrono>
+	<thread>
 

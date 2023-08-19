@@ -23,12 +23,6 @@ void mostCommonWord(int x)
 
     ifstream inputFile("MostCommonEnglishWord.txt");
 
-    /* if (!inputFile)
-     {
-         cerr << "Error opening file." << endl;
-         return 1;
-     } */
-
     string line;
     while (getline(inputFile, line))
     {

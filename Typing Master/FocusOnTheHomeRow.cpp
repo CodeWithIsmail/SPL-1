@@ -49,8 +49,8 @@ void lessonNew1(int x)
     case '4':
         wordDrill(dataset1,7);
         break;
-   // case '5':
-        //
+    // case '5':
+    //
     //    break;
     default:
         exit(0);

@@ -1,17 +1,13 @@
 #include"StartMenu.h"
 #include"TypingTutorial.h"
-#include"FocusOnTheHomeRow.h"
-#include"indexFingerKeys.h"
+#include"FastTyperGame.h"
+#include "set_cursor.h"
+
 #include<iostream>
 #include<conio.h>
 #include<windows.h>
 #include<time.h>
 #include<bits/stdc++.h>
-#include "set_cursor.h"
-//#include "user_manual.h"
-#include "dataset.h"
-
-
 
 /*char dataset1[8]= {'a','s','d','f','j','k','l',';'};
 char dataset2[10]= {'a','s','d','f','j','k','l',';','e','i'};
@@ -27,7 +23,6 @@ char dataset12[29]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c'
 char datasetTotal[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 */
 using namespace std;
-
 
 void startMenu(int x)
 {
@@ -67,7 +62,7 @@ void startMenu(int x)
             break;
         case '3':
            // lessonNew2(0);
-            // Games();
+             game1();
             break;
         case '4':
 //            UserManual(0);

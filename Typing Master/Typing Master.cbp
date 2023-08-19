@@ -32,8 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="FastTyperGame.cpp" />
+		<Unit filename="FastTyperGame.h" />
 		<Unit filename="FocusOnTheHomeRow.cpp" />
 		<Unit filename="FocusOnTheHomeRow.h" />
+		<Unit filename="LoginSystem.cpp" />
+		<Unit filename="LoginSystem.h" />
 		<Unit filename="StartMenu.cpp" />
 		<Unit filename="StartMenu.h" />
 		<Unit filename="TypingTutorial.cpp" />
@@ -44,8 +48,6 @@
 		<Unit filename="dataset.h" />
 		<Unit filename="indexFingerKeys.cpp" />
 		<Unit filename="indexFingerKeys.h" />
-		<Unit filename="lesson1.cpp" />
-		<Unit filename="lesson1.h" />
 		<Unit filename="littleFingerKeys.cpp" />
 		<Unit filename="littleFingerKeys.h" />
 		<Unit filename="main.cpp" />
