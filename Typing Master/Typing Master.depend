@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1692369566 source:e:\spl-1\typing master\main.cpp
+1692601668 source:e:\spl-1\typing master\main.cpp
 	"LoginSystem.h"
+	"StartMenu.h"
 	<bits/stdc++.h>
 
 1692377870 source:e:\spl-1\typing master\set_cursor.cpp
@@ -8,7 +9,7 @@
 	<windows.h>
 	<bits/stdc++.h>
 
-1692367915 source:e:\spl-1\typing master\startmenu.cpp
+1692602618 source:e:\spl-1\typing master\startmenu.cpp
 	"StartMenu.h"
 	"TypingTutorial.h"
 	"FastTyperGame.h"
@@ -25,10 +26,10 @@
 
 1691859282 e:\spl-1\typing master\keydrill.h
 
-1692198329 e:\spl-1\typing master\dataset.h
+1692800685 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1692329712 source:e:\spl-1\typing master\dataset.cpp
+1692815101 source:e:\spl-1\typing master\dataset.cpp
 	"StartMenu.h"
 	"dataset.h"
 	"set_cursor.h"
@@ -73,7 +74,7 @@
 	"littleFingerKeys.h"
 	"commonWords.h"
 
-1692371139 source:e:\spl-1\typing master\focusonthehomerow.cpp
+1692459368 source:e:\spl-1\typing master\focusonthehomerow.cpp
 	"set_cursor.h"
 	"dataset.h"
 	"startMenu.h"
@@ -130,7 +131,7 @@
 
 1692329712 e:\spl-1\typing master\commonwords.h
 
-1692370949 source:e:\spl-1\typing master\commonwords.cpp
+1692497243 source:e:\spl-1\typing master\commonwords.cpp
 	<bits/stdc++.h>
 	<windows.h>
 	<conio.h>
@@ -140,7 +141,7 @@
 
 1692355477 e:\spl-1\typing master\loginsystem.h
 
-1692355477 source:e:\spl-1\typing master\loginsystem.cpp
+1692458794 source:e:\spl-1\typing master\loginsystem.cpp
 	<bits/stdc++.h>
 	<windows.h>
 	<conio.h>
@@ -150,7 +151,7 @@
 
 1692367915 e:\spl-1\typing master\fasttypergame.h
 
-1692414313 source:e:\spl-1\typing master\fasttypergame.cpp
+1692554129 source:e:\spl-1\typing master\fasttypergame.cpp
 	"set_cursor.h"
 	"FastTyperGame.h"
 	"StartMenu.h"

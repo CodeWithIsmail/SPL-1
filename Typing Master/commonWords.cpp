@@ -9,6 +9,7 @@ using namespace std;
 
 void mostCommonWord(int x)
 {
+    int gross=0,wrong=0;
     gotoxy(20,5);
     cout<<"Accuracy goal 95%";
     gotoxy(20,7);
@@ -23,26 +24,40 @@ void mostCommonWord(int x)
 
     ifstream inputFile("MostCommonEnglishWord.txt");
 
-    string line;
-    while (getline(inputFile, line))
+    string out;
+    while (getline(inputFile, out))
     {
-        gotoxy(40,10);
-        cout << line << endl;
-        gotoxy(40,13);
-        string input;
-        cin>>input;
-        if(input==line)
-            score++;
         system("cls");
+        gotoxy(40,10);
+        cout << out << endl;
+
+        gotoxy(40,12);
+        int index=0;
+        while(index<out.length())
+        {
+            char ch=_getch();
+            gross++;
+            if(ch==out[index])
+            {
+                cout<<ch;
+                index++;
+            }
+            else
+                wrong++;
+        }
     }
     inputFile.close();
 
-    int accuracy=(score*100)/total;
+     score=gross-wrong;
+    int accuracy=(score*100)/gross;
+    system("cls");
+    gotoxy(40,5);
+    cout<<"Total Key Press: "<<gross;
     gotoxy(40,7);
-    cout<<"Your Score: "<<score;
-    gotoxy(40,10);
-    cout<<"Your Accuracy: "<<accuracy<<"%";
-    gotoxy(40,15);
+    cout<<"Wrong Key Press: "<<wrong;
+    gotoxy(40,9);
+    cout<<"Accuracy: "<<accuracy<<"%";
+    gotoxy(40,12);
     cout<<"Press 1 to return home or any key exit.";
 
     char temp;
@@ -51,6 +66,4 @@ void mostCommonWord(int x)
         startMenu(0);
     else
         exit(0);
-
-    // return 0;
 }

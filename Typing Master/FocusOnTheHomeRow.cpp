@@ -8,27 +8,21 @@
 
 void reviewHomeRow();
 void lesson1(int x);
-void SpeedBuildingCourseDescription();
 using namespace std;
 char dataset1[7]= {'a','s','d','f','j','k','l'};
 void lessonNew1(int x)
 {
     system("cls");
     gotoxy(40,5);
-    cout<<"Lesson 1: Focus on the Home row"<<endl;
-    cout<<endl;
+    cout<<"Lesson 1: Focus on the Home row";
     gotoxy(40,7);
-    cout<<"1.1 -> Speed Building course description"<<endl;
+    cout<<"1.1 -> Review the Home Row";
     gotoxy(40,9);
-    cout<<"1.2 -> Review the Home Row"<<endl;
+    cout<<"1.2 -> Key Drill";
     gotoxy(40,11);
-    cout<<"1.3 -> Fun phrases with A F J"<<endl;
-    gotoxy(40,13);
-    cout<<"1.4 -> Fun phrases with D K"<<endl;
+    cout<<"1.3 -> Word Drill";
     gotoxy(40,15);
-    cout<<"1.5 -> Fun phrases with S L"<<endl;
-    gotoxy(40,17);
-    cout<<"Select lesson: (1-5) or 0 to return home or any key to exit"<<endl;
+    cout<<"Select lesson: (1-3) or 0 to return home or any key to exit";
 
     char lesson=getch();
     system("cls");
@@ -38,31 +32,19 @@ void lessonNew1(int x)
         startMenu(0);
         break;
     case '1':
-        SpeedBuildingCourseDescription();
-        break;
-    case '2':
         reviewHomeRow();
         break;
-    case '3':
+    case '2':
         keyDrill(dataset1,7);
         break;
-    case '4':
+    case '3':
         wordDrill(dataset1,7);
         break;
-    // case '5':
-    //
-    //    break;
     default:
         exit(0);
     }
 }
-void SpeedBuildingCourseDescription()
-{
-    system("cls");
-    cout<<"Speed Building Course"<<endl;
-    cout<<endl;
-    cout<<"Increasing your typing speed needs regular practice."<<endl;
-}
+
 void reviewHomeRow()
 {
     gotoxy(10,5);

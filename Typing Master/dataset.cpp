@@ -11,6 +11,7 @@ string keyMapping(char input);
 void lesson(char input);
 void keyDrill(char dataset[],int limit);
 void wordDrill(char dataset[],int limit);
+void drawHistogram(char dataset[],int size,int frequency[]);
 
 string keyMapping(char input)
 {
@@ -78,7 +79,7 @@ void lesson(char input)
 {
     gotoxy(10,5);
     string temp=keyMapping(input);
-    cout<<"Now try typing "<<input<<" with "<<temp<<".";
+    cout<<"Now try typing '"<<input<<"' with "<<temp<<".";
 
     for(;;)
     {
@@ -98,6 +99,7 @@ void lesson(char input)
 
 void keyDrill(char dataset[],int limit)
 {
+    int wrongPressCount[limit]= {0};
     int score=0,total=50,wrong=0;
 
     srand(time(NULL));
@@ -113,7 +115,6 @@ void keyDrill(char dataset[],int limit)
 
     for(int i=0; i<total; i++)
     {
-
         system("cls");
         gotoxy(40,3);
         cout<<"-----------"<<endl;
@@ -142,6 +143,14 @@ void keyDrill(char dataset[],int limit)
         while(1)
         {
             char ch=getch();
+            int target,got;
+            for(int i=0; i<limit; i++)
+            {
+                if(dataset[i]==ch)
+                    got=i;
+                if(dataset[i]==dataset[index])
+                    target=i;
+            }
             if(ch==dataset[index])
             {
                 score++;
@@ -150,6 +159,8 @@ void keyDrill(char dataset[],int limit)
             else
             {
                 wrong++;
+                wrongPressCount[target]++;
+                wrongPressCount[got]++;
                 gotoxy(40,9);
                 cout<<"Wrong Input. Try again.";
                 gotoxy(40,11);
@@ -167,11 +178,15 @@ void keyDrill(char dataset[],int limit)
     gotoxy(40,9);
     cout<<"Your accuracy: "<<accuracy<<" %"<<endl;
     gotoxy(40,11);
-    if(accuracy>=94) cout<<"Very Good"<<endl;
-    else cout<<"Try to improve"<<endl;
+    if(accuracy>=94)
+        cout<<"Very Good"<<endl;
+    else
+        cout<<"Try to improve"<<endl;
 
+    cout<<"Your wrong press report:"<<endl;
+    drawHistogram(dataset, limit,wrongPressCount);
     cout<<endl;
-    gotoxy(40,13);
+
     cout<<"Enter 1 to return Main menu or any key to exit"<<endl;
     char check=getch();
     //  exit(0);
@@ -182,7 +197,8 @@ void keyDrill(char dataset[],int limit)
 
 void wordDrill(char dataset[],int limit)
 {
-    int score=0,total=30;
+    int wrongPressCount[limit]= {0};
+    int score=0,total=30,wrong=0,gross=0;
     gotoxy(10,5);
     cout<<"Objective: Integrate new keys with keys already learned and add flow to your typing."<<endl;
     gotoxy(10,8);
@@ -227,26 +243,98 @@ void wordDrill(char dataset[],int limit)
 
         gotoxy(53,5);
         cout<<out<<endl;
-        string in;
-        gotoxy(53,9);
-        cin>>in;
-        if(in==out)
-            score++;
+        gotoxy(53,8);
+        int index=0;
+        while(index<out.length())
+        {
+
+            char ch=_getch();
+            gross++;
+            int target=0,got=0;
+            for(int j=0; j<limit; j++)
+            {
+                if(dataset[j]==ch)
+                    got=j;
+                if(dataset[j]==out[index])
+                    target=j;
+            }
+            if(ch==out[index])
+            {
+                cout<<ch;
+                index++;
+            }
+            else
+            {
+                wrong++;
+                wrongPressCount[target]++;
+                wrongPressCount[got]++;
+            }
+        }
+        // string in;
+        // gotoxy(53,9);
+        // cin>>in;
+        // if(in==out)
+        //    score++;
     }
-    int accuracy=(score*100)/total;
+    score=gross-wrong;
+    int accuracy=(score*100)/gross;
     system("cls");
     gotoxy(40,5);
-    cout<<"Your score: "<<score;
+    cout<<"Total Key Press: "<<gross;
     gotoxy(40,7);
-    cout<<"Your accuracy: "<<accuracy<<" %";
+    cout<<"Wrong Key Press: "<<wrong;
     gotoxy(40,9);
+    cout<<"Accuracy: "<<accuracy<<"%";
+    gotoxy(40,11);
     if(accuracy>=94)
         cout<<"Very good";
-    else cout<<"Try more";
-    gotoxy(40,11);
+    else
+        cout<<"Try more";
+    cout<<endl;
+
+    drawHistogram(dataset, limit,wrongPressCount);
+    cout<<endl;
     cout<<"Enter 1 for return home menu or any key to exit";
     ch=getch();
     if(ch=='1')
         startMenu(0);
     else exit(0);
+}
+
+void drawHistogram(char dataset[],int size,int frequency[])
+{
+  /*  int sum=0;
+    for(int i=0; i<size; i++)
+        sum+=frequency[i];
+    for(int i=0; i<size; i++)
+    {
+        frequency[i]=(frequency[i]*100)/sum;
+    }
+*/
+    int maxFreq=INT_MIN;
+    for(int i=0; i<size; i++)
+    {
+        if(frequency[i]>maxFreq)
+        {
+            maxFreq=frequency[i];
+        }
+    }
+
+    for(int row=maxFreq; row>0; row--)
+    {
+        for(int element=0; element<size; element++)
+        {
+            if(frequency[element]<row)
+                cout<<"           ";
+            else
+                cout<<" ********* ";
+        }
+        cout<<endl;
+    }
+    for(int i=0; i<size; i++)
+        cout<<"-----------";
+    cout<<endl;
+    for(int i=0; i<size; i++)
+        cout<<"     "<<dataset[i]<<"     ";
+    cout<<endl;
 }

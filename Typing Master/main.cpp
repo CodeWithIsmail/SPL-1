@@ -1,10 +1,10 @@
 #include"LoginSystem.h"
-//#include"StartMenu.h"
+#include"StartMenu.h"
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    signIn();
+   signIn();
     //startMenu(0);
 
 }

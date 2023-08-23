@@ -12,15 +12,24 @@ void signUp();
 
 void signIn()
 {
-    gotoxy(25,5);
+    system("cls");
+    gotoxy(40,5);
+    cout<<"--------------------------";
+    gotoxy(40,6);
+    cout<<"|     TYPING TUTOR       |";
+    gotoxy(40,7);
+    cout<<"--------------------------";
+
+ //   gotoxy(40,9);
+  //  cout<<"--------------------------";
+
+    gotoxy(42,11);
     cout<<"Enter username: ";
     string name;
-    gotoxy(25,7);
     cin>>name;
-    gotoxy(25,9);
-    cout<<"Enter Password";
+    gotoxy(42,13);
+    cout<<"Enter Password: ";
     string password;
-    gotoxy(25,11);
     cin>>password;
 
     bool checkName=false,checkPassword=false;

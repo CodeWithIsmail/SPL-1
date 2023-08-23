@@ -46,6 +46,7 @@ void startMenu(int x)
         gotoxy(40,17);
         cout<<"5. Exit"<<endl;
 
+
         gotoxy(40,20);
         cout<<"Select option: "<<endl;;
         char option=getch();
@@ -56,13 +57,13 @@ void startMenu(int x)
             TypingTutorial(0);
             break;
         case '2':
-           // lessonNew1(0);
-         //  keyDrill(dataset1,8);
+            // lessonNew1(0);
+            //  keyDrill(dataset1,8);
             //  Practice();
             break;
         case '3':
-           // lessonNew2(0);
-             game1();
+            // lessonNew2(0);
+            game1();
             break;
         case '4':
 //            UserManual(0);
