@@ -247,7 +247,6 @@ void wordDrill(char dataset[],int limit)
         int index=0;
         while(index<out.length())
         {
-
             char ch=_getch();
             gross++;
             int target=0,got=0;
@@ -279,6 +278,7 @@ void wordDrill(char dataset[],int limit)
     score=gross-wrong;
     int accuracy=(score*100)/gross;
     system("cls");
+
     gotoxy(40,5);
     cout<<"Total Key Press: "<<gross;
     gotoxy(40,7);
@@ -292,6 +292,7 @@ void wordDrill(char dataset[],int limit)
         cout<<"Try more";
     cout<<endl;
 
+
     drawHistogram(dataset, limit,wrongPressCount);
     cout<<endl;
     cout<<"Enter 1 for return home menu or any key to exit";
@@ -303,14 +304,19 @@ void wordDrill(char dataset[],int limit)
 
 void drawHistogram(char dataset[],int size,int frequency[])
 {
-  /*  int sum=0;
-    for(int i=0; i<size; i++)
-        sum+=frequency[i];
-    for(int i=0; i<size; i++)
-    {
-        frequency[i]=(frequency[i]*100)/sum;
-    }
-*/
+    cout<<endl;
+    cout<<"Your difficult keys in this lesson:"<<endl;
+   // setColor(4);
+    /*  int sum=0;
+      for(int i=0; i<size; i++)
+          sum+=frequency[i];
+      for(int i=0; i<size; i++)
+      {
+          frequency[i]=(frequency[i]*100)/sum;
+      }
+    */
+
+    cout<<endl;
     int maxFreq=INT_MIN;
     for(int i=0; i<size; i++)
     {

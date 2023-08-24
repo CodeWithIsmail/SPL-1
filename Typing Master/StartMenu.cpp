@@ -54,6 +54,7 @@ void startMenu(int x)
         switch(option)
         {
         case '1':
+           // setColor(11);
             TypingTutorial(0);
             break;
         case '2':

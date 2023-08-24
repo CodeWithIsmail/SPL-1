@@ -12,6 +12,7 @@ using namespace std;
 char dataset1[7]= {'a','s','d','f','j','k','l'};
 void lessonNew1(int x)
 {
+    setConsoleBackgroundColor(RGB(70, 10, 128));
     system("cls");
     gotoxy(40,5);
     cout<<"Lesson 1: Focus on the Home row";
