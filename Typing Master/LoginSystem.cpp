@@ -25,7 +25,7 @@ void signIn()
   //  cout<<"--------------------------";
 
     gotoxy(42,11);
-    cout<<"Enter username: ";
+    cout<<"Enter Username: ";
     string name;
     cin>>name;
     gotoxy(42,13);

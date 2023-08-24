@@ -98,9 +98,33 @@ void game1()
     gotoxy(40,10);
     cout<<"Time's Up!";
     gotoxy(40,12);
-    cout<<"Your final score is: "<<score;
 
-    gotoxy(30,15);
+    ifstream scoreList("ScoreList.txt");
+    string getScore;
+    int highestScore=0;
+    while(getline(scoreList,getScore))
+    {
+        int temp=stoi(getScore);
+        highestScore=max(highestScore,temp);
+    }
+    scoreList.close();
+    gotoxy(40,15);
+    if(score>highestScore)
+    {
+        cout<<"Congratulations!! New Highest Score!!";
+        gotoxy(40,17);
+        cout<<"Your Score is: "<<score;
+        ofstream scoreList("ScoreList.txt");
+        scoreList<<score;
+    }
+    else
+    {
+        cout<<"Highest Score: "<<highestScore;
+        gotoxy(40,17);
+        cout<<"Your Score is: "<<score;
+    }
+
+    gotoxy(30,20);
     cout<<"Press 1 to play again or 0 to return Home or any key to exit.";
     char choice;
     choice=getch();
@@ -162,5 +186,4 @@ void drawBorder()
         gotoxy(75,i);
         cout<<"+";
     }
-
 }
