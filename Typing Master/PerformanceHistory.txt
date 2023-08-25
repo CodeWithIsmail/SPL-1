@@ -1,0 +1,15 @@
+Tutorial Number: 3.3
+Date: 25-Aug-2023  12:27 PM
+Total Key Press: 176
+Wrong Key Press: 20
+Accuracy :88
+Score :156
+Tutorial Number: 1.2
+Date: 25-Aug-2023  12:28 PM
+Total Key Press: 59
+Wrong Key Press: 9
+Accuracy :82
+Score :41
+Game: Fast Typer
+Date: 25-Aug-2023  12:29 PM
+Score :22

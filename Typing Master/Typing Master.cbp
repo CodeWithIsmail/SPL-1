@@ -38,6 +38,10 @@
 		<Unit filename="FocusOnTheHomeRow.h" />
 		<Unit filename="LoginSystem.cpp" />
 		<Unit filename="LoginSystem.h" />
+		<Unit filename="PerformanceHistory.cpp" />
+		<Unit filename="PerformanceHistory.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="StartMenu.cpp" />
 		<Unit filename="StartMenu.h" />
 		<Unit filename="TypingTutorial.cpp" />

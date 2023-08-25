@@ -36,10 +36,10 @@ void lessonNew1(int x)
         reviewHomeRow();
         break;
     case '2':
-        keyDrill(dataset1,7);
+        keyDrill(dataset1,7,1,2);
         break;
     case '3':
-        wordDrill(dataset1,7);
+        wordDrill(dataset1,7,1,3);
         break;
     default:
         exit(0);
@@ -101,5 +101,5 @@ void reviewHomeRow()
     c=getch();
     system("cls");
 
-    keyDrill(dataset1,7);
+    keyDrill(dataset1,7,1,3);
 }

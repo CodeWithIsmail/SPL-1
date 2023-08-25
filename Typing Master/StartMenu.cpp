@@ -36,18 +36,20 @@ void startMenu(int x)
         gotoxy(40,7);
         cout<<"--------------------------";
         gotoxy(40,9);
-        cout<<"1. Typing Tutorial"<<endl;
+        cout<<"1. Typing Tutorial";
         gotoxy(40,11);
-        cout<<"2. Practice"<<endl;
+        cout<<"2. Practice";
         gotoxy(40,13);
-        cout<<"3. Games"<<endl;
+        cout<<"3. Games";
         gotoxy(40,15);
-        cout<<"4. User Manual"<<endl;
+        cout<<"4. Performance History";
         gotoxy(40,17);
-        cout<<"5. Exit"<<endl;
+        cout<<"5. User Manual";
+        gotoxy(40,19);
+        cout<<"6. Exit"<<endl;
 
 
-        gotoxy(40,20);
+        gotoxy(40,22);
         cout<<"Select option: "<<endl;;
         char option=getch();
 
@@ -67,11 +69,18 @@ void startMenu(int x)
             game1();
             break;
         case '4':
+            //history();
+            break;
 //            UserManual(0);
             break;
         case '5':
+//            userManual();
+            break;
+        case '6':
             cout<<"Exiting the application...."<<endl;
             exit(0);
+        default:
+            cout<<"Wrong Choice. Try again.";
         }
     }
     while(1);

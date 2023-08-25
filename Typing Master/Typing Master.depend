@@ -11,7 +11,7 @@
 	<windows.h>
 	<bits/stdc++.h>
 
-1692858432 source:e:\spl-1\typing master\startmenu.cpp
+1692944262 source:e:\spl-1\typing master\startmenu.cpp
 	"StartMenu.h"
 	"TypingTutorial.h"
 	"FastTyperGame.h"
@@ -29,10 +29,10 @@
 
 1691859282 e:\spl-1\typing master\keydrill.h
 
-1692800685 e:\spl-1\typing master\dataset.h
+1692944039 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1692869670 source:e:\spl-1\typing master\dataset.cpp
+1692941187 source:e:\spl-1\typing master\dataset.cpp
 	"StartMenu.h"
 	"dataset.h"
 	"set_cursor.h"
@@ -77,7 +77,7 @@
 	"littleFingerKeys.h"
 	"commonWords.h"
 
-1692856673 source:e:\spl-1\typing master\focusonthehomerow.cpp
+1692943953 source:e:\spl-1\typing master\focusonthehomerow.cpp
 	"set_cursor.h"
 	"dataset.h"
 	"startMenu.h"
@@ -90,7 +90,7 @@
 
 1692282442 e:\spl-1\typing master\indexfingerkeys.h
 
-1692292734 source:e:\spl-1\typing master\indexfingerkeys.cpp
+1692943953 source:e:\spl-1\typing master\indexfingerkeys.cpp
 	"set_cursor.h"
 	"dataset.h"
 	"startMenu.h"
@@ -99,7 +99,7 @@
 	<conio.h>
 	<windows.h>
 
-1692292734 source:e:\spl-1\typing master\middlefingerkeys.cpp
+1692943953 source:e:\spl-1\typing master\middlefingerkeys.cpp
 	"set_cursor.h"
 	"dataset.h"
 	"startMenu.h"
@@ -110,7 +110,7 @@
 
 1692291384 e:\spl-1\typing master\middlefingerkeys.h
 
-1692292762 source:e:\spl-1\typing master\ringfingerkeys.cpp
+1692943953 source:e:\spl-1\typing master\ringfingerkeys.cpp
 	"set_cursor.h"
 	"dataset.h"
 	"startMenu.h"
@@ -121,7 +121,7 @@
 
 1692292734 e:\spl-1\typing master\ringfingerkeys.h
 
-1692293926 source:e:\spl-1\typing master\littlefingerkeys.cpp
+1692943953 source:e:\spl-1\typing master\littlefingerkeys.cpp
 	"set_cursor.h"
 	"dataset.h"
 	"startMenu.h"
@@ -144,7 +144,7 @@
 
 1692355477 e:\spl-1\typing master\loginsystem.h
 
-1692871023 source:e:\spl-1\typing master\loginsystem.cpp
+1692941362 source:e:\spl-1\typing master\loginsystem.cpp
 	<bits/stdc++.h>
 	<windows.h>
 	<conio.h>
@@ -154,7 +154,7 @@
 
 1692367915 e:\spl-1\typing master\fasttypergame.h
 
-1692871062 source:e:\spl-1\typing master\fasttypergame.cpp
+1692944242 source:e:\spl-1\typing master\fasttypergame.cpp
 	"set_cursor.h"
 	"FastTyperGame.h"
 	"StartMenu.h"
@@ -164,4 +164,11 @@
 	<time.h>
 	<chrono>
 	<thread>
+	<fstream>
+
+1692944089 source:e:\spl-1\typing master\performancehistory.cpp
+	<bits/stdc++.h>
+	<windows.h>
+	<conio.h>
+	<fstream>
 

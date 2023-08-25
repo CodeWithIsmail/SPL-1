@@ -36,10 +36,10 @@ void lessonNew3(int x)
         reviewMiddleFingerKeys();
         break;
     case '2':
-        keyDrill(dataset3,10);
+        keyDrill(dataset3,10,3,2);
         break;
     case '3':
-        wordDrill(dataset3,10);
+        wordDrill(dataset3,10,3,3);
         break;
     default:
         exit(0);
@@ -66,5 +66,5 @@ void reviewMiddleFingerKeys()
     c=getch();
     system("cls");
 
-    keyDrill(dataset3,10);
+    keyDrill(dataset3,10,3,3);
 }

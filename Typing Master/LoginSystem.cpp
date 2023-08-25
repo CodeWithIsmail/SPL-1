@@ -65,7 +65,12 @@ void signIn()
     {
         system("cls");
         gotoxy(25,7);
-        cout<<"Username or Password mismatch.";
+        cout<<"Username or Password mismatch! Press 0 to exit the application or any other key try again.";
+        char ch=getch();
+        if(ch=='0')
+            exit(0);
+        else
+            signIn();
     }
 
 }

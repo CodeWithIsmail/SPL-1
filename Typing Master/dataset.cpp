@@ -4,6 +4,7 @@
 #include<windows.h>
 #include<time.h>
 #include<conio.h>
+#include<fstream>
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -97,8 +98,9 @@ void lesson(char input)
     }
 }
 
-void keyDrill(char dataset[],int limit)
+void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
 {
+
     int wrongPressCount[limit]= {0};
     int score=0,total=50,wrong=0;
 
@@ -116,6 +118,21 @@ void keyDrill(char dataset[],int limit)
     for(int i=0; i<total; i++)
     {
         system("cls");
+
+        gotoxy(0,20);
+        cout << " Keyboard :\n";
+        cout <<
+             "\t\t     ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------'\n" <<
+             "\t\t     | ~ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | + |   <-  |\n" <<
+             "\t\t     |---'---'---'---'---'---'---'---'---'---'---'---'---'-------|\n" <<
+             "\t\t     | <-> | Q | W | E | R | T | Y | U | I | O | P | { | } | \\   |\n" <<
+             "\t\t     |-----'---'---'---'---'---'---'---'---'---'---'---'---'-----|\n" <<
+             "\t\t     | Caps | A | S | D | F | G | H | J | K | L | ; | ' |  Enter |\n" <<
+             "\t\t     |------'---'---'---'---'---'---'---'---'---'---'---'--------|\n" <<
+             "\t\t     | Shift  | Z | X | C | V | B | N | M | , | . | ? |  Shift   |\n" <<
+             "\t\t     |--------'---'---'---'---'---'---'---'---'---'---'----------|\n" <<
+             "\t\t     | Ctrl | Win | Alt |                           | Alt | Ctrl |\n" <<
+             "\t\t     '------'-----'-----'---------------------------'-----'------'\n";
         gotoxy(40,3);
         cout<<"-----------"<<endl;
 
@@ -187,6 +204,23 @@ void keyDrill(char dataset[],int limit)
     drawHistogram(dataset, limit,wrongPressCount);
     cout<<endl;
 
+    ofstream performance("PerformanceHistory.txt",ios::app);
+    performance<<"Tutorial Number: "<<lessonNum<<"."<<partNum<<endl;
+
+    time_t currentTime=time(nullptr);
+    tm* localTime=localtime(&currentTime);
+    char Time[50],Date[50];
+
+    strftime(Time,sizeof(Time),"%I:%M %p",localTime);
+    strftime(Date,sizeof(Date),"%d-%b-%Y",localTime);
+
+    performance<<"Date: "<<Date<<"  "<<Time<<endl;
+    performance<<"Total Key Press: "<<total+wrong<<endl;
+    performance<<"Wrong Key Press: "<<wrong<<endl;
+    performance<<"Accuracy :"<<accuracy<<"%"<<endl;
+    performance<<"Score :"<<score<<endl;
+    performance.close();
+
     cout<<"Enter 1 to return Main menu or any key to exit"<<endl;
     char check=getch();
     //  exit(0);
@@ -195,7 +229,7 @@ void keyDrill(char dataset[],int limit)
     //  else exit(0);
 }
 
-void wordDrill(char dataset[],int limit)
+void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
 {
     int wrongPressCount[limit]= {0};
     int score=0,total=30,wrong=0,gross=0;
@@ -209,9 +243,25 @@ void wordDrill(char dataset[],int limit)
     char ch=getch();
     system("cls");
 
+
     for(int i=0; i<total; i++)
     {
         system("cls");
+        gotoxy(0,20);
+        cout << " Keyboard :\n";
+        cout <<
+             "\t\t     ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------'\n" <<
+             "\t\t     | ~ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | + |   <-  |\n" <<
+             "\t\t     |---'---'---'---'---'---'---'---'---'---'---'---'---'-------|\n" <<
+             "\t\t     | <-> | Q | W | E | R | T | Y | U | I | O | P | { | } | \\   |\n" <<
+             "\t\t     |-----'---'---'---'---'---'---'---'---'---'---'---'---'-----|\n" <<
+             "\t\t     | Caps | A | S | D | F | G | H | J | K | L | ; | ' |  Enter |\n" <<
+             "\t\t     |------'---'---'---'---'---'---'---'---'---'---'---'--------|\n" <<
+             "\t\t     | Shift  | Z | X | C | V | B | N | M | , | . | ? |  Shift   |\n" <<
+             "\t\t     |--------'---'---'---'---'---'---'---'---'---'---'----------|\n" <<
+             "\t\t     | Ctrl | Win | Alt |                           | Alt | Ctrl |\n" <<
+             "\t\t     '------'-----'-----'---------------------------'-----'------'\n";
+
         gotoxy(40,3);
         cout<<"--------------------------";
 
@@ -295,7 +345,25 @@ void wordDrill(char dataset[],int limit)
 
     drawHistogram(dataset, limit,wrongPressCount);
     cout<<endl;
-    cout<<"Enter 1 for return home menu or any key to exit";
+
+    ofstream performance("PerformanceHistory.txt",ios::app);
+    performance<<"Tutorial Number: "<<lessonNum<<"."<<partNum<<endl;
+
+    time_t currentTime=time(nullptr);
+    tm* localTime=localtime(&currentTime);
+    char Time[50],Date[50];
+
+    strftime(Time,sizeof(Time),"%I:%M %p",localTime);
+    strftime(Date,sizeof(Date),"%d-%b-%Y",localTime);
+
+    performance<<"Date: "<<Date<<"  "<<Time<<endl;
+    performance<<"Total Key Press: "<<gross<<endl;
+    performance<<"Wrong Key Press: "<<wrong<<endl;
+    performance<<"Accuracy :"<<accuracy<<"%"<<endl;
+    performance<<"Score :"<<score<<endl;
+    performance.close();
+
+    cout<<"\tEnter 1 for return home menu or any key to exit";
     ch=getch();
     if(ch=='1')
         startMenu(0);
@@ -305,8 +373,8 @@ void wordDrill(char dataset[],int limit)
 void drawHistogram(char dataset[],int size,int frequency[])
 {
     cout<<endl;
-    cout<<"Your difficult keys in this lesson:"<<endl;
-   // setColor(4);
+    cout<<"\t  Your difficult keys in this lesson:"<<endl;
+    // setColor(4);
     /*  int sum=0;
       for(int i=0; i<size; i++)
           sum+=frequency[i];

@@ -7,6 +7,7 @@
 #include<time.h>
 #include<chrono>
 #include<thread>
+#include<fstream>
 
 using namespace std;
 
@@ -99,23 +100,29 @@ void game1()
     cout<<"Time's Up!";
     gotoxy(40,12);
 
-    ifstream scoreList("ScoreList.txt");
+    ifstream scoreFile("ScoreList.txt");
     string getScore;
     int highestScore=0;
-    while(getline(scoreList,getScore))
+    while(getline(scoreFile,getScore))
     {
-        int temp=stoi(getScore);
-        highestScore=max(highestScore,temp);
+        string temp="New Score: ";
+        int index=getScore.find(temp);
+        if(index!=-1)
+        {
+            string sc=getScore.substr(index+temp.size());
+            int temp=stoi(sc);
+            highestScore=max(highestScore,temp);
+        }
     }
-    scoreList.close();
+    scoreFile.close();
     gotoxy(40,15);
+
     if(score>highestScore)
     {
         cout<<"Congratulations!! New Highest Score!!";
         gotoxy(40,17);
         cout<<"Your Score is: "<<score;
-        ofstream scoreList("ScoreList.txt");
-        scoreList<<score;
+
     }
     else
     {
@@ -123,6 +130,32 @@ void game1()
         gotoxy(40,17);
         cout<<"Your Score is: "<<score;
     }
+
+    ofstream scoreList("ScoreList.txt",ios::app);
+    scoreList<<"New Score: "<<score<<endl;
+    time_t currentTime=time(nullptr);
+    tm* localTime=localtime(&currentTime);
+    string Time,Date;
+    char formattedDateC[50];
+    char formattedTimeC[50];
+
+    strftime(formattedDateC, sizeof(formattedDateC), "%d-%b-%Y", localTime);
+    strftime(formattedTimeC, sizeof(formattedTimeC), "%I:%M %p", localTime);
+    Time=formattedTimeC;
+    Date=formattedDateC;
+    scoreList << "Current date: " << Time << endl;
+    scoreList << "Current time: " << Date << endl;
+
+
+
+    scoreList.close();
+
+    ofstream performance("PerformanceHistory.txt",ios::app);
+    performance<<"Game: Fast Typer"<<endl;
+
+    performance<<"Date: "<<Date<<"  "<<Time<<endl;
+    performance<<"Score :"<<score<<endl;
+    performance.close();
 
     gotoxy(30,20);
     cout<<"Press 1 to play again or 0 to return Home or any key to exit.";
