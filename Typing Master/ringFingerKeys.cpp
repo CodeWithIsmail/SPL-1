@@ -1,10 +1,11 @@
-#include"set_cursor.h"
+/*#include"set_cursor.h"
 #include "dataset.h"
 #include"startMenu.h"
 #include"ringFingerKeys.h"
 #include<bits/stdc++.h>
 #include<conio.h>
-#include<windows.h>
+#include<windows.h>*/
+#include "AllHeaderFile.h"
 
 void reviewRingFingerKeys();
 void lessonNew4(int x);

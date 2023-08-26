@@ -1,6 +1,8 @@
-#include "set_cursor.h"
+/*#include "set_cursor.h"
 #include<windows.h>
 #include<bits/stdc++.h>
+*/
+#include "AllHeaderFile.h"
 using namespace std;
 
 HANDLE console=GetStdHandle(STD_OUTPUT_HANDLE);

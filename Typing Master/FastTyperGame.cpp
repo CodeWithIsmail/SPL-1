@@ -1,6 +1,10 @@
+/*
 #include"set_cursor.h"
 #include"FastTyperGame.h"
+#include"drawing.h"
 #include"StartMenu.h"
+#include"getDate.h"
+#include"dataset.h"
 #include<bits/stdc++.h>
 #include<conio.h>
 #include<windows.h>
@@ -8,18 +12,19 @@
 #include<chrono>
 #include<thread>
 #include<fstream>
-
+*/
+#include "AllHeaderFile.h"
 using namespace std;
 
 void game1();
-string wordGen();
-void drawBorder();
+void Border();
 
 char letter[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 
 void game1()
 {
     system("cls");
+
     gotoxy(40,5);
     cout<<"FAST TYPER";
     gotoxy(30,8);
@@ -31,6 +36,8 @@ void game1()
     ch=getch();
 
     int score=0;
+
+    Border();
 
     auto startTime = chrono::high_resolution_clock::now();
 
@@ -51,9 +58,11 @@ void game1()
         if(getline(file, word))
             getline(file,word);
         else
-            word=wordGen();
+            word=RandomWordGen(letter,26);
 
-        drawBorder();
+        Border();
+
+
         gotoxy(40,5);
         cout<<"Score :"<<score;
 
@@ -133,28 +142,15 @@ void game1()
 
     ofstream scoreList("ScoreList.txt",ios::app);
     scoreList<<"New Score: "<<score<<endl;
-    time_t currentTime=time(nullptr);
-    tm* localTime=localtime(&currentTime);
-    string Time,Date;
-    char formattedDateC[50];
-    char formattedTimeC[50];
-
-    strftime(formattedDateC, sizeof(formattedDateC), "%d-%b-%Y", localTime);
-    strftime(formattedTimeC, sizeof(formattedTimeC), "%I:%M %p", localTime);
-    Time=formattedTimeC;
-    Date=formattedDateC;
-    scoreList << "Current date: " << Time << endl;
-    scoreList << "Current time: " << Date << endl;
-
-
-
+    scoreList << "Date: " << DateFind() << endl;
+    scoreList<<endl;
     scoreList.close();
 
-    ofstream performance("PerformanceHistory.txt",ios::app);
-    performance<<"Game: Fast Typer"<<endl;
-
-    performance<<"Date: "<<Date<<"  "<<Time<<endl;
-    performance<<"Score :"<<score<<endl;
+   // ofstream performance("PerformanceHistory.csv",ios::app);
+   ofstream performance("PerformanceHistory.txt",ios::app);
+    performance<<"Game: Fast Typer  \t";
+    performance<<DateFind()<<"\t\t\t\t\t\t\t";
+    performance<<score<<"\n";
     performance.close();
 
     gotoxy(30,20);
@@ -168,55 +164,12 @@ void game1()
         game1();
     else exit(0);
 }
-
-string wordGen()
+void Border()
 {
-    string randomWord="";
-    int length=5;
-    srand(time(NULL));
-    while(length--)
-    {
-        int index=rand()%26;
-        randomWord+=letter[index];
-    }
-    return randomWord;
+    drawBorder(35,51,3,7,"+","+");
+    drawBorder(45,75,13,21,"+","+");
+    drawBorder(65,93,3,7,"+","+");
 }
 
-void drawBorder()
-{
-    gotoxy(35,3);
-    cout<<"+++++++++++++++++";
-    gotoxy(35,7);
-    cout<<"+++++++++++++++++";
-    for(int i=4; i<7; i++)
-    {
-        gotoxy(35,i);
-        cout<<"+";
-        gotoxy(51,i);
-        cout<<"+";
-    }
 
-    gotoxy(65,3);
-    cout<<"+++++++++++++++++++++++++++++";
-    gotoxy(65,7);
-    cout<<"+++++++++++++++++++++++++++++";
-    for(int i=4; i<7; i++)
-    {
-        gotoxy(65,i);
-        cout<<"+";
-        gotoxy(93,i);
-        cout<<"+";
-    }
 
-    gotoxy(45,13);
-    cout<<"+++++++++++++++++++++++++++++++";
-    gotoxy(45,21);
-    cout<<"+++++++++++++++++++++++++++++++";
-    for(int i=14; i<21; i++)
-    {
-        gotoxy(45,i);
-        cout<<"+";
-        gotoxy(75,i);
-        cout<<"+";
-    }
-}

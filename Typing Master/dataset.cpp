@@ -1,18 +1,24 @@
+/*
 #include "StartMenu.h"
 #include"dataset.h"
 #include"set_cursor.h"
+#include "getDate.h"
+#include"drawing.h"
 #include<windows.h>
 #include<time.h>
 #include<conio.h>
 #include<fstream>
+
 #include<bits/stdc++.h>
+*/
+#include "AllHeaderFile.h"
 using namespace std;
 
 string keyMapping(char input);
 void lesson(char input);
 void keyDrill(char dataset[],int limit);
 void wordDrill(char dataset[],int limit);
-void drawHistogram(char dataset[],int size,int frequency[]);
+string RandomWordGen(char dataset[],int limit );
 
 string keyMapping(char input)
 {
@@ -118,40 +124,8 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
     for(int i=0; i<total; i++)
     {
         system("cls");
-
-        gotoxy(0,20);
-        cout << " Keyboard :\n";
-        cout <<
-             "\t\t     ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------'\n" <<
-             "\t\t     | ~ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | + |   <-  |\n" <<
-             "\t\t     |---'---'---'---'---'---'---'---'---'---'---'---'---'-------|\n" <<
-             "\t\t     | <-> | Q | W | E | R | T | Y | U | I | O | P | { | } | \\   |\n" <<
-             "\t\t     |-----'---'---'---'---'---'---'---'---'---'---'---'---'-----|\n" <<
-             "\t\t     | Caps | A | S | D | F | G | H | J | K | L | ; | ' |  Enter |\n" <<
-             "\t\t     |------'---'---'---'---'---'---'---'---'---'---'---'--------|\n" <<
-             "\t\t     | Shift  | Z | X | C | V | B | N | M | , | . | ? |  Shift   |\n" <<
-             "\t\t     |--------'---'---'---'---'---'---'---'---'---'---'----------|\n" <<
-             "\t\t     | Ctrl | Win | Alt |                           | Alt | Ctrl |\n" <<
-             "\t\t     '------'-----'-----'---------------------------'-----'------'\n";
-        gotoxy(40,3);
-        cout<<"-----------"<<endl;
-
-        gotoxy(40,4);
-        cout<<"|";
-        gotoxy(40,5);
-        cout<<"|";
-        gotoxy(40,6);
-        cout<<"|";
-
-        gotoxy(50,4);
-        cout<<"|";
-        gotoxy(50,5);
-        cout<<"|";
-        gotoxy(50,6);
-        cout<<"|";
-
-        gotoxy(40,7);
-        cout<<"-----------"<<endl;
+        drawBorder(40,50,3,7,"-","|");
+        drawKeyboard();
 
         int index=rand()%limit;
         gotoxy(45,5);
@@ -206,19 +180,12 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
 
     ofstream performance("PerformanceHistory.txt",ios::app);
     performance<<"Tutorial Number: "<<lessonNum<<"."<<partNum<<endl;
-
-    time_t currentTime=time(nullptr);
-    tm* localTime=localtime(&currentTime);
-    char Time[50],Date[50];
-
-    strftime(Time,sizeof(Time),"%I:%M %p",localTime);
-    strftime(Date,sizeof(Date),"%d-%b-%Y",localTime);
-
-    performance<<"Date: "<<Date<<"  "<<Time<<endl;
+    performance<<"Date: "<<DateFind()<<endl;
     performance<<"Total Key Press: "<<total+wrong<<endl;
     performance<<"Wrong Key Press: "<<wrong<<endl;
     performance<<"Accuracy :"<<accuracy<<"%"<<endl;
     performance<<"Score :"<<score<<endl;
+    performance<<endl;
     performance.close();
 
     cout<<"Enter 1 to return Main menu or any key to exit"<<endl;
@@ -232,7 +199,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
 void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
 {
     int wrongPressCount[limit]= {0};
-    int score=0,total=30,wrong=0,gross=0;
+    int score=0,total=15,wrong=0,gross=0;
     gotoxy(10,5);
     cout<<"Objective: Integrate new keys with keys already learned and add flow to your typing."<<endl;
     gotoxy(10,8);
@@ -247,50 +214,10 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     for(int i=0; i<total; i++)
     {
         system("cls");
-        gotoxy(0,20);
-        cout << " Keyboard :\n";
-        cout <<
-             "\t\t     ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------'\n" <<
-             "\t\t     | ~ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | + |   <-  |\n" <<
-             "\t\t     |---'---'---'---'---'---'---'---'---'---'---'---'---'-------|\n" <<
-             "\t\t     | <-> | Q | W | E | R | T | Y | U | I | O | P | { | } | \\   |\n" <<
-             "\t\t     |-----'---'---'---'---'---'---'---'---'---'---'---'---'-----|\n" <<
-             "\t\t     | Caps | A | S | D | F | G | H | J | K | L | ; | ' |  Enter |\n" <<
-             "\t\t     |------'---'---'---'---'---'---'---'---'---'---'---'--------|\n" <<
-             "\t\t     | Shift  | Z | X | C | V | B | N | M | , | . | ? |  Shift   |\n" <<
-             "\t\t     |--------'---'---'---'---'---'---'---'---'---'---'----------|\n" <<
-             "\t\t     | Ctrl | Win | Alt |                           | Alt | Ctrl |\n" <<
-             "\t\t     '------'-----'-----'---------------------------'-----'------'\n";
+        drawBorder(40,65,3,7,"-","|");
+        drawKeyboard();
 
-        gotoxy(40,3);
-        cout<<"--------------------------";
-
-        gotoxy(40,4);
-        cout<<"|";
-        gotoxy(40,5);
-        cout<<"|";
-        gotoxy(40,6);
-        cout<<"|";
-
-        gotoxy(65,4);
-        cout<<"|";
-        gotoxy(65,5);
-        cout<<"|";
-        gotoxy(65,6);
-        cout<<"|";
-
-        gotoxy(40,7);
-        cout<<"--------------------------";
-
-        int size=3+rand()%5;
-        string out="";
-        srand(time(NULL));
-        for(int j=0; j<size; j++)
-        {
-            int index=rand()%limit;
-            out+=dataset[index];
-        }
-
+        string out=RandomWordGen(dataset,limit);
         gotoxy(53,5);
         cout<<out<<endl;
         gotoxy(53,8);
@@ -319,11 +246,6 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
                 wrongPressCount[got]++;
             }
         }
-        // string in;
-        // gotoxy(53,9);
-        // cin>>in;
-        // if(in==out)
-        //    score++;
     }
     score=gross-wrong;
     int accuracy=(score*100)/gross;
@@ -347,20 +269,12 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     cout<<endl;
 
     ofstream performance("PerformanceHistory.txt",ios::app);
-    performance<<"Tutorial Number: "<<lessonNum<<"."<<partNum<<endl;
-
-    time_t currentTime=time(nullptr);
-    tm* localTime=localtime(&currentTime);
-    char Time[50],Date[50];
-
-    strftime(Time,sizeof(Time),"%I:%M %p",localTime);
-    strftime(Date,sizeof(Date),"%d-%b-%Y",localTime);
-
-    performance<<"Date: "<<Date<<"  "<<Time<<endl;
-    performance<<"Total Key Press: "<<gross<<endl;
-    performance<<"Wrong Key Press: "<<wrong<<endl;
-    performance<<"Accuracy :"<<accuracy<<"%"<<endl;
-    performance<<"Score :"<<score<<endl;
+    performance<<"     "<<lessonNum<<"."<<partNum<<"\t\t";
+    performance<<DateFind()<<"     \t";
+    performance<<gross<<"\t\t\t";
+    performance<<wrong<<"\t\t   ";
+    performance<<accuracy<<"%"<<"\t\t  ";
+    performance<<score<<"\n";
     performance.close();
 
     cout<<"\tEnter 1 for return home menu or any key to exit";
@@ -370,45 +284,22 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     else exit(0);
 }
 
-void drawHistogram(char dataset[],int size,int frequency[])
+string RandomWordGen(char dataset[],int limit)
 {
-    cout<<endl;
-    cout<<"\t  Your difficult keys in this lesson:"<<endl;
-    // setColor(4);
-    /*  int sum=0;
-      for(int i=0; i<size; i++)
-          sum+=frequency[i];
-      for(int i=0; i<size; i++)
-      {
-          frequency[i]=(frequency[i]*100)/sum;
-      }
-    */
+    srand(time(NULL));
+    int size=3+rand()%5;
+    string out="";
 
-    cout<<endl;
-    int maxFreq=INT_MIN;
-    for(int i=0; i<size; i++)
+    for(int j=0; j<size; j++)
     {
-        if(frequency[i]>maxFreq)
-        {
-            maxFreq=frequency[i];
-        }
+        int index=rand()%limit;
+        out+=dataset[index];
     }
-
-    for(int row=maxFreq; row>0; row--)
-    {
-        for(int element=0; element<size; element++)
-        {
-            if(frequency[element]<row)
-                cout<<"           ";
-            else
-                cout<<" ********* ";
-        }
-        cout<<endl;
-    }
-    for(int i=0; i<size; i++)
-        cout<<"-----------";
-    cout<<endl;
-    for(int i=0; i<size; i++)
-        cout<<"     "<<dataset[i]<<"     ";
-    cout<<endl;
+    return out;
 }
+
+
+
+
+
+

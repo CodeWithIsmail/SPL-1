@@ -1,11 +1,12 @@
-#include"set_cursor.h"
+/*#include"set_cursor.h"
 #include "dataset.h"
 #include"startMenu.h"
 #include"littleFingerKeys.h"
 #include<bits/stdc++.h>
 #include<conio.h>
-#include<windows.h>
+#include<windows.h>*/
 
+#include "AllHeaderFile.h"
 void reviewLittleFingerKeys();
 void lessonNew5(int x);
 using namespace std;

@@ -1,9 +1,10 @@
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 #include<windows.h>
 #include<conio.h>
 #include"set_cursor.h"
 #include"StartMenu.h"
-#include"LoginSystem.h"
+#include"LoginSystem.h"*/
+#include "AllHeaderFile.h"
 
 using namespace std;
 

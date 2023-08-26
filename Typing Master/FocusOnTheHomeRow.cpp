@@ -1,3 +1,4 @@
+/*
 #include"set_cursor.h"
 #include "dataset.h"
 #include"startMenu.h"
@@ -5,6 +6,8 @@
 #include<bits/stdc++.h>
 #include<conio.h>
 #include<windows.h>
+*/
+#include "AllHeaderFile.h"
 
 void reviewHomeRow();
 void lesson1(int x);
@@ -12,7 +15,7 @@ using namespace std;
 char dataset1[7]= {'a','s','d','f','j','k','l'};
 void lessonNew1(int x)
 {
-    setConsoleBackgroundColor(RGB(70, 10, 128));
+   // setConsoleBackgroundColor(RGB(70, 10, 128));
     system("cls");
     gotoxy(40,5);
     cout<<"Lesson 1: Focus on the Home row";

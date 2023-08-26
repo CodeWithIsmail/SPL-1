@@ -1,9 +1,9 @@
-#include"LoginSystem.h"
+/*#include"LoginSystem.h"
 #include<windows.h>
 #include"set_cursor.h"
 #include"StartMenu.h"
-#include<bits/stdc++.h>
-
+#include<bits/stdc++.h>*/
+#include "AllHeaderFile.h"
 
 using namespace std;
 int main()
@@ -13,8 +13,8 @@ int main()
   system("color E1");
   // setConsoleBackgroundColor(BACKGROUND_RED);
     //setColor(10);
-    signIn();
-    //startMenu(0);
+   // signIn();
+    startMenu(0);
 
 }
 

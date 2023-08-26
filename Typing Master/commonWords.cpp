@@ -1,9 +1,14 @@
+/*
 #include<bits/stdc++.h>
 #include<windows.h>
 #include<conio.h>
+#include<fstream>
 #include"set_cursor.h"
 #include"StartMenu.h"
 #include"commonWords.h"
+*/
+
+#include "AllHeaderFile.h"
 
 using namespace std;
 
@@ -27,11 +32,15 @@ void mostCommonWord(int x)
     string out;
     while (getline(inputFile, out))
     {
-        system("cls");
-        gotoxy(40,10);
-        cout << out << endl;
 
-        gotoxy(40,12);
+        system("cls");
+        drawBorder(40,65,3,7,"-","|");
+        drawKeyboard();
+
+        gotoxy(53,5);
+        cout<<out<<endl;
+        gotoxy(53,8);
+
         int index=0;
         while(index<out.length())
         {
@@ -58,6 +67,16 @@ void mostCommonWord(int x)
     gotoxy(40,9);
     cout<<"Accuracy: "<<accuracy<<"%";
     gotoxy(40,12);
+
+    ofstream performance("PerformanceHistory.txt",ios::app);
+    performance<<"Common Word \t";
+    performance<<DateFind()<<" \t";
+    performance<<gross<<"\t\t";
+    performance<<wrong<<"\t\t";
+    performance<<accuracy<<"%"<<"\n";
+    performance.close();
+
+
     cout<<"Press 1 to return home or any key exit.";
 
     char temp;

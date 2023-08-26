@@ -1,8 +1,8 @@
-#include"StartMenu.h"
+/*#include"StartMenu.h"
 #include"TypingTutorial.h"
 #include"FastTyperGame.h"
 #include "set_cursor.h"
-
+#include "PerformanceHistory.h"
 #include<iostream>
 #include<conio.h>
 #include<windows.h>
@@ -22,66 +22,46 @@ char dataset11[27]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c'
 char dataset12[29]= {'a','s','d','f','j','k','l',';','e','i','r','u','t','o','c',',','g','h','v','n','?','w','m','q','p','b','y','z','x'};
 char datasetTotal[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 */
+
+#include "AllHeaderFile.h"
 using namespace std;
 
 void startMenu(int x)
 {
-    do
+    system("cls");
+    gotoxy(47,4);
+
+    cout<<"  --------------------------\n";
+    cout<<"\t\t\t\t\t\t |     TYPING TUTOR       |\n";
+    cout<<"\t\t\t\t\t\t --------------------------\n\n\n";
+
+    cout<<"\t\t\t\t\t\t 1. Typing Tutorial \n\n";
+    cout<<"\t\t\t\t\t\t 2. Practice \n\n";
+    cout<<"\t\t\t\t\t\t 3. Games \n\n";
+    cout<<"\t\t\t\t\t\t 4. Performance History \n\n";
+    cout<<"\t\t\t\t\t\t 5. User Manual \n\n";
+    cout<<"\t\t\t\t\t\t 6. Exit \n\n\n";
+
+    cout<<"\t\t\t\t\t\t Select option: ";
+    char option=getch();
+
+    if(option=='1')
+        TypingTutorial(0);
+    else if(option=='2');
+    else if(option=='3')
+        game1();
+    else if(option=='4')
+        history();
+    else if(option=='5');
+    //UserManual(0);
+    else if(option=='6')
     {
-        system("cls");
-        gotoxy(40,5);
-        cout<<"--------------------------";
-        gotoxy(40,6);
-        cout<<"|     TYPING TUTOR       |";
-        gotoxy(40,7);
-        cout<<"--------------------------";
-        gotoxy(40,9);
-        cout<<"1. Typing Tutorial";
-        gotoxy(40,11);
-        cout<<"2. Practice";
-        gotoxy(40,13);
-        cout<<"3. Games";
-        gotoxy(40,15);
-        cout<<"4. Performance History";
-        gotoxy(40,17);
-        cout<<"5. User Manual";
-        gotoxy(40,19);
-        cout<<"6. Exit"<<endl;
-
-
-        gotoxy(40,22);
-        cout<<"Select option: "<<endl;;
-        char option=getch();
-
-        switch(option)
-        {
-        case '1':
-           // setColor(11);
-            TypingTutorial(0);
-            break;
-        case '2':
-            // lessonNew1(0);
-            //  keyDrill(dataset1,8);
-            //  Practice();
-            break;
-        case '3':
-            // lessonNew2(0);
-            game1();
-            break;
-        case '4':
-            //history();
-            break;
-//            UserManual(0);
-            break;
-        case '5':
-//            userManual();
-            break;
-        case '6':
-            cout<<"Exiting the application...."<<endl;
-            exit(0);
-        default:
-            cout<<"Wrong Choice. Try again.";
-        }
+        cout<<"Exiting the application...."<<endl;
+        exit(0);
     }
-    while(1);
+    else
+    {
+        cout<<"Wrong Choice. Try again.";
+        startMenu(0);
+    }
 }

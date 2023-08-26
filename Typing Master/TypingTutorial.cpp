@@ -1,62 +1,46 @@
-#include"StartMenu.h"
+/*#include"StartMenu.h"
 #include"set_cursor.h"
 #include"TypingTutorial.h"
 
 #include<windows.h>
 #include<conio.h>
 #include<bits/stdc++.h>
+*/
+#include "AllHeaderFile.h"
 using namespace std;
 
 void TypingTutorial(int x)
 {
     system("cls");
 
-    gotoxy(40,4);
-    cout<<"LESSONS:"<<endl;
-    gotoxy(40,7);
-    cout<<"1. Focus on the Home Row";
-    gotoxy(40,9);
-    cout<<"2. Focus on the Index Finger keys";
-    gotoxy(40,11);
-    cout<<"3. Focus on the Middle Finger keys";
-    gotoxy(40,13);
-    cout<<"4. Focus on the Ring Finger keys";
-    gotoxy(40,15);
-    cout<<"5. Focus on the Little Finger keys";
-    gotoxy(40,17);
-    cout<<"6. Common words";
+    gotoxy(50,4);
+    cout<<"\t LESSONS:\n\n\n";
+    cout<<"\t\t\t\t\t\t 1. Focus on the Home Row\n\n";
+    cout<<"\t\t\t\t\t\t 2. Focus on the Index Finger keys\n\n";
+    cout<<"\t\t\t\t\t\t 3. Focus on the Middle Finger keys\n\n";
+    cout<<"\t\t\t\t\t\t 4. Focus on the Ring Finger keys\n\n";
+    cout<<"\t\t\t\t\t\t 5. Focus on the Little Finger keys\n\n";
+    cout<<"\t\t\t\t\t\t 6. Common words\n\n\n";
+    cout<<"\t\t\t\t\t\t Select your lesson (1-6) or Enter 0 to return Home or any key to exit:\n\n";
 
-    gotoxy(40,20);
-    cout<<"Select your lesson (1-6) or Enter 0 to return Home or any key to exit:"<<endl;
-
-    char ch;
-    ch=getch();
+    char ch=getch();
     system("cls");
 
-    switch(ch)
-    {
-    case '0':
+    if(ch=='0')
         startMenu(0);
-        break;
-    case '1':
+    else if(ch=='1')
         lessonNew1(0);
-        break;
-    case '2':
+    else if(ch=='2')
         lessonNew2(0);
-        break;
-    case '3':
+    else if(ch=='3')
         lessonNew3(0);
-        break;
-    case '4':
+    else if(ch=='4')
         lessonNew4(0);
-        break;
-    case '5':
+    else if(ch=='5')
         lessonNew5(0);
-        break;
-    case '6':
+    else if(ch=='6')
         mostCommonWord(0);
-        break;
-    default :
+    else
         exit(0);
-    }
 }
+
