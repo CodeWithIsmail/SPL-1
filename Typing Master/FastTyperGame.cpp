@@ -146,23 +146,27 @@ void game1()
     scoreList<<endl;
     scoreList.close();
 
-   // ofstream performance("PerformanceHistory.csv",ios::app);
-   ofstream performance("PerformanceHistory.txt",ios::app);
+    // ofstream performance("PerformanceHistory.csv",ios::app);
+    ofstream performance("PerformanceHistory.txt",ios::app);
     performance<<"Game: Fast Typer       ";
     performance<<DateFind()<<"                                                                     ";
-    performance<<score<<"\n";
+    performance<<score<<"\n\n";
     performance.close();
 
-    gotoxy(30,20);
-    cout<<"Press 1 to play again or 0 to return Home or any key to exit.";
-    char choice;
-    choice=getch();
-
-    if(choice=='0')
-        startMenu();
-    else if(choice=='1')
-        game1();
-    else exit(0);
+    while(1)
+    {
+        gotoxy(30,20);
+        cout<<"Press 1 to play again or 0 to return Home or 2 to exit.\n\n";
+        ch=getch();
+        if(ch=='0')
+            startMenu();
+        else if(ch=='1')
+            game1();
+        else if(ch=='2')
+            exit(0);
+        else
+            cout<<"Wrong Input. Try again.\n";
+    }
 }
 void Border()
 {

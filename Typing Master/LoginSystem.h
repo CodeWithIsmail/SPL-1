@@ -1,5 +1,0 @@
-#ifndef LOGINSYSTEM_H_INCLUDED
-#define LOGINSYSTEM_H_INCLUDED
-void signIn();
-
-#endif // LOGINSYSTEM_H_INCLUDED

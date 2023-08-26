@@ -32,35 +32,23 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AllHeaderFile.h" />
 		<Unit filename="FastTyperGame.cpp" />
-		<Unit filename="FastTyperGame.h" />
 		<Unit filename="FocusOnTheHomeRow.cpp" />
-		<Unit filename="FocusOnTheHomeRow.h" />
 		<Unit filename="LoginSystem.cpp" />
-		<Unit filename="LoginSystem.h" />
 		<Unit filename="PerformanceHistory.cpp" />
-		<Unit filename="PerformanceHistory.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="StartMenu.cpp" />
-		<Unit filename="StartMenu.h" />
 		<Unit filename="TypingTutorial.cpp" />
-		<Unit filename="TypingTutorial.h" />
 		<Unit filename="commonWords.cpp" />
-		<Unit filename="commonWords.h" />
 		<Unit filename="dataset.cpp" />
-		<Unit filename="dataset.h" />
+		<Unit filename="drawing.cpp" />
+		<Unit filename="getDate.cpp" />
 		<Unit filename="indexFingerKeys.cpp" />
-		<Unit filename="indexFingerKeys.h" />
 		<Unit filename="littleFingerKeys.cpp" />
-		<Unit filename="littleFingerKeys.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="middleFingerKeys.cpp" />
-		<Unit filename="middleFingerKeys.h" />
 		<Unit filename="ringFingerKeys.cpp" />
-		<Unit filename="ringFingerKeys.h" />
 		<Unit filename="set_Cursor.cpp" />
-		<Unit filename="set_cursor.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

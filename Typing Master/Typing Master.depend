@@ -1,26 +1,27 @@
 # depslib dependency file v1.0
-1692869436 source:e:\spl-1\typing master\main.cpp
-	"LoginSystem.h"
+1693018791 source:e:\spl-1\typing master\main.cpp
 	<windows.h>
 	"set_cursor.h"
 	"StartMenu.h"
 	<bits/stdc++.h>
+	"AllHeaderFile.h"
 
-1692856974 source:e:\spl-1\typing master\set_cursor.cpp
-	"set_cursor.h"
+1692986184 source:e:\spl-1\typing master\set_cursor.cpp
 	<windows.h>
 	<bits/stdc++.h>
+	"AllHeaderFile.h"
 
-1692944262 source:e:\spl-1\typing master\startmenu.cpp
-	"StartMenu.h"
+1693019004 source:e:\spl-1\typing master\startmenu.cpp
 	"TypingTutorial.h"
 	"FastTyperGame.h"
 	"set_cursor.h"
+	"PerformanceHistory.h"
 	<iostream>
 	<conio.h>
 	<windows.h>
 	<time.h>
 	<bits/stdc++.h>
+	"AllHeaderFile.h"
 
 1692856940 e:\spl-1\typing master\set_cursor.h
 	<windows.h>
@@ -29,17 +30,21 @@
 
 1691859282 e:\spl-1\typing master\keydrill.h
 
-1692944039 e:\spl-1\typing master\dataset.h
+1692961316 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1692941187 source:e:\spl-1\typing master\dataset.cpp
+1693036137 source:e:\spl-1\typing master\dataset.cpp
 	"StartMenu.h"
 	"dataset.h"
 	"set_cursor.h"
+	"getDate.h"
+	"drawing.h"
 	<windows.h>
 	<time.h>
 	<conio.h>
+	<fstream>
 	<bits/stdc++.h>
+	"AllHeaderFile.h"
 
 1692124398 e:\spl-1\typing master\usermanual.h
 
@@ -59,13 +64,13 @@
 	<conio.h>
 	<windows.h>
 
-1692371140 source:e:\spl-1\typing master\typingtutorial.cpp
-	"StartMenu.h"
+1693019035 source:e:\spl-1\typing master\typingtutorial.cpp
 	"set_cursor.h"
 	"TypingTutorial.h"
 	<windows.h>
 	<conio.h>
 	<bits/stdc++.h>
+	"AllHeaderFile.h"
 
 1692197899 e:\spl-1\typing master\lesson1.h
 
@@ -77,7 +82,7 @@
 	"littleFingerKeys.h"
 	"commonWords.h"
 
-1692943953 source:e:\spl-1\typing master\focusonthehomerow.cpp
+1693019077 source:e:\spl-1\typing master\focusonthehomerow.cpp
 	"set_cursor.h"
 	"dataset.h"
 	"startMenu.h"
@@ -85,79 +90,85 @@
 	<bits/stdc++.h>
 	<conio.h>
 	<windows.h>
+	"AllHeaderFile.h"
 
 1692236570 e:\spl-1\typing master\focusonthehomerow.h
 
 1692282442 e:\spl-1\typing master\indexfingerkeys.h
 
-1692943953 source:e:\spl-1\typing master\indexfingerkeys.cpp
-	"set_cursor.h"
+1693018986 source:e:\spl-1\typing master\indexfingerkeys.cpp
 	"dataset.h"
 	"startMenu.h"
 	"indexFingerKeys.h"
 	<bits/stdc++.h>
 	<conio.h>
 	<windows.h>
+	"AllHeaderFile.h"
 
-1692943953 source:e:\spl-1\typing master\middlefingerkeys.cpp
-	"set_cursor.h"
+1693018986 source:e:\spl-1\typing master\middlefingerkeys.cpp
 	"dataset.h"
 	"startMenu.h"
 	"middleFingerKeys.h"
 	<bits/stdc++.h>
 	<conio.h>
 	<windows.h>
+	"AllHeaderFile.h"
 
 1692291384 e:\spl-1\typing master\middlefingerkeys.h
 
-1692943953 source:e:\spl-1\typing master\ringfingerkeys.cpp
-	"set_cursor.h"
+1693018986 source:e:\spl-1\typing master\ringfingerkeys.cpp
 	"dataset.h"
 	"startMenu.h"
 	"ringFingerKeys.h"
 	<bits/stdc++.h>
 	<conio.h>
 	<windows.h>
+	"AllHeaderFile.h"
 
 1692292734 e:\spl-1\typing master\ringfingerkeys.h
 
-1692943953 source:e:\spl-1\typing master\littlefingerkeys.cpp
-	"set_cursor.h"
+1693018986 source:e:\spl-1\typing master\littlefingerkeys.cpp
 	"dataset.h"
 	"startMenu.h"
 	"littleFingerKeys.h"
 	<bits/stdc++.h>
 	<conio.h>
 	<windows.h>
+	"AllHeaderFile.h"
 
 1692293999 e:\spl-1\typing master\littlefingerkeys.h
 
 1692329712 e:\spl-1\typing master\commonwords.h
 
-1692497243 source:e:\spl-1\typing master\commonwords.cpp
+1693018986 source:e:\spl-1\typing master\commonwords.cpp
 	<bits/stdc++.h>
 	<windows.h>
 	<conio.h>
+	<fstream>
 	"set_cursor.h"
 	"StartMenu.h"
 	"commonWords.h"
+	"AllHeaderFile.h"
 
 1692355477 e:\spl-1\typing master\loginsystem.h
 
-1692941362 source:e:\spl-1\typing master\loginsystem.cpp
-	<bits/stdc++.h>
+1693018757 source:e:\spl-1\typing master\loginsystem.cpp
 	<windows.h>
 	<conio.h>
 	"set_cursor.h"
 	"StartMenu.h"
 	"LoginSystem.h"
+	"AllHeaderFile.h"
 
 1692367915 e:\spl-1\typing master\fasttypergame.h
 
-1692944242 source:e:\spl-1\typing master\fasttypergame.cpp
+1693036077 source:e:\spl-1\typing master\fasttypergame.cpp
 	"set_cursor.h"
 	"FastTyperGame.h"
+	"drawing.h"
 	"StartMenu.h"
+	"getDate.h"
+	"dataset.h"
 	<bits/stdc++.h>
 	<conio.h>
 	<windows.h>
@@ -165,10 +176,43 @@
 	<chrono>
 	<thread>
 	<fstream>
+	"AllHeaderFile.h"
 
-1692944089 source:e:\spl-1\typing master\performancehistory.cpp
+1693018699 source:e:\spl-1\typing master\performancehistory.cpp
+	<windows.h>
+	<conio.h>
+	<fstream>
+	"set_cursor.h"
+	"PerformanceHistory.h"
+	"AllHeaderFile.h"
+
+1692955742 e:\spl-1\typing master\datetime.h
+
+1692956078 e:\spl-1\typing master\getdate.h
+
+1692985916 source:e:\spl-1\typing master\drawing.cpp
+	<bits/stdc++.h>
+	<conio.h>
+	"set_cursor.h"
+	"drawing.h"
+	"AllHeaderFile.h"
+
+1692959478 e:\spl-1\typing master\drawing.h
+	<bits/stdc++.h>
+
+1692986184 source:e:\spl-1\typing master\getdate.cpp
+	<time.h>
+	"getDate.h"
+	"AllHeaderFile.h"
+
+1692964013 e:\spl-1\typing master\performancehistory.h
+
+1693018986 e:\spl-1\typing master\allheaderfile.h
 	<bits/stdc++.h>
 	<windows.h>
 	<conio.h>
 	<fstream>
+	<time.h>
+	<chrono>
+	<thread>
 

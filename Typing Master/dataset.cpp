@@ -179,6 +179,15 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
     cout<<endl;
 
     ofstream performance("PerformanceHistory.txt",ios::app);
+    performance<<"     "<<lessonNum<<"."<<partNum<<"\t\t";
+    performance<<DateFind()<<"     \t";
+    performance<<total+wrong<<"\t\t\t";
+    performance<<wrong<<"\t\t   ";
+    performance<<accuracy<<"%"<<"\t\t  ";
+    performance<<score<<"\n\n";
+    performance.close();
+
+    /*ofstream performance("PerformanceHistory.txt",ios::app);
     performance<<"Tutorial Number: "<<lessonNum<<"."<<partNum<<endl;
     performance<<"Date: "<<DateFind()<<endl;
     performance<<"Total Key Press: "<<total+wrong<<endl;
@@ -187,6 +196,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
     performance<<"Score :"<<score<<endl;
     performance<<endl;
     performance.close();
+    */
 
     cout<<"Enter 1 to return Main menu or any key to exit"<<endl;
     char check=getch();
@@ -274,7 +284,7 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     performance<<gross<<"\t\t\t";
     performance<<wrong<<"\t\t   ";
     performance<<accuracy<<"%"<<"\t\t  ";
-    performance<<score<<"\n";
+    performance<<score<<"\n\n";
     performance.close();
 
     cout<<"\tEnter 1 for return home menu or any key to exit";

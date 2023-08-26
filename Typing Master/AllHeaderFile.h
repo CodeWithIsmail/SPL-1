@@ -25,12 +25,12 @@ void drawBorder(int x1,int x2,int y1,int y2,string ch1,string ch2);
 void game1();
 string DateFind();
 
-void lessonNew1(int x);
-void lessonNew2(int x);
-void lessonNew3(int x);
-void lessonNew4(int x);
-void lessonNew5(int x);
-void mostCommonWord(int x);
+void lessonNew1();
+void lessonNew2();
+void lessonNew3();
+void lessonNew4();
+void lessonNew5();
+void mostCommonWord();
 
 void signIn();
 
@@ -38,8 +38,8 @@ void history();
 
 void gotoxy(int x,int y);
 
-void startMenu(int x);
+void startMenu();
 
-void TypingTutorial(int x);
+void TypingTutorial();
 
 //#endif // ALLHEADERFILE_H_INCLUDED

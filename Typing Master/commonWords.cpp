@@ -73,7 +73,7 @@ void mostCommonWord()
     performance<<DateFind()<<" \t";
     performance<<gross<<"\t\t";
     performance<<wrong<<"\t\t";
-    performance<<accuracy<<"%"<<"\n";
+    performance<<accuracy<<"%"<<"\n\n";
     performance.close();
 
 
