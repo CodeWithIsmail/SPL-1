@@ -8,11 +8,11 @@
 
 #include "AllHeaderFile.h"
 void reviewLittleFingerKeys();
-void lessonNew5(int x);
+void lessonNew5();
 using namespace std;
 char dataset5[10]= {'q','z','p','a','s','d','f','j','k','l'};
 
-void lessonNew5(int x)
+void lessonNew5()
 {
     system("cls");
     gotoxy(40,5);
@@ -31,7 +31,7 @@ void lessonNew5(int x)
     switch(lesson)
     {
     case '0':
-        startMenu(0);
+        startMenu();
         break;
     case '1':
         reviewLittleFingerKeys();

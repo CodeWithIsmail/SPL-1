@@ -60,7 +60,7 @@ void signIn()
         char ch;
         ch=getch();
         system("cls");
-        startMenu(0);
+        startMenu();
     }
     else
     {

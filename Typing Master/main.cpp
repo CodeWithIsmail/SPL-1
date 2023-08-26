@@ -14,7 +14,7 @@ int main()
   // setConsoleBackgroundColor(BACKGROUND_RED);
     //setColor(10);
    // signIn();
-    startMenu(0);
+    startMenu();
 
 }
 

@@ -26,7 +26,7 @@ char datasetTotal[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 #include "AllHeaderFile.h"
 using namespace std;
 
-void startMenu(int x)
+void startMenu()
 {
     system("cls");
     gotoxy(47,4);
@@ -46,7 +46,7 @@ void startMenu(int x)
     char option=getch();
 
     if(option=='1')
-        TypingTutorial(0);
+        TypingTutorial();
     else if(option=='2');
     else if(option=='3')
         game1();
@@ -62,6 +62,6 @@ void startMenu(int x)
     else
     {
         cout<<"Wrong Choice. Try again.";
-        startMenu(0);
+        startMenu();
     }
 }

@@ -191,7 +191,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
     cout<<"Enter 1 to return Main menu or any key to exit"<<endl;
     char check=getch();
     //  exit(0);
-    if(check=='1') startMenu(0);
+    if(check=='1') startMenu();
     else exit(0);
     //  else exit(0);
 }
@@ -280,7 +280,7 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     cout<<"\tEnter 1 for return home menu or any key to exit";
     ch=getch();
     if(ch=='1')
-        startMenu(0);
+        startMenu();
     else exit(0);
 }
 

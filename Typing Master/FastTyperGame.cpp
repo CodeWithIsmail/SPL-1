@@ -148,8 +148,8 @@ void game1()
 
    // ofstream performance("PerformanceHistory.csv",ios::app);
    ofstream performance("PerformanceHistory.txt",ios::app);
-    performance<<"Game: Fast Typer  \t";
-    performance<<DateFind()<<"\t\t\t\t\t\t\t";
+    performance<<"Game: Fast Typer       ";
+    performance<<DateFind()<<"                                                                     ";
     performance<<score<<"\n";
     performance.close();
 
@@ -159,7 +159,7 @@ void game1()
     choice=getch();
 
     if(choice=='0')
-        startMenu(0);
+        startMenu();
     else if(choice=='1')
         game1();
     else exit(0);

@@ -12,7 +12,7 @@
 
 using namespace std;
 
-void mostCommonWord(int x)
+void mostCommonWord()
 {
     int gross=0,wrong=0;
     gotoxy(20,5);
@@ -82,7 +82,7 @@ void mostCommonWord(int x)
     char temp;
     temp=getch();
     if(temp=='1')
-        startMenu(0);
+        startMenu();
     else
         exit(0);
 }

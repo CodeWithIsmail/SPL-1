@@ -8,11 +8,11 @@
 #include "AllHeaderFile.h"
 
 void reviewIndexFingerKeys();
-void lessonNew2(int x);
+void lessonNew2();
 using namespace std;
 char dataset2[10]= {'r','t','y','u','g','h','v','b','n','m'};
 
-void lessonNew2(int x)
+void lessonNew2()
 {
     system("cls");
     gotoxy(40,5);
@@ -31,7 +31,7 @@ void lessonNew2(int x)
     switch(lesson)
     {
     case '0':
-        startMenu(0);
+        startMenu();
         break;
     case '1':
         reviewIndexFingerKeys();
@@ -40,7 +40,7 @@ void lessonNew2(int x)
         keyDrill(dataset2,10,2,2);
         break;
     case '3':
-        wordDrill(dataset2,1,2,3);
+        wordDrill(dataset2,10,2,3);
         break;
     default:
         exit(0);

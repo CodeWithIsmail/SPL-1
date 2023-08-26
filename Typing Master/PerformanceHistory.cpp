@@ -29,4 +29,10 @@ void history()
        cout<<"\t "<<line<<endl;
     }
     performance.close();
+
+    cout<<"\n\n\n\n\t\t Enter 1 to return Main menu or any key to exit";
+    char ch=getch();
+    if(ch=='1')
+        startMenu();
+    else exit(0);
 }

@@ -10,10 +10,10 @@
 #include "AllHeaderFile.h"
 
 void reviewHomeRow();
-void lesson1(int x);
+void lesson1();
 using namespace std;
 char dataset1[7]= {'a','s','d','f','j','k','l'};
-void lessonNew1(int x)
+void lessonNew1()
 {
    // setConsoleBackgroundColor(RGB(70, 10, 128));
     system("cls");
@@ -33,7 +33,7 @@ void lessonNew1(int x)
     switch(lesson)
     {
     case '0':
-        startMenu(0);
+        startMenu();
         break;
     case '1':
         reviewHomeRow();

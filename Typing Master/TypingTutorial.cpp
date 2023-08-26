@@ -9,7 +9,7 @@
 #include "AllHeaderFile.h"
 using namespace std;
 
-void TypingTutorial(int x)
+void TypingTutorial()
 {
     system("cls");
 
@@ -27,19 +27,19 @@ void TypingTutorial(int x)
     system("cls");
 
     if(ch=='0')
-        startMenu(0);
+        startMenu();
     else if(ch=='1')
-        lessonNew1(0);
+        lessonNew1();
     else if(ch=='2')
-        lessonNew2(0);
+        lessonNew2();
     else if(ch=='3')
-        lessonNew3(0);
+        lessonNew3();
     else if(ch=='4')
-        lessonNew4(0);
+        lessonNew4();
     else if(ch=='5')
-        lessonNew5(0);
+        lessonNew5();
     else if(ch=='6')
-        mostCommonWord(0);
+        mostCommonWord();
     else
         exit(0);
 }
