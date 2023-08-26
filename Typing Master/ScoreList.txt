@@ -1,15 +1,18 @@
-New Score: 15
-Current date: 09:15:45
-Current time: 2023-08-25
-New Score: 26
-Current date: 09:32:11
-Current time: 2023-08-25
+New Score: 24
+Date: 25-Aug-2023  04:39 PM
+
+New Score: 28
+Date: 25-Aug-2023  05:04 PM
+
+New Score: 29
+Date: 25-Aug-2023  05:08 PM
+
 New Score: 27
-Current date: 11:30:40
-Current time: 2023-08-25
-New Score: 23
-Current date: 12:21:44
-Current time: 2023-08-25
-New Score: 22
-Current date: 12:29 PM
-Current time: 25-Aug-2023
+Date: 25-Aug-2023  10:12 PM
+
+New Score: 25
+Date: 25-Aug-2023  10:34 PM
+
+New Score: 26
+Date: 25-Aug-2023  10:47 PM
+
