@@ -18,12 +18,14 @@ using namespace std;
 
 void game1();
 void Border();
+void clearScreen();
 
 char letter[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 
 void game1()
 {
-    system("cls");
+      system("cls");
+
 
     gotoxy(40,5);
     cout<<"FAST TYPER";
@@ -43,6 +45,7 @@ void game1()
 
     ifstream file("FastTyperGame.txt");
     string word;
+    system("cls");
 
     for(;;)
     {
@@ -52,8 +55,9 @@ void game1()
         {
             break;
         }
+        clearScreen();
 
-        system("cls");
+        //    system("cls");
 
         if(getline(file, word))
             getline(file,word);
@@ -174,6 +178,16 @@ void Border()
     drawBorder(45,75,13,21,"+","+");
     drawBorder(65,93,3,7,"+","+");
 }
-
+void clearScreen()
+{
+    gotoxy(48,5);
+    cout<<"   ";
+    gotoxy(86,5);
+    cout<<"   ";
+    gotoxy(55,17);
+    cout<<"       ";
+    gotoxy(55,19);
+    cout<<"       ";
+}
 
 

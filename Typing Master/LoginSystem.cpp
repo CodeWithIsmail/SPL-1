@@ -75,3 +75,7 @@ void signIn()
     }
 
 }
+void signUp()
+{
+
+}
