@@ -108,7 +108,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
 {
 
     int wrongPressCount[limit]= {0};
-    int score=0,total=50,wrong=0;
+    int score=0,total=25,wrong=0;
 
     srand(time(NULL));
     gotoxy(10,5);
@@ -123,7 +123,8 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
 
     for(int i=0; i<total; i++)
     {
-        system("cls");
+        //   system("cls");
+
         drawBorder(40,50,3,7,"-","|");
         drawKeyboard();
 
@@ -158,6 +159,13 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
                 cout<<"Use your "<<keyMapping(dataset[index])<<".";
             }
         }
+        gotoxy(45,5);
+        cout<<" "<<endl;
+        gotoxy(40,9);
+        cout<<"                                  ";
+        gotoxy(40,11);
+        cout<<"                                   ";
+
     }
     score-=wrong;
     int accuracy=(score*100)/total;
@@ -174,7 +182,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
     else
         cout<<"Try to improve"<<endl;
 
-    cout<<"Your wrong press report:"<<endl;
+
     drawHistogram(dataset, limit,wrongPressCount);
     cout<<endl;
 
@@ -209,7 +217,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
 void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
 {
     int wrongPressCount[limit]= {0};
-    int score=0,total=15,wrong=0,gross=0;
+    int score=0,total=20,wrong=0,gross=0;
     gotoxy(10,5);
     cout<<"Objective: Integrate new keys with keys already learned and add flow to your typing."<<endl;
     gotoxy(10,8);
@@ -223,7 +231,7 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
 
     for(int i=0; i<total; i++)
     {
-        system("cls");
+     //   system("cls");
         drawBorder(40,65,3,7,"-","|");
         drawKeyboard();
 
@@ -256,6 +264,10 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
                 wrongPressCount[got]++;
             }
         }
+         gotoxy(53,5);
+        cout<<"          "<<endl;
+        gotoxy(53,8);
+        cout<<"          "<<endl;
     }
     score=gross-wrong;
     int accuracy=(score*100)/gross;
