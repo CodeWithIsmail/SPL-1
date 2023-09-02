@@ -217,7 +217,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
 void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
 {
     int wrongPressCount[limit]= {0};
-    int score=0,total=20,wrong=0,gross=0;
+    int score=0,total=20,wrong=0,gross=0,totalKey=0;
     gotoxy(10,5);
     cout<<"Objective: Integrate new keys with keys already learned and add flow to your typing."<<endl;
     gotoxy(10,8);
@@ -229,13 +229,15 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     system("cls");
 
 
+    auto startTime=chrono::high_resolution_clock::now();
     for(int i=0; i<total; i++)
     {
-     //   system("cls");
+        //   system("cls");
         drawBorder(40,65,3,7,"-","|");
         drawKeyboard();
 
         string out=RandomWordGen(dataset,limit);
+        totalKey+=out.length();
         gotoxy(53,5);
         cout<<out<<endl;
         gotoxy(53,8);
@@ -264,16 +266,24 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
                 wrongPressCount[got]++;
             }
         }
-         gotoxy(53,5);
+        gotoxy(53,5);
         cout<<"          "<<endl;
         gotoxy(53,8);
         cout<<"          "<<endl;
     }
+    auto endTime=chrono::high_resolution_clock::now();
+    chrono::duration<double> duration=endTime-startTime;
     score=gross-wrong;
+    int GrossSpeed=((gross/5)/(duration.count()/60));
+    int NetSpeed=((totalKey/5)/(duration.count()/60));
     int accuracy=(score*100)/gross;
     system("cls");
-
+    gotoxy(40,1);
+    cout<<"Gross Speed: "<<GrossSpeed<<" WPM";
+    gotoxy(40,3);
+    cout<<"Net Speed: "<<NetSpeed<<" WPM";
     gotoxy(40,5);
+
     cout<<"Total Key Press: "<<gross;
     gotoxy(40,7);
     cout<<"Wrong Key Press: "<<wrong;
