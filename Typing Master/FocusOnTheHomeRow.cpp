@@ -1,93 +1,57 @@
-/*
-#include"set_cursor.h"
-#include "dataset.h"
-#include"startMenu.h"
-#include"FocusOnTheHomeRow.h"
-#include<bits/stdc++.h>
-#include<conio.h>
-#include<windows.h>
-*/
 #include "AllHeaderFile.h"
 
-void reviewHomeRow();
-void lesson1();
-using namespace std;
 char dataset1[7]= {'a','s','d','f','j','k','l'};
+void reviewHomeRow();
 void lessonNew1()
 {
-   // setConsoleBackgroundColor(RGB(70, 10, 128));
     system("cls");
-    gotoxy(40,5);
-    cout<<"Lesson 1: Focus on the Home row";
-    gotoxy(40,7);
-    cout<<"1.1 -> Review the Home Row";
-    gotoxy(40,9);
-    cout<<"1.2 -> Key Drill";
-    gotoxy(40,11);
-    cout<<"1.3 -> Word Drill";
-    gotoxy(40,15);
-    cout<<"Select lesson: (1-3) or 0 to return home or any key to exit";
+    cout<<"\n\n\n\t\t\t\t\t Lesson 1: Focus on the Home row";
+    cout<<"\n\n\t\t\t\t\t 1.1 -> Review the Home Row";
+    cout<<"\n\n\t\t\t\t\t 1.2 -> Key Drill";
+    cout<<"\n\n\t\t\t\t\t 1.3 -> Word Drill";
+    cout<<"\n\n\n\t\t\t\t\t Select lesson: (1-3) or 0 to return home or any key to exit";
 
     char lesson=getch();
     system("cls");
-    switch(lesson)
-    {
-    case '0':
+    if(lesson=='0')
         startMenu();
-        break;
-    case '1':
+    else if(lesson=='1')
         reviewHomeRow();
-        break;
-    case '2':
+    else if(lesson=='2')
         keyDrill(dataset1,7,1,2);
-        break;
-    case '3':
+    else if(lesson=='3')
         wordDrill(dataset1,7,1,3);
-        break;
-    default:
+    else
         exit(0);
-    }
 }
 
 void reviewHomeRow()
 {
-    gotoxy(10,5);
-    cout<<"In this lesson, you will learn the home row.";
-    gotoxy(10,6);
-    cout<<"A S D F and J K L";
-    gotoxy(10,9);
-    cout<<"Press any key to continue.";
-    char c=getch();
+    cout<<"\n\n\n\t\t\t In this lesson, you will learn the home row.";
+    cout<<"\n\t\t\t A S D F and J K L";
+    cout<<"\n\n\n\t\t\t Press any key to continue.";
+    getch();
     system("cls");
 
-    gotoxy(10,5);
-    cout<<"Starting from the little finger, place your left hand fingers on A, S, D and F.";
-    gotoxy(10,8);
-    cout<<"Press any key to continue.";
-    c=getch();
+    cout<<"\n\n\n\t\t\t Starting from the little finger, place your left hand fingers on A, S, D and F.";
+    cout<<"\n\n\n\t\t\t Press any key to continue.";
+    getch();
     system("cls");
 
-    gotoxy(10,5);
-    cout<<"Starting from the index finger, place your right hand fingers on J, K, L";
-    gotoxy(10,8);
-    cout<<"Press any key to continue.";
-    c=getch();
+    cout<<"\n\n\n\t\t\t Starting from the index finger, place your right hand fingers on J, K, L";
+    cout<<"\n\n\n\t\t\t Press any key to continue.";
+    getch();
     system("cls");
 
-    gotoxy(10,5);
-    cout<<"Let your thumbs rest on the space bar.";
-    gotoxy(10,8);
-    cout<<"Press any key to continue.";
-    c=getch();
+    cout<<"\n\n\n\t\t\t Let your thumbs rest on the space bar.";
+    cout<<"\n\n\n\t\t\t Press any key to continue.";
+    getch();
     system("cls");
 
-    gotoxy(10,5);
-    cout<<"Now your hands are in the basic position.";
-    gotoxy(10,8);
-    cout<<"Press any key to continue.";
-    c=getch();
+    cout<<"\n\n\n\t\t\t Now your hands are in the basic position.";
+    cout<<"\n\n\n\t\t\t Press any key to continue.";
+    getch();
     system("cls");
-
 
     lesson('a');
     lesson('s');
@@ -97,11 +61,9 @@ void reviewHomeRow()
     lesson('k');
     lesson('l');
 
-    gotoxy(10,5);
-    cout<<"Now you can start the first drill.";
-    gotoxy(10,8);
-    cout<<"Press any key to continue.";
-    c=getch();
+    cout<<"\n\n\n\t\t\t Now you can start the first drill.";
+    cout<<"\n\n\n\t\t\t Press any key to continue.";
+    getch();
     system("cls");
 
     keyDrill(dataset1,7,1,3);

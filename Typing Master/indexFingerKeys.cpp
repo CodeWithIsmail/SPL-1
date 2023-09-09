@@ -1,59 +1,35 @@
-/*#include"set_cursor.h"
-#include "dataset.h"
-#include"startMenu.h"
-#include"indexFingerKeys.h"
-#include<bits/stdc++.h>
-#include<conio.h>
-#include<windows.h>*/
 #include "AllHeaderFile.h"
 
-void reviewIndexFingerKeys();
-void lessonNew2();
-using namespace std;
 char dataset2[10]= {'r','t','y','u','g','h','v','b','n','m'};
-
+void reviewIndexFingerKeys();
 void lessonNew2()
 {
     system("cls");
-    gotoxy(40,5);
-    cout<<"Lesson 2: Focus on the index finger keys"<<endl;
-    gotoxy(40,7);
-    cout<<"2.1 -> Review Index Finger keys"<<endl;
-    gotoxy(40,9);
-    cout<<"2.2 -> Key Drills"<<endl;
-    gotoxy(40,11);
-    cout<<"2.3 -> Word Drills"<<endl;
-    gotoxy(40,15);
-    cout<<"Select lesson: (1-3) or 0 to return home or any key to exit"<<endl;
+    cout<<"\n\n\n\t\t\t\t\t Lesson 2: Focus on the index finger keys";
+    cout<<"\n\n\t\t\t\t\t 2.1 -> Review Index Finger keys";
+    cout<<"\n\n\t\t\t\t\t 2.2 -> Key Drill";
+    cout<<"\n\n\t\t\t\t\t 2.3 -> Word Drill";
+    cout<<"\n\n\n\t\t\t\t\t Select lesson: (1-3) or 0 to return home or any key to exit";
 
     char lesson=getch();
     system("cls");
-    switch(lesson)
-    {
-    case '0':
+    if(lesson=='0')
         startMenu();
-        break;
-    case '1':
+    else if(lesson=='1')
         reviewIndexFingerKeys();
-        break;
-    case '2':
+    else if(lesson=='2')
         keyDrill(dataset2,10,2,2);
-        break;
-    case '3':
+    else if(lesson=='3')
         wordDrill(dataset2,10,2,3);
-        break;
-    default:
+    else
         exit(0);
-    }
 }
 
 void reviewIndexFingerKeys()
 {
-    gotoxy(10,5);
-    cout<<"In this lesson, you will R T Y U G H V B N M, the index finger keys.";
-    gotoxy(10,9);
-    cout<<"Press any key to continue.";
-    char c=getch();
+    cout<<"\n\n\n\t\t\t In this lesson, you will R T Y U G H V B N M, the index finger keys.";
+    cout<<"\n\n\n\t\t\t Press any key to continue.";
+    getch();
     system("cls");
 
     lesson('r');
@@ -67,11 +43,9 @@ void reviewIndexFingerKeys()
     lesson('n');
     lesson('m');
 
-    gotoxy(10,5);
-    cout<<"Now you can start the key drill.";
-    gotoxy(10,8);
-    cout<<"Press any key to continue.";
-    c=getch();
+    cout<<"\n\n\n\t\t\t Now you can start the key drill.";
+    cout<<"\n\n\n\t\t\t Press any key to continue.";
+    getch();
     system("cls");
 
     keyDrill(dataset2,10,2,3);
