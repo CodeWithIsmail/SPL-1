@@ -9,6 +9,7 @@
 #include<time.h>
 #include<chrono>
 #include<thread>
+#include <mutex>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ void drawHistogram(char dataset[],int size,int frequency[]);
 void drawBorder(int x1,int x2,int y1,int y2,string ch1,string ch2);
 
 void game1();
+void game2();
 string DateFind();
 
 void lessonNew1();
@@ -33,8 +35,12 @@ void lessonNew5();
 void mostCommonWord();
 
 void signIn();
+void signUp();
 
 void history();
+void statistics();
+void performanceAnalysis();
+
 
 void gotoxy(int x,int y);
 

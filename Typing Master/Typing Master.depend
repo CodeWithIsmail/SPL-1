@@ -1,9 +1,5 @@
 # depslib dependency file v1.0
-1693018791 source:e:\spl-1\typing master\main.cpp
-	<windows.h>
-	"set_cursor.h"
-	"StartMenu.h"
-	<bits/stdc++.h>
+1694244810 source:e:\spl-1\typing master\main.cpp
 	"AllHeaderFile.h"
 
 1692986184 source:e:\spl-1\typing master\set_cursor.cpp
@@ -11,16 +7,7 @@
 	<bits/stdc++.h>
 	"AllHeaderFile.h"
 
-1693019004 source:e:\spl-1\typing master\startmenu.cpp
-	"TypingTutorial.h"
-	"FastTyperGame.h"
-	"set_cursor.h"
-	"PerformanceHistory.h"
-	<iostream>
-	<conio.h>
-	<windows.h>
-	<time.h>
-	<bits/stdc++.h>
+1694236184 source:e:\spl-1\typing master\startmenu.cpp
 	"AllHeaderFile.h"
 
 1692856940 e:\spl-1\typing master\set_cursor.h
@@ -33,17 +20,7 @@
 1692961316 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1693235835 source:e:\spl-1\typing master\dataset.cpp
-	"StartMenu.h"
-	"dataset.h"
-	"set_cursor.h"
-	"getDate.h"
-	"drawing.h"
-	<windows.h>
-	<time.h>
-	<conio.h>
-	<fstream>
-	<bits/stdc++.h>
+1694245941 source:e:\spl-1\typing master\dataset.cpp
 	"AllHeaderFile.h"
 
 1692124398 e:\spl-1\typing master\usermanual.h
@@ -64,7 +41,7 @@
 	<conio.h>
 	<windows.h>
 
-1693019035 source:e:\spl-1\typing master\typingtutorial.cpp
+1694182615 source:e:\spl-1\typing master\typingtutorial.cpp
 	"set_cursor.h"
 	"TypingTutorial.h"
 	<windows.h>
@@ -140,19 +117,12 @@
 
 1692329712 e:\spl-1\typing master\commonwords.h
 
-1693036946 source:e:\spl-1\typing master\commonwords.cpp
-	<bits/stdc++.h>
-	<windows.h>
-	<conio.h>
-	<fstream>
-	"set_cursor.h"
-	"StartMenu.h"
-	"commonWords.h"
+1694237880 source:e:\spl-1\typing master\commonwords.cpp
 	"AllHeaderFile.h"
 
 1692355477 e:\spl-1\typing master\loginsystem.h
 
-1693018757 source:e:\spl-1\typing master\loginsystem.cpp
+1693298948 source:e:\spl-1\typing master\loginsystem.cpp
 	<windows.h>
 	<conio.h>
 	"set_cursor.h"
@@ -162,7 +132,7 @@
 
 1692367915 e:\spl-1\typing master\fasttypergame.h
 
-1693236425 source:e:\spl-1\typing master\fasttypergame.cpp
+1693236642 source:e:\spl-1\typing master\fasttypergame.cpp
 	"set_cursor.h"
 	"FastTyperGame.h"
 	"drawing.h"
@@ -190,11 +160,7 @@
 
 1692956078 e:\spl-1\typing master\getdate.h
 
-1692985916 source:e:\spl-1\typing master\drawing.cpp
-	<bits/stdc++.h>
-	<conio.h>
-	"set_cursor.h"
-	"drawing.h"
+1694242906 source:e:\spl-1\typing master\drawing.cpp
 	"AllHeaderFile.h"
 
 1692959478 e:\spl-1\typing master\drawing.h
@@ -207,7 +173,7 @@
 
 1692964013 e:\spl-1\typing master\performancehistory.h
 
-1693018986 e:\spl-1\typing master\allheaderfile.h
+1693903735 e:\spl-1\typing master\allheaderfile.h
 	<bits/stdc++.h>
 	<windows.h>
 	<conio.h>
@@ -215,4 +181,11 @@
 	<time.h>
 	<chrono>
 	<thread>
+	<mutex>
+
+1693654982 source:e:\spl-1\typing master\word catcher.cpp
+	"AllHeaderFile.h"
+
+1693903735 source:e:\spl-1\typing master\statistics.cpp
+	"AllHeaderFile.h"
 

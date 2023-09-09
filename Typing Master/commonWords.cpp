@@ -1,5 +1,4 @@
 #include "AllHeaderFile.h"
-using namespace std;
 
 void mostCommonWord()
 {

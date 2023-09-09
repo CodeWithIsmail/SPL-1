@@ -33,7 +33,7 @@ void drawHistogram(char dataset[],int size,int frequency[])
     {
         for(int element=0; element<size; element++)
         {
-            frequency[element]<row? cout<<"           " : cout<<" ********* ";
+            frequency[element]<row? cout<<"           ":cout<<" ********* ";
         }
         cout<<endl;
     }

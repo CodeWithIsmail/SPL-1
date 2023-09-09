@@ -15,12 +15,12 @@ void TypingTutorial()
 
     gotoxy(50,4);
     cout<<"\t LESSONS:\n\n\n";
-    cout<<"\t\t\t\t\t\t 1. Focus on the Home Row\n\n";
-    cout<<"\t\t\t\t\t\t 2. Focus on the Index Finger keys\n\n";
-    cout<<"\t\t\t\t\t\t 3. Focus on the Middle Finger keys\n\n";
-    cout<<"\t\t\t\t\t\t 4. Focus on the Ring Finger keys\n\n";
-    cout<<"\t\t\t\t\t\t 5. Focus on the Little Finger keys\n\n";
-    cout<<"\t\t\t\t\t\t 6. Common words\n\n\n";
+    cout<<"\t\t\t\t\t\t 1. Learn the Home Row\n\n";
+    cout<<"\t\t\t\t\t\t 2. Learn the Index Finger keys\n\n";
+    cout<<"\t\t\t\t\t\t 3. Learn the Middle Finger keys\n\n";
+    cout<<"\t\t\t\t\t\t 4. Learn the Ring Finger keys\n\n";
+    cout<<"\t\t\t\t\t\t 5. Learn the Little Finger keys\n\n";
+    cout<<"\t\t\t\t\t\t 6. Practice Common words\n\n\n";
     cout<<"\t\t\t\t\t\t Select your lesson (1-6) or Enter 0 to return Home or any key to exit:\n\n";
 
     char ch=getch();

@@ -36,9 +36,10 @@
 		<Unit filename="FastTyperGame.cpp" />
 		<Unit filename="FocusOnTheHomeRow.cpp" />
 		<Unit filename="LoginSystem.cpp" />
-		<Unit filename="PerformanceHistory.cpp" />
 		<Unit filename="StartMenu.cpp" />
+		<Unit filename="Statistics.cpp" />
 		<Unit filename="TypingTutorial.cpp" />
+		<Unit filename="Word Catcher.cpp" />
 		<Unit filename="commonWords.cpp" />
 		<Unit filename="dataset.cpp" />
 		<Unit filename="drawing.cpp" />

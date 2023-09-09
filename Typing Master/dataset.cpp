@@ -1,24 +1,4 @@
-/*
-#include "StartMenu.h"
-#include"dataset.h"
-#include"set_cursor.h"
-#include "getDate.h"
-#include"drawing.h"
-#include<windows.h>
-#include<time.h>
-#include<conio.h>
-#include<fstream>
-
-#include<bits/stdc++.h>
-*/
 #include "AllHeaderFile.h"
-using namespace std;
-
-string keyMapping(char input);
-void lesson(char input);
-void keyDrill(char dataset[],int limit);
-void wordDrill(char dataset[],int limit);
-string RandomWordGen(char dataset[],int limit );
 
 string keyMapping(char input)
 {
@@ -106,28 +86,23 @@ void lesson(char input)
 
 void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
 {
+    system("color F1");
+
+    cout<<"\n\n\n\n\t\t\t Objective: Practice to develop smooth and accurate keystrokes and even rhythm.";
+    cout<<"\n\n\t\t\t Accuracy goal: 94%";
+    cout<<"\n\n\n\t\t\t Enter any key to start"<<endl;
+    getch();
+
+    system("cls");
+    drawBorder(40,50,3,7,"-","|");
+    drawKeyboard();
 
     int wrongPressCount[limit]= {0};
     int score=0,total=25,wrong=0;
-
     srand(time(NULL));
-    gotoxy(10,5);
-    cout<<"Objective: Reinforcement practice to develop smooth and accurate keystrokes and even rhythm"<<endl;
-    gotoxy(10,8);
-    cout<<"Accuracy goal: 94%"<<endl;
-    cout<<endl;
-    gotoxy(10,11);
-    cout<<"Enter any key to start"<<endl;
-    char temp=getch();
-    system("cls");
 
     for(int i=0; i<total; i++)
     {
-        //   system("cls");
-
-        drawBorder(40,50,3,7,"-","|");
-        drawKeyboard();
-
         int index=rand()%limit;
         gotoxy(45,5);
         cout<<dataset[index]<<endl;
@@ -135,14 +110,6 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
         while(1)
         {
             char ch=getch();
-            int target,got;
-            for(int i=0; i<limit; i++)
-            {
-                if(dataset[i]==ch)
-                    got=i;
-                if(dataset[i]==dataset[index])
-                    target=i;
-            }
             if(ch==dataset[index])
             {
                 score++;
@@ -151,8 +118,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
             else
             {
                 wrong++;
-                wrongPressCount[target]++;
-                wrongPressCount[got]++;
+                wrongPressCount[index]++;
                 gotoxy(40,9);
                 cout<<"Wrong Input. Try again.";
                 gotoxy(40,11);
@@ -160,82 +126,56 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
             }
         }
         gotoxy(45,5);
-        cout<<" "<<endl;
+        cout<<"  "<<endl;
         gotoxy(40,9);
         cout<<"                                  ";
         gotoxy(40,11);
         cout<<"                                   ";
-
     }
     score-=wrong;
     int accuracy=(score*100)/total;
     system("cls");
-    gotoxy(40,5);
-    cout<<"Wrong Press key: "<<wrong<<" times.";
-    gotoxy(40,7);
-    cout<<"Your score: "<<score<<endl;
-    gotoxy(40,9);
-    cout<<"Your accuracy: "<<accuracy<<" %"<<endl;
-    gotoxy(40,11);
-    if(accuracy>=94)
-        cout<<"Very Good"<<endl;
-    else
-        cout<<"Try to improve"<<endl;
 
+    cout<<"\n\n\n\t\t\t\t\t Wrong Press key: "<<wrong<<" times.";
+    cout<<"\n\n\t\t\t\t\t Your score: "<<score;
+    cout<<"\n\n\t\t\t\t\t Your accuracy: "<<accuracy<<" %"<<endl;
 
-    drawHistogram(dataset, limit,wrongPressCount);
+    cout<<"\n\n\t\t\t\t\t";
+    accuracy>93? cout<<"Very Good\n": cout<<"Try to improve\n";
     cout<<endl;
 
+    drawHistogram(dataset, limit,wrongPressCount);
+
     ofstream performance("PerformanceHistory.txt",ios::app);
-    performance<<"     "<<lessonNum<<"."<<partNum<<"\t\t";
-    performance<<DateFind()<<"     \t";
-    performance<<total+wrong<<"\t\t\t";
-    performance<<wrong<<"\t\t   ";
-    performance<<accuracy<<"%"<<"\t\t  ";
-    performance<<score<<"\n\n";
+    string write=to_string(lessonNum)+"."+to_string(partNum)+","+DateFind()+","
+                 +to_string(total+wrong)+","+to_string(wrong)+","+to_string(accuracy)+","+to_string(score)+"\n";
+    performance<<write;
     performance.close();
 
-    /*ofstream performance("PerformanceHistory.txt",ios::app);
-    performance<<"Tutorial Number: "<<lessonNum<<"."<<partNum<<endl;
-    performance<<"Date: "<<DateFind()<<endl;
-    performance<<"Total Key Press: "<<total+wrong<<endl;
-    performance<<"Wrong Key Press: "<<wrong<<endl;
-    performance<<"Accuracy :"<<accuracy<<"%"<<endl;
-    performance<<"Score :"<<score<<endl;
-    performance<<endl;
-    performance.close();
-    */
-
-    cout<<"Enter 1 to return Main menu or any key to exit"<<endl;
+    cout<<"\n\n\t\t\t Enter 1 to return Main menu or any key to exit";
     char check=getch();
-    //  exit(0);
-    if(check=='1') startMenu();
-    else exit(0);
-    //  else exit(0);
+    check=='1'? startMenu(): exit(0);
 }
 
 void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
 {
-    int wrongPressCount[limit]= {0};
-    int score=0,total=20,wrong=0,gross=0,totalKey=0;
-    gotoxy(10,5);
-    cout<<"Objective: Integrate new keys with keys already learned and add flow to your typing."<<endl;
-    gotoxy(10,8);
-    cout<<"Accuracy Goal: 94 %"<<endl;
-    gotoxy(10,10);
-    cout<<"Enter any key to start"<<endl;
-    srand(time(NULL));
-    char ch=getch();
+    system("color F1");
+
+    cout<<"\n\n\n\n\t\t\t Objective: Practice to develop smooth and accurate keystrokes and even rhythm.";
+    cout<<"\n\n\t\t\t Accuracy goal: 94%";
+    cout<<"\n\n\n\t\t\t Enter any key to start"<<endl;
+    getch();
     system("cls");
 
+    srand(time(NULL));
+    int wrongPressCount[limit]= {0};
+    int score=0,total=20,wrong=0,gross=0,totalKey=0;
+    drawBorder(40,65,3,7,"-","|");
+    drawKeyboard();
 
     auto startTime=chrono::high_resolution_clock::now();
     for(int i=0; i<total; i++)
     {
-        //   system("cls");
-        drawBorder(40,65,3,7,"-","|");
-        drawKeyboard();
-
         string out=RandomWordGen(dataset,limit);
         totalKey+=out.length();
         gotoxy(53,5);
@@ -246,11 +186,9 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
         {
             char ch=_getch();
             gross++;
-            int target=0,got=0;
+            int target=0;
             for(int j=0; j<limit; j++)
             {
-                if(dataset[j]==ch)
-                    got=j;
                 if(dataset[j]==out[index])
                     target=j;
             }
@@ -263,7 +201,6 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
             {
                 wrong++;
                 wrongPressCount[target]++;
-                wrongPressCount[got]++;
             }
         }
         gotoxy(53,5);
@@ -273,47 +210,35 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     }
     auto endTime=chrono::high_resolution_clock::now();
     chrono::duration<double> duration=endTime-startTime;
+
     score=gross-wrong;
-    int GrossSpeed=((gross/5)/(duration.count()/60));
-    int NetSpeed=((totalKey/5)/(duration.count()/60));
+    int GrossSpeed=(gross/5)/(duration.count()/60);
+    int NetSpeed=(totalKey/5)/(duration.count()/60);
     int accuracy=(score*100)/gross;
+
     system("cls");
-    gotoxy(40,1);
-    cout<<"Gross Speed: "<<GrossSpeed<<" WPM";
-    gotoxy(40,3);
-    cout<<"Net Speed: "<<NetSpeed<<" WPM";
-    gotoxy(40,5);
-
-    cout<<"Total Key Press: "<<gross;
-    gotoxy(40,7);
-    cout<<"Wrong Key Press: "<<wrong;
-    gotoxy(40,9);
-    cout<<"Accuracy: "<<accuracy<<"%";
-    gotoxy(40,11);
-    if(accuracy>=94)
-        cout<<"Very good";
-    else
-        cout<<"Try more";
+ //   cout<<duration.count()/60;
+    cout<<"\n\n\n\t\t\t\t\t Gross Speed: "<<GrossSpeed<<" WPM";
+    cout<<"\n\n\t\t\t\t\t Net Speed: "<<NetSpeed<<" WPM";
+    cout<<"\n\n\t\t\t\t\t Total Key Press: "<<gross;
+    cout<<"\n\n\t\t\t\t\t Wrong Key Press: "<<wrong;
+    cout<<"\n\n\t\t\t\t\t Accuracy: "<<accuracy<<"%";
+    cout<<"\n\n\t\t\t\t\t";
+    accuracy>93? cout<<" Very Good\n": cout<<" Try to improve\n";
     cout<<endl;
-
 
     drawHistogram(dataset, limit,wrongPressCount);
-    cout<<endl;
 
     ofstream performance("PerformanceHistory.txt",ios::app);
-    performance<<"     "<<lessonNum<<"."<<partNum<<"\t\t";
-    performance<<DateFind()<<"     \t";
-    performance<<gross<<"\t\t\t";
-    performance<<wrong<<"\t\t   ";
-    performance<<accuracy<<"%"<<"\t\t  ";
-    performance<<score<<"\n\n";
+    string write=to_string(lessonNum)+"."+to_string(partNum)+","+DateFind()+","
+                 +to_string(totalKey)+","+to_string(wrong)+","+to_string(accuracy)+","+to_string(score)+"\n";
+
+    performance<<write;
     performance.close();
 
-    cout<<"\tEnter 1 for return home menu or any key to exit";
-    ch=getch();
-    if(ch=='1')
-        startMenu();
-    else exit(0);
+    cout<<"\n\n\t\t\t Enter 1 to return Main menu or any key to exit";
+    char check=getch();
+    check=='1'? startMenu(): exit(0);
 }
 
 string RandomWordGen(char dataset[],int limit)
