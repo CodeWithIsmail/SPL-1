@@ -19,13 +19,13 @@ void mostCommonWord()
 
     while (getline(inputFile, out))
     {
-        gotoxy(53,5);
+        moveCursor(53,5);
         cout<<"            "<<endl;
-        gotoxy(53,8);
+        moveCursor(53,8);
         cout<<"            "<<endl;
-        gotoxy(53,5);
+        moveCursor(53,5);
         cout<<out<<endl;
-        gotoxy(53,8);
+        moveCursor(53,8);
 
         int index=0;
         while(index<out.length())
@@ -51,7 +51,7 @@ void mostCommonWord()
     cout<<"\n\n\t\t\t\t\t\t Accuracy: "<<accuracy<<"%";
 
     ofstream performance("PerformanceHistory.txt",ios::app);
-    string write="Common Word,"+DateFind()+","+to_string(gross)+","+to_string(wrong)+","+to_string(accuracy)+"%\n";
+    string write="Common Word,,"+DateFind()+","+to_string(gross)+","+to_string(wrong)+","+to_string(accuracy)+"%\n";
     performance<<write;
     performance.close();
 

@@ -33,16 +33,16 @@ void game1()
         else
             word=RandomWordGen(letter,26);
 
-        gotoxy(40,5);
+        moveCursor(40,5);
         cout<<"Score :"<<score;
-        gotoxy(70,5);
+        moveCursor(70,5);
         int remain=60-duration.count();
         cout<<"Remaining time: "<<remain;
-        gotoxy(55,15);
+        moveCursor(55,15);
         cout<<"Type this:";
-        gotoxy(55,17);
+        moveCursor(55,17);
         cout<<word;
-        gotoxy(55,19);
+        moveCursor(55,19);
 
         string input;
         int index=0,count=0;
@@ -78,16 +78,18 @@ void game1()
     int highestScore=0;
     string highest,temp;
     ifstream scorefile("scoreList.txt");
-    getline(scorefile,temp);
-    istringstream str(temp);
-    getline(str,highest,',');
-    highestScore=stoi(highest);
+    if(getline(scorefile,temp))
+    {
+        istringstream str(temp);
+        getline(str,highest,',');
+        highestScore=stoi(highest);
+    }
 
     if(score>highestScore)
     {
         cout<<"\n\n\t\t\t\t\t Congratulations!! New Highest Score!!";
         ofstream scoreList("ScoreList.txt");
-        string sc=to_string(score)+","+DateFind()+"\n";
+        string sc=to_string(score)+",,"+DateFind()+"\n";
         scoreList<<sc;
         scoreList.close();
     }
@@ -98,7 +100,7 @@ void game1()
     cout<<"\n\n\t\t\t\t\t Your Score is: "<<score;
 
     ofstream performance("PerformanceHistory.txt",ios::app);
-    string write="Game: Fast Typer,"+DateFind()+","+to_string(score)+"\n";
+    string write="Game: Fast Typer,,"+DateFind()+","+to_string(score)+"\n";
     performance<<write;
     performance.close();
 
@@ -124,13 +126,13 @@ void Border()
 }
 void clearScreen()
 {
-    gotoxy(48,5);
+    moveCursor(48,5);
     cout<<"   ";
-    gotoxy(86,5);
+    moveCursor(86,5);
     cout<<"   ";
-    gotoxy(55,17);
+    moveCursor(55,17);
     cout<<"       ";
-    gotoxy(55,19);
+    moveCursor(55,19);
     cout<<"       ";
 }
 

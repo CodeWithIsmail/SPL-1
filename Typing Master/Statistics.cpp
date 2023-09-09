@@ -1,34 +1,23 @@
 #include "AllHeaderFile.h"
-using namespace std;
-
-void history();
-void statistics();
-void performanceAnalysis();
 
 void statistics()
 {
     system("cls");
-    gotoxy(40,10);
-    cout<<"1. Performance History";
-    gotoxy(40,12);
-    cout<<"2. Performance Analysis";
+    cout<<"\n\n\n\n\t\t\t\t\t 1. Performance History";
+    cout<<"\n\n\t\t\t\t\t 2. Performance Analysis";
 
-
-    gotoxy(40,17);
-    cout<<"Enter your choice:";
+    cout<<"\n\n\n\t\t\t\t\t Enter your choice:";
     char ch=getch();
     if(ch=='1')
         history();
     else if(ch=='2')
         performanceAnalysis();
     else exit(0);
-
-
 }
 void history()
 {
     system("cls");
-    gotoxy(5,5);
+    moveCursor(5,5);
     ifstream username("UserList.txt");
     string name;
     getline(username,name);
@@ -44,7 +33,11 @@ void history()
     string line;
     while(getline(performance,line))
     {
-        cout<<"\t "<<line<<endl;
+        istringstream is(line);
+        string temp;
+        while(getline(is,temp,','))
+             cout<<setw(10)<<right<<temp;
+        cout<<"\n\n";
     }
     performance.close();
 

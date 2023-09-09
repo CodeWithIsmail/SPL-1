@@ -1,22 +1,19 @@
 #include "AllHeaderFile.h"
-using namespace std;
 
 void startMenu()
 {
     system("cls");
-    gotoxy(47,4);
+    moveCursor(47,4);
 
     cout<<"  --------------------------\n";
     cout<<"\t\t\t\t\t\t |     TYPING TUTOR       |\n";
     cout<<"\t\t\t\t\t\t --------------------------\n\n\n";
-
     cout<<"\t\t\t\t\t\t 1. Typing Tutorial \n\n";
     cout<<"\t\t\t\t\t\t 2. Practice \n\n";
     cout<<"\t\t\t\t\t\t 3. Games \n\n";
     cout<<"\t\t\t\t\t\t 4. Statistics \n\n";
     cout<<"\t\t\t\t\t\t 5. User Manual \n\n";
     cout<<"\t\t\t\t\t\t 6. Exit \n\n\n";
-
     cout<<"\t\t\t\t\t\t Select option: ";
     char option=getch();
 
@@ -36,8 +33,11 @@ void startMenu()
         system("color ED");
         statistics();
     }
-    else if(option=='5');
-    //UserManual(0);
+    else if(option=='5')
+    {
+        system("color FD");
+        UserManual();
+    }
     else if(option=='6')
     {
         cout<<"Exiting the application...."<<endl;
@@ -46,6 +46,6 @@ void startMenu()
     else
     {
         cout<<"Wrong Choice. Try again.";
-        //startMenu();
+        startMenu();
     }
 }

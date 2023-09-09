@@ -20,4 +20,8 @@ void UserManual()
     cout<<"\n\t\t\t\t\t|--> Lesson 6: Common Words";
 
     cout<<"\n\n";
+
+    cout<<"\t\tPress any key to back menu";
+    getch();
+    startMenu();
 }

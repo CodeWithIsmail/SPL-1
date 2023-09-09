@@ -16,12 +16,12 @@ void game2()
          string temp=RandomWordGen(data,26);
          for(int i=up; i<=down; i++)
          {
-             gotoxy(60,i);
+             moveCursor(60,i);
              cout<<temp;
-             gotoxy(60,24);
+             moveCursor(60,24);
              cin>>input;
              Sleep(1000);
-             gotoxy(60,i);
+             moveCursor(60,i);
              if(i!=down)
                  cout<<"          ";
              if(input==temp)
@@ -42,16 +42,16 @@ void game2Border()
 
     for(i=25; i<=110; i++)
     {
-        gotoxy(i,2);
+        moveCursor(i,2);
         cout<<"=";
-        gotoxy(i,25);
+        moveCursor(i,25);
         cout<<"=";
     }
     for(i=3; i<=25; i++)
     {
-        gotoxy(25,i);
+        moveCursor(25,i);
         cout<<"||";
-        gotoxy(110,i);
+        moveCursor(110,i);
         cout<<"||";
     }
 }

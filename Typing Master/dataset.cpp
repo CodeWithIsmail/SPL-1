@@ -64,7 +64,7 @@ string keyMapping(char input)
 
 void lesson(char input)
 {
-    gotoxy(10,5);
+    moveCursor(10,5);
     string temp=keyMapping(input);
     cout<<"Now try typing '"<<input<<"' with "<<temp<<".";
 
@@ -78,7 +78,7 @@ void lesson(char input)
         }
         else
         {
-            gotoxy(10,7);
+            moveCursor(10,7);
             cout<<"Try again.";
         }
     }
@@ -104,7 +104,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
     for(int i=0; i<total; i++)
     {
         int index=rand()%limit;
-        gotoxy(45,5);
+        moveCursor(45,5);
         cout<<dataset[index]<<endl;
 
         while(1)
@@ -119,17 +119,17 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
             {
                 wrong++;
                 wrongPressCount[index]++;
-                gotoxy(40,9);
+                moveCursor(40,9);
                 cout<<"Wrong Input. Try again.";
-                gotoxy(40,11);
+                moveCursor(40,11);
                 cout<<"Use your "<<keyMapping(dataset[index])<<".";
             }
         }
-        gotoxy(45,5);
+        moveCursor(45,5);
         cout<<"  "<<endl;
-        gotoxy(40,9);
+        moveCursor(40,9);
         cout<<"                                  ";
-        gotoxy(40,11);
+        moveCursor(40,11);
         cout<<"                                   ";
     }
     score-=wrong;
@@ -147,7 +147,7 @@ void keyDrill(char dataset[],int limit,int lessonNum,int partNum)
     drawHistogram(dataset, limit,wrongPressCount);
 
     ofstream performance("PerformanceHistory.txt",ios::app);
-    string write=to_string(lessonNum)+"."+to_string(partNum)+","+DateFind()+","
+    string write=to_string(lessonNum)+"."+to_string(partNum)+",,"+DateFind()+","
                  +to_string(total+wrong)+","+to_string(wrong)+","+to_string(accuracy)+","+to_string(score)+"\n";
     performance<<write;
     performance.close();
@@ -178,9 +178,9 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     {
         string out=RandomWordGen(dataset,limit);
         totalKey+=out.length();
-        gotoxy(53,5);
+        moveCursor(53,5);
         cout<<out<<endl;
-        gotoxy(53,8);
+        moveCursor(53,8);
         int index=0;
         while(index<out.length())
         {
@@ -203,9 +203,9 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
                 wrongPressCount[target]++;
             }
         }
-        gotoxy(53,5);
+        moveCursor(53,5);
         cout<<"          "<<endl;
-        gotoxy(53,8);
+        moveCursor(53,8);
         cout<<"          "<<endl;
     }
     auto endTime=chrono::high_resolution_clock::now();
@@ -230,7 +230,7 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     drawHistogram(dataset, limit,wrongPressCount);
 
     ofstream performance("PerformanceHistory.txt",ios::app);
-    string write=to_string(lessonNum)+"."+to_string(partNum)+","+DateFind()+","
+    string write=to_string(lessonNum)+"."+to_string(partNum)+",,"+DateFind()+","
                  +to_string(totalKey)+","+to_string(wrong)+","+to_string(accuracy)+","+to_string(score)+"\n";
 
     performance<<write;

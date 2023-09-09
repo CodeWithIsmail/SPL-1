@@ -1,10 +1,4 @@
-/*#include<bits/stdc++.h>
-#include<time.h>
-#include "getDate.h";*/
-
 #include "AllHeaderFile.h"
-using namespace std;
-
 string DateFind()
 {
     time_t tempTime=time(nullptr);

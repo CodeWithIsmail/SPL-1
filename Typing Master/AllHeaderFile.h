@@ -1,15 +1,14 @@
 //#ifndef ALLHEADERFILE_H_INCLUDED
 //#define ALLHEADERFILE_H_INCLUDED
 #pragma once
-
+#include<stdio.h>
 #include<bits/stdc++.h>
 #include<windows.h>
 #include<conio.h>
 #include<fstream>
 #include<time.h>
 #include<chrono>
-#include<thread>
-#include <mutex>
+#include<iomanip>
 
 using namespace std;
 
@@ -24,7 +23,9 @@ void drawHistogram(char dataset[],int size,int frequency[]);
 void drawBorder(int x1,int x2,int y1,int y2,string ch1,string ch2);
 
 void game1();
+void Border();
 void game2();
+void clearScreen();
 string DateFind();
 
 void lessonNew1();
@@ -42,10 +43,11 @@ void statistics();
 void performanceAnalysis();
 
 
-void gotoxy(int x,int y);
+void moveCursor(int x,int y);
 
 void startMenu();
 
 void TypingTutorial();
+void UserManual();
 
 //#endif // ALLHEADERFILE_H_INCLUDED

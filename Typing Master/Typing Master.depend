@@ -2,12 +2,10 @@
 1694244810 source:e:\spl-1\typing master\main.cpp
 	"AllHeaderFile.h"
 
-1692986184 source:e:\spl-1\typing master\set_cursor.cpp
-	<windows.h>
-	<bits/stdc++.h>
+1694265926 source:e:\spl-1\typing master\set_cursor.cpp
 	"AllHeaderFile.h"
 
-1694236184 source:e:\spl-1\typing master\startmenu.cpp
+1694265648 source:e:\spl-1\typing master\startmenu.cpp
 	"AllHeaderFile.h"
 
 1692856940 e:\spl-1\typing master\set_cursor.h
@@ -20,7 +18,7 @@
 1692961316 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1694245941 source:e:\spl-1\typing master\dataset.cpp
+1694270768 source:e:\spl-1\typing master\dataset.cpp
 	"AllHeaderFile.h"
 
 1692124398 e:\spl-1\typing master\usermanual.h
@@ -41,12 +39,7 @@
 	<conio.h>
 	<windows.h>
 
-1694182615 source:e:\spl-1\typing master\typingtutorial.cpp
-	"set_cursor.h"
-	"TypingTutorial.h"
-	<windows.h>
-	<conio.h>
-	<bits/stdc++.h>
+1694265976 source:e:\spl-1\typing master\typingtutorial.cpp
 	"AllHeaderFile.h"
 
 1692197899 e:\spl-1\typing master\lesson1.h
@@ -59,93 +52,44 @@
 	"littleFingerKeys.h"
 	"commonWords.h"
 
-1693019077 source:e:\spl-1\typing master\focusonthehomerow.cpp
-	"set_cursor.h"
-	"dataset.h"
-	"startMenu.h"
-	"FocusOnTheHomeRow.h"
-	<bits/stdc++.h>
-	<conio.h>
-	<windows.h>
+1694265773 source:e:\spl-1\typing master\focusonthehomerow.cpp
 	"AllHeaderFile.h"
 
 1692236570 e:\spl-1\typing master\focusonthehomerow.h
 
 1692282442 e:\spl-1\typing master\indexfingerkeys.h
 
-1693018986 source:e:\spl-1\typing master\indexfingerkeys.cpp
-	"dataset.h"
-	"startMenu.h"
-	"indexFingerKeys.h"
-	<bits/stdc++.h>
-	<conio.h>
-	<windows.h>
+1694265784 source:e:\spl-1\typing master\indexfingerkeys.cpp
 	"AllHeaderFile.h"
 
-1693018986 source:e:\spl-1\typing master\middlefingerkeys.cpp
-	"dataset.h"
-	"startMenu.h"
-	"middleFingerKeys.h"
-	<bits/stdc++.h>
-	<conio.h>
-	<windows.h>
+1694265909 source:e:\spl-1\typing master\middlefingerkeys.cpp
 	"AllHeaderFile.h"
 
 1692291384 e:\spl-1\typing master\middlefingerkeys.h
 
-1693018986 source:e:\spl-1\typing master\ringfingerkeys.cpp
-	"dataset.h"
-	"startMenu.h"
-	"ringFingerKeys.h"
-	<bits/stdc++.h>
-	<conio.h>
-	<windows.h>
+1694265881 source:e:\spl-1\typing master\ringfingerkeys.cpp
 	"AllHeaderFile.h"
 
 1692292734 e:\spl-1\typing master\ringfingerkeys.h
 
-1693018986 source:e:\spl-1\typing master\littlefingerkeys.cpp
-	"dataset.h"
-	"startMenu.h"
-	"littleFingerKeys.h"
-	<bits/stdc++.h>
-	<conio.h>
-	<windows.h>
+1694265797 source:e:\spl-1\typing master\littlefingerkeys.cpp
 	"AllHeaderFile.h"
 
 1692293999 e:\spl-1\typing master\littlefingerkeys.h
 
 1692329712 e:\spl-1\typing master\commonwords.h
 
-1694237880 source:e:\spl-1\typing master\commonwords.cpp
+1694272424 source:e:\spl-1\typing master\commonwords.cpp
 	"AllHeaderFile.h"
 
 1692355477 e:\spl-1\typing master\loginsystem.h
 
-1693298948 source:e:\spl-1\typing master\loginsystem.cpp
-	<windows.h>
-	<conio.h>
-	"set_cursor.h"
-	"StartMenu.h"
-	"LoginSystem.h"
+1694265848 source:e:\spl-1\typing master\loginsystem.cpp
 	"AllHeaderFile.h"
 
 1692367915 e:\spl-1\typing master\fasttypergame.h
 
-1693236642 source:e:\spl-1\typing master\fasttypergame.cpp
-	"set_cursor.h"
-	"FastTyperGame.h"
-	"drawing.h"
-	"StartMenu.h"
-	"getDate.h"
-	"dataset.h"
-	<bits/stdc++.h>
-	<conio.h>
-	<windows.h>
-	<time.h>
-	<chrono>
-	<thread>
-	<fstream>
+1694272241 source:e:\spl-1\typing master\fasttypergame.cpp
 	"AllHeaderFile.h"
 
 1693018699 source:e:\spl-1\typing master\performancehistory.cpp
@@ -160,32 +104,33 @@
 
 1692956078 e:\spl-1\typing master\getdate.h
 
-1694242906 source:e:\spl-1\typing master\drawing.cpp
+1694263320 source:e:\spl-1\typing master\drawing.cpp
 	"AllHeaderFile.h"
 
 1692959478 e:\spl-1\typing master\drawing.h
 	<bits/stdc++.h>
 
-1692986184 source:e:\spl-1\typing master\getdate.cpp
-	<time.h>
-	"getDate.h"
+1694246649 source:e:\spl-1\typing master\getdate.cpp
 	"AllHeaderFile.h"
 
 1692964013 e:\spl-1\typing master\performancehistory.h
 
-1693903735 e:\spl-1\typing master\allheaderfile.h
+1694269917 e:\spl-1\typing master\allheaderfile.h
+	<stdio.h>
 	<bits/stdc++.h>
 	<windows.h>
 	<conio.h>
 	<fstream>
 	<time.h>
 	<chrono>
-	<thread>
-	<mutex>
+	<iomanip>
 
-1693654982 source:e:\spl-1\typing master\word catcher.cpp
+1694265648 source:e:\spl-1\typing master\word catcher.cpp
 	"AllHeaderFile.h"
 
-1693903735 source:e:\spl-1\typing master\statistics.cpp
+1694272455 source:e:\spl-1\typing master\statistics.cpp
+	"AllHeaderFile.h"
+
+1694255809 source:e:\spl-1\typing master\manual.cpp
 	"AllHeaderFile.h"
 
