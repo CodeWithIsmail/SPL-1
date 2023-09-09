@@ -1,77 +1,42 @@
-/*
-#include"set_cursor.h"
-#include"FastTyperGame.h"
-#include"drawing.h"
-#include"StartMenu.h"
-#include"getDate.h"
-#include"dataset.h"
-#include<bits/stdc++.h>
-#include<conio.h>
-#include<windows.h>
-#include<time.h>
-#include<chrono>
-#include<thread>
-#include<fstream>
-*/
 #include "AllHeaderFile.h"
-using namespace std;
-
-void game1();
-void Border();
-void clearScreen();
 
 char letter[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 
 void game1()
 {
-      system("cls");
+    system("cls");
+    cout<<"\n\n\n\t\t\t\t\t FAST TYPER";
+    cout<<"\n\n\n\t\t\t\t\t How many 6 letter words can you type in 60 seconds?";
+    cout<<"\n\n\n\t\t\t\t\t Press any key to start the game!";
+    getch();
 
-
-    gotoxy(40,5);
-    cout<<"FAST TYPER";
-    gotoxy(30,8);
-    cout<<"How many 6 letter words can you type in 60 seconds?";
-    gotoxy(30,11);
-    cout<<"Press any key to start the game!";
-
-    char ch;
-    ch=getch();
-
-    int score=0;
-
+    system("cls");
     Border();
-
-    auto startTime = chrono::high_resolution_clock::now();
 
     ifstream file("FastTyperGame.txt");
     string word;
-    system("cls");
+    int score=0;
 
+    auto startTime = chrono::high_resolution_clock::now();
     for(;;)
     {
         auto currentTime = chrono::high_resolution_clock::now();
-        chrono::duration<double> elapsedSeconds = currentTime - startTime;
-        if (elapsedSeconds.count() >= 60.0)
+        chrono::duration<double> duration = currentTime - startTime;
+        if (duration.count() >= 60.0)
         {
             break;
         }
         clearScreen();
-
-        //    system("cls");
 
         if(getline(file, word))
             getline(file,word);
         else
             word=RandomWordGen(letter,26);
 
-        Border();
-
-
         gotoxy(40,5);
         cout<<"Score :"<<score;
-
         gotoxy(70,5);
-        int remain=60-elapsedSeconds.count();
+        int remain=60-duration.count();
         cout<<"Remaining time: "<<remain;
         gotoxy(55,15);
         cout<<"Type this:";
@@ -108,60 +73,39 @@ void game1()
     file.close();
 
     system("cls");
+    cout<<"\n\n\n\t\t\t\t\t Time's Up!";
 
-    gotoxy(40,10);
-    cout<<"Time's Up!";
-    gotoxy(40,12);
-
-    ifstream scoreFile("ScoreList.txt");
-    string getScore;
     int highestScore=0;
-    while(getline(scoreFile,getScore))
-    {
-        string temp="New Score: ";
-        int index=getScore.find(temp);
-        if(index!=-1)
-        {
-            string sc=getScore.substr(index+temp.size());
-            int temp=stoi(sc);
-            highestScore=max(highestScore,temp);
-        }
-    }
-    scoreFile.close();
-    gotoxy(40,15);
+    string highest,temp;
+    ifstream scorefile("scoreList.txt");
+    getline(scorefile,temp);
+    istringstream str(temp);
+    getline(str,highest,',');
+    highestScore=stoi(highest);
 
     if(score>highestScore)
     {
-        cout<<"Congratulations!! New Highest Score!!";
-        gotoxy(40,17);
-        cout<<"Your Score is: "<<score;
-
+        cout<<"\n\n\t\t\t\t\t Congratulations!! New Highest Score!!";
+        ofstream scoreList("ScoreList.txt");
+        string sc=to_string(score)+","+DateFind()+"\n";
+        scoreList<<sc;
+        scoreList.close();
     }
     else
     {
-        cout<<"Highest Score: "<<highestScore;
-        gotoxy(40,17);
-        cout<<"Your Score is: "<<score;
+        cout<<"\n\n\t\t\t\t\t Highest Score: "<<highestScore;
     }
+    cout<<"\n\n\t\t\t\t\t Your Score is: "<<score;
 
-    ofstream scoreList("ScoreList.txt",ios::app);
-    scoreList<<"New Score: "<<score<<endl;
-    scoreList << "Date: " << DateFind() << endl;
-    scoreList<<endl;
-    scoreList.close();
-
-    // ofstream performance("PerformanceHistory.csv",ios::app);
     ofstream performance("PerformanceHistory.txt",ios::app);
-    performance<<"Game: Fast Typer       ";
-    performance<<DateFind()<<"                                                                     ";
-    performance<<score<<"\n\n";
+    string write="Game: Fast Typer,"+DateFind()+","+to_string(score)+"\n";
+    performance<<write;
     performance.close();
 
+    cout<<"\n\n\t\t\t\t Press 1 to play again or 0 to return Home or 2 to exit.\n\n";
     while(1)
     {
-        gotoxy(30,20);
-        cout<<"Press 1 to play again or 0 to return Home or 2 to exit.\n\n";
-        ch=getch();
+        char ch=getch();
         if(ch=='0')
             startMenu();
         else if(ch=='1')
@@ -169,7 +113,7 @@ void game1()
         else if(ch=='2')
             exit(0);
         else
-            cout<<"Wrong Input. Try again.\n";
+            cout<<"t\t\t\t Wrong Input. Try again.\n";
     }
 }
 void Border()
