@@ -1,20 +1,10 @@
-/*#include"StartMenu.h"
-#include"set_cursor.h"
-#include"TypingTutorial.h"
-
-#include<windows.h>
-#include<conio.h>
-#include<bits/stdc++.h>
-*/
 #include "AllHeaderFile.h"
-using namespace std;
 
 void TypingTutorial()
 {
     system("cls");
 
-    gotoxy(50,4);
-    cout<<"\t LESSONS:\n\n\n";
+    cout<<"\n\n\n\t\t\t\t\t\t\t LESSONS:\n\n\n";
     cout<<"\t\t\t\t\t\t 1. Learn the Home Row\n\n";
     cout<<"\t\t\t\t\t\t 2. Learn the Index Finger keys\n\n";
     cout<<"\t\t\t\t\t\t 3. Learn the Middle Finger keys\n\n";

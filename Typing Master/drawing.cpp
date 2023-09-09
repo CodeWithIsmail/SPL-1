@@ -2,7 +2,7 @@
 
 void drawKeyboard()
 {
-    gotoxy(10,20);
+    moveCursor(10,20);
     cout <<"Keyboard :\n";
     cout <<
          "\t\t     ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------'\n" <<
@@ -49,16 +49,16 @@ void drawBorder(int x1,int x2,int y1,int y2,string ch1,string ch2)
 {
     for(int i=1; i<x2-x1; i++)
     {
-        gotoxy(x1+i,y1);
+        moveCursor(x1+i,y1);
         cout<<ch1;
-        gotoxy(x1+i,y2);
+        moveCursor(x1+i,y2);
         cout<<ch1;
     }
     for(int i=1; i<y2-y1; i++)
     {
-        gotoxy(x1,y1+i);
+        moveCursor(x1,y1+i);
         cout<<ch2;
-        gotoxy(x2,y1+i);
+        moveCursor(x2,y1+i);
         cout<<ch2;
     }
 }
