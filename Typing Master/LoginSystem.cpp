@@ -3,6 +3,7 @@
 void signIn()
 {
     system("cls");
+    moveCursor(40,5);
     cout<<"--------------------------";
     moveCursor(40,6);
     cout<<"|     TYPING TUTOR       |";

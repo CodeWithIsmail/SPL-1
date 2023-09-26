@@ -3,12 +3,12 @@
 using namespace std;
 int main()
 {
-    // system("color FD");
-    system("color F1");
+     system("color FD");
+    //system("color F1");
     //system("color 8E");
     //system("color ED");
-  //  signIn();
-     startMenu();
+   signIn();
+    // startMenu();
     //game2();
 
 }

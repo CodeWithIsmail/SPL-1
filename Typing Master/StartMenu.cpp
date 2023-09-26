@@ -22,7 +22,8 @@ void startMenu()
         system("color FD");
         TypingTutorial();
     }
-    else if(option=='2');
+    else if(option=='2'); // not developed yet
+
     else if(option=='3')
     {
         system("color F1");

@@ -217,7 +217,7 @@ void wordDrill(char dataset[],int limit,int lessonNum,int partNum)
     int accuracy=(score*100)/gross;
 
     system("cls");
- //   cout<<duration.count()/60;
+//   cout<<duration.count()/60;
     cout<<"\n\n\n\t\t\t\t\t Gross Speed: "<<GrossSpeed<<" WPM";
     cout<<"\n\n\t\t\t\t\t Net Speed: "<<NetSpeed<<" WPM";
     cout<<"\n\n\t\t\t\t\t Total Key Press: "<<gross;

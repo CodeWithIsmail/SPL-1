@@ -47,6 +47,7 @@
 		<Unit filename="indexFingerKeys.cpp" />
 		<Unit filename="littleFingerKeys.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="manual.cpp" />
 		<Unit filename="middleFingerKeys.cpp" />
 		<Unit filename="ringFingerKeys.cpp" />
 		<Unit filename="set_Cursor.cpp" />

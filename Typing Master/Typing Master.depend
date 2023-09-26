@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1694244810 source:e:\spl-1\typing master\main.cpp
+1694306429 source:e:\spl-1\typing master\main.cpp
 	"AllHeaderFile.h"
 
 1694265926 source:e:\spl-1\typing master\set_cursor.cpp
 	"AllHeaderFile.h"
 
-1694265648 source:e:\spl-1\typing master\startmenu.cpp
+1694310683 source:e:\spl-1\typing master\startmenu.cpp
 	"AllHeaderFile.h"
 
 1692856940 e:\spl-1\typing master\set_cursor.h
@@ -18,7 +18,7 @@
 1692961316 e:\spl-1\typing master\dataset.h
 	<bits/stdc++.h>
 
-1694270768 source:e:\spl-1\typing master\dataset.cpp
+1694309929 source:e:\spl-1\typing master\dataset.cpp
 	"AllHeaderFile.h"
 
 1692124398 e:\spl-1\typing master\usermanual.h
@@ -84,7 +84,7 @@
 
 1692355477 e:\spl-1\typing master\loginsystem.h
 
-1694265848 source:e:\spl-1\typing master\loginsystem.cpp
+1694306469 source:e:\spl-1\typing master\loginsystem.cpp
 	"AllHeaderFile.h"
 
 1692367915 e:\spl-1\typing master\fasttypergame.h
@@ -104,20 +104,19 @@
 
 1692956078 e:\spl-1\typing master\getdate.h
 
-1694263320 source:e:\spl-1\typing master\drawing.cpp
+1694307384 source:e:\spl-1\typing master\drawing.cpp
 	"AllHeaderFile.h"
 
 1692959478 e:\spl-1\typing master\drawing.h
 	<bits/stdc++.h>
 
-1694246649 source:e:\spl-1\typing master\getdate.cpp
+1694309929 source:e:\spl-1\typing master\getdate.cpp
 	"AllHeaderFile.h"
 
 1692964013 e:\spl-1\typing master\performancehistory.h
 
-1694269917 e:\spl-1\typing master\allheaderfile.h
-	<stdio.h>
-	<bits/stdc++.h>
+1694308165 e:\spl-1\typing master\allheaderfile.h
+	<iostream>
 	<windows.h>
 	<conio.h>
 	<fstream>
@@ -131,6 +130,6 @@
 1694272455 source:e:\spl-1\typing master\statistics.cpp
 	"AllHeaderFile.h"
 
-1694255809 source:e:\spl-1\typing master\manual.cpp
+1694281608 source:e:\spl-1\typing master\manual.cpp
 	"AllHeaderFile.h"
 

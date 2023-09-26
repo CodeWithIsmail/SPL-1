@@ -1,8 +1,7 @@
 //#ifndef ALLHEADERFILE_H_INCLUDED
 //#define ALLHEADERFILE_H_INCLUDED
 #pragma once
-#include<stdio.h>
-#include<bits/stdc++.h>
+#include<iostream>
 #include<windows.h>
 #include<conio.h>
 #include<fstream>
@@ -41,7 +40,6 @@ void signUp();
 void history();
 void statistics();
 void performanceAnalysis();
-
 
 void moveCursor(int x,int y);
 
