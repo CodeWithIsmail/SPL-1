@@ -5,6 +5,11 @@ using namespace std;
 int main()
 {
     _setmode(_fileno(stdout),_O_U16TEXT);
-    wprintf(L"Hello world\n\x0995");
+ //   wprintf(L"Hello world\nআমার নাম ইসমাইল\n");
+  //  wprintf(L"বাংলা টাইপিং অনুশীলন");
+  wcout<<L"আমার নাম ইসমাইল\n";
+  wstring unistr;
+  getline(wcin,unistr);
+  wcout<<L"আপনি লিখেছেনঃ "<<unistr<<"\n";
 
 }

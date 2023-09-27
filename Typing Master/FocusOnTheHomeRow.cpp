@@ -27,30 +27,20 @@ void lessonNew1()
 
 void reviewHomeRow()
 {
-    cout<<"\n\n\n\t\t\t In this lesson, you will learn the home row.";
-    cout<<"\n\t\t\t A S D F and J K L";
-    cout<<"\n\n\n\t\t\t Press any key to continue.";
-    getch();
-    system("cls");
+    ifstream tutorial("lesson1.txt");
+    string temp;
+    while(getline(tutorial,temp))
+    {
+        if(temp=="new")
+        {
+            getch();
+            system("cls");
+            continue;
+        }
+        cout<<"\n\n\n\t\t\t";
+        cout<<temp;
 
-    cout<<"\n\n\n\t\t\t Starting from the little finger, place your left hand fingers on A, S, D and F.";
-    cout<<"\n\n\n\t\t\t Press any key to continue.";
-    getch();
-    system("cls");
-
-    cout<<"\n\n\n\t\t\t Starting from the index finger, place your right hand fingers on J, K, L";
-    cout<<"\n\n\n\t\t\t Press any key to continue.";
-    getch();
-    system("cls");
-
-    cout<<"\n\n\n\t\t\t Let your thumbs rest on the space bar.";
-    cout<<"\n\n\n\t\t\t Press any key to continue.";
-    getch();
-    system("cls");
-
-    cout<<"\n\n\n\t\t\t Now your hands are in the basic position.";
-    cout<<"\n\n\n\t\t\t Press any key to continue.";
-    getch();
+    }
     system("cls");
 
     lesson('a');
@@ -61,7 +51,7 @@ void reviewHomeRow()
     lesson('k');
     lesson('l');
 
-    cout<<"\n\n\n\t\t\t Now you can start the first drill.";
+    cout<<"\n\n\n\t\t\t Now you can start the key drill.";
     cout<<"\n\n\n\t\t\t Press any key to continue.";
     getch();
     system("cls");
