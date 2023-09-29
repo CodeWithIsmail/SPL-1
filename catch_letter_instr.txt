@@ -1,0 +1,17 @@
+                                                        --------------------------
+                                                        |      INSTRUCTIONS      |
+                                                        --------------------------
+
+
+                                           -> You will see some characters are falling.
+ 
+                                           -> You have to catch them before they touch the floor.
+
+                                           -> Press the key which you want to catch.
+
+                                           -> If a character touch the floor, you'll lose one life.
+ 
+                                           -> You'll get 5 life.
+
+ 
+                                           -> Press any key to go back to home menu.
