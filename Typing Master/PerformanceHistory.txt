@@ -39,3 +39,5 @@ Game: Fast Typer,,10-Sep-2023  07:46 AM,22
 3.3,,10-Sep-2023  07:47 AM,98,10,90,98
 Game: Fast Typer,,25-Sep-2023  08:04 PM,28
 Common Word,,25-Sep-2023  08:06 PM,169,7,95%
+Game: Fast Typer,,29-Sep-2023  06:43 PM,28
+1.3,,01-Oct-2023  08:07 PM,101,10,90,101

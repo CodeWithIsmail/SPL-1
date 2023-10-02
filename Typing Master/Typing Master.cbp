@@ -40,11 +40,13 @@
 		<Unit filename="Statistics.cpp" />
 		<Unit filename="TypingTutorial.cpp" />
 		<Unit filename="Word Catcher.cpp" />
+		<Unit filename="bangla_typing_tutorial.cpp" />
 		<Unit filename="commonWords.cpp" />
 		<Unit filename="dataset.cpp" />
 		<Unit filename="drawing.cpp" />
 		<Unit filename="getDate.cpp" />
 		<Unit filename="indexFingerKeys.cpp" />
+		<Unit filename="key_practice.cpp" />
 		<Unit filename="littleFingerKeys.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="manual.cpp" />

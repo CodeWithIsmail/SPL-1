@@ -11,6 +11,7 @@ void TypingTutorial()
     cout<<"\t\t\t\t\t\t 4. Learn the Ring Finger keys\n\n";
     cout<<"\t\t\t\t\t\t 5. Learn the Little Finger keys\n\n";
     cout<<"\t\t\t\t\t\t 6. Practice Common words\n\n\n";
+
     cout<<"\t\t\t\t\t\t Select your lesson (1-6) or Enter 0 to return Home or any key to exit:\n\n";
 
     char ch=getch();

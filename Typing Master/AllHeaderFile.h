@@ -6,9 +6,11 @@
 #include<conio.h>
 #include<fstream>
 #include<time.h>
+#include<thread>
 #include<chrono>
 #include<iomanip>
-
+#include<io.h>
+#include<fcntl.h>
 using namespace std;
 
 string keyMapping(char input);
@@ -47,5 +49,6 @@ void startMenu();
 
 void TypingTutorial();
 void UserManual();
-
+void time_prac(char dataset[],int limit,int sec);
+void bangla_tutorial();
 //#endif // ALLHEADERFILE_H_INCLUDED

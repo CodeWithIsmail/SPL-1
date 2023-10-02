@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1695650619 source:e:\spl-1\typing master\main.cpp
+1696170468 source:e:\spl-1\typing master\main.cpp
 	"AllHeaderFile.h"
 
 1694265926 source:e:\spl-1\typing master\set_cursor.cpp
 	"AllHeaderFile.h"
 
-1694310683 source:e:\spl-1\typing master\startmenu.cpp
+1696266749 source:e:\spl-1\typing master\startmenu.cpp
 	"AllHeaderFile.h"
 
 1692856940 e:\spl-1\typing master\set_cursor.h
@@ -39,7 +39,7 @@
 	<conio.h>
 	<windows.h>
 
-1694265976 source:e:\spl-1\typing master\typingtutorial.cpp
+1696170203 source:e:\spl-1\typing master\typingtutorial.cpp
 	"AllHeaderFile.h"
 
 1692197899 e:\spl-1\typing master\lesson1.h
@@ -52,7 +52,7 @@
 	"littleFingerKeys.h"
 	"commonWords.h"
 
-1695835839 source:e:\spl-1\typing master\focusonthehomerow.cpp
+1696264707 source:e:\spl-1\typing master\focusonthehomerow.cpp
 	"AllHeaderFile.h"
 
 1692236570 e:\spl-1\typing master\focusonthehomerow.h
@@ -89,7 +89,7 @@
 
 1692367915 e:\spl-1\typing master\fasttypergame.h
 
-1694272241 source:e:\spl-1\typing master\fasttypergame.cpp
+1696088246 source:e:\spl-1\typing master\fasttypergame.cpp
 	"AllHeaderFile.h"
 
 1693018699 source:e:\spl-1\typing master\performancehistory.cpp
@@ -104,7 +104,7 @@
 
 1692956078 e:\spl-1\typing master\getdate.h
 
-1694307384 source:e:\spl-1\typing master\drawing.cpp
+1696232959 source:e:\spl-1\typing master\drawing.cpp
 	"AllHeaderFile.h"
 
 1692959478 e:\spl-1\typing master\drawing.h
@@ -115,14 +115,17 @@
 
 1692964013 e:\spl-1\typing master\performancehistory.h
 
-1694308165 e:\spl-1\typing master\allheaderfile.h
+1696271177 e:\spl-1\typing master\allheaderfile.h
 	<iostream>
 	<windows.h>
 	<conio.h>
 	<fstream>
 	<time.h>
+	<thread>
 	<chrono>
 	<iomanip>
+	<io.h>
+	<fcntl.h>
 
 1694265648 source:e:\spl-1\typing master\word catcher.cpp
 	"AllHeaderFile.h"
@@ -131,5 +134,11 @@
 	"AllHeaderFile.h"
 
 1694281608 source:e:\spl-1\typing master\manual.cpp
+	"AllHeaderFile.h"
+
+1696271177 source:e:\spl-1\typing master\bangla_typing_tutorial.cpp
+	"AllHeaderFile.h"
+
+1696271196 source:e:\spl-1\typing master\key_practice.cpp
 	"AllHeaderFile.h"
 

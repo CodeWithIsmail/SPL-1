@@ -18,6 +18,8 @@ void drawKeyboard()
          "\t\t     '------'-----'-----'---------------------------'-----'------'\n";
 }
 
+
+
 void drawHistogram(char dataset[],int size,int frequency[])
 {
     cout<<"\n\t\tYour difficult keys in this lesson:\n\n";

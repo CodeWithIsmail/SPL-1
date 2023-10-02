@@ -14,7 +14,7 @@ HANDLE console=GetStdHandle(STD_OUTPUT_HANDLE);
 COORD cursor;
 char keys[10];
 int keyPos[10][2];
-int score=0,life=10;
+int score=0,life=10,level;
 
 void gotoxy(int x,int y)
 {
@@ -52,7 +52,7 @@ void drawBorder()
 void gen_alphabet(int index)
 {
     keys[index]=65+rand()%25;
-    keyPos[index][0]=2+rand()%(SCREEN_WIDTH-2);
+    keyPos[index][0]=2+rand()%(GAME_WIN_WIDTH-2);
     keyPos[index][1]=1;
 }
 void draw_alphabet(int index)
@@ -116,12 +116,12 @@ void game_play()
     for(i=0; i<10; i++)
         gen_alphabet(i);
 
-    gotoxy(GAME_WIN_WIDTH+5,2);
+    gotoxy(GAME_WIN_WIDTH+5,4);
     cout<<"TYPING TUTOR";
-    gotoxy(GAME_WIN_WIDTH+6,4);
-    cout<<"----------------";
-    gotoxy(GAME_WIN_WIDTH+6,6);
-    cout<<"----------------";
+    gotoxy(GAME_WIN_WIDTH+2,3);
+    cout<<"------------------";
+    gotoxy(GAME_WIN_WIDTH+2,5);
+    cout<<"------------------";
 
     gotoxy(18,5);
     cout<<"Press any key to start";
@@ -147,21 +147,23 @@ void game_play()
         for(i=0; i<10; i++)
             draw_alphabet(i);
 
-        Sleep(300);
+        Sleep(level);
 
         for(i=0; i<10; i++)
         {
             erase_alphabet(i);
-            keyPos[i][1]++;
-            if(keyPos[i][1]>SCREEN_HEIGHT)
+
+            if(keyPos[i][1]>=SCREEN_HEIGHT)
             {
                 life--;
             }
-            if(!life)
-            {
-                game_over();
-                return;
-            }
+            else  keyPos[i][1]++;
+
+        }
+        if(!life)
+        {
+            game_over();
+            return;
         }
     }
 }
@@ -185,7 +187,20 @@ int main()
         char option=getche();
 
         if(option=='1')
+        {
+            system("cls");
+            cout<<"\n\n\t\t\t\t\t Select Level";
+            cout<<"\n\n\t\t\t\t\t 1. Easy";
+            cout<<"\n\n\t\t\t\t\t 2. Medium";
+            cout<<"\n\n\t\t\t\t\t 3. Hard";
+            char l=getch();
+            if(l=='1') level=500;
+            else if(l=='2') level=400;
+            else level=300;
             game_play();
+
+        }
+
         else if(option=='2')
             instructions();
         else exit(0);
