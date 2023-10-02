@@ -14,3 +14,6 @@ In today's digital age, where computers play a vital role in various aspects of 
 3. Typing Game: The Typing Game feature adds a fun and challenging aspect to the learning experience. Users can test their typing speed and accuracy in an exciting game environment. The game displays falling characters that users must type correctly before they reach the bottom of the screen. As users progress, the game's speed and complexity increase, offering a dynamic and engaging way to put their typing skills to the test.
 
 ## Language Used: C++
+
+## Acknowledgements:
+- https://www.unicode.org/charts/PDF/U0980.pdf
