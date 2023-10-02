@@ -68,7 +68,7 @@ int main()
             wrong++;
             wcout<<L"\n\t\t\t\t ভুল হয়েছে! \n";
         }
-        Sleep(600);
+        Sleep(650);
         system("cls");
 
     }
