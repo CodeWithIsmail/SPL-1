@@ -16,8 +16,5 @@ In today's digital age, where computers play a vital role in various aspects of 
 ## Language Used: C++
 
 ## Acknowledgements:
-<<<<<<< HEAD
 - https://www.unicode.org/charts/PDF/U0980.pdf
-=======
-- https://www.unicode.org/charts/PDF/U0980.pdf
->>>>>>> 90dada8a539d66f0c565280a69544cb419a7fbfd
+- https://www.rapidtables.com/convert/number/ascii-to-hex.html
