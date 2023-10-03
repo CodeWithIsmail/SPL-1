@@ -1,5 +1,5 @@
 #include "AllHeaderFile.h"
-char dataset1[7]={'a','s','d','f','j','k','l'};
+char dataset1[7]= {'a','s','d','f','j','k','l'};
 void startMenu()
 {
 
@@ -16,7 +16,11 @@ void startMenu()
     cout<<"\t\t\t\t\t\t 3. Games \n\n";
     cout<<"\t\t\t\t\t\t 4. Statistics \n\n";
     cout<<"\t\t\t\t\t\t 5. User Manual \n\n";
-    cout<<"\t\t\t\t\t\t 6. Key Practice \n\n\n";
+    cout<<"\t\t\t\t\t\t 6. Key Practice \n\n";
+    _setmode(_fileno(stdout),_O_U16TEXT);
+    wcout<<L"\t\t\t\t\t\t ৭। বাংলা টাইপিং অনুশীলন \n\n";
+    _setmode(_fileno(stdout),_O_TEXT);
+      cout<<"\t\t\t\t\t\t 8. Exit \n\n\n";
     cout<<"\t\t\t\t\t\t Select option: ";
     char option=getch();
 
@@ -46,15 +50,25 @@ void startMenu()
     }
     else if(option=='6')
     {
-       time_prac(dataset1,7,60);
+        time_prac(dataset1,7,60);
         system("cls");
 
-      /*  cout<<"\n\t\t\t\t\t\tYour score: "<<score<<endl;
-        getch();
-        system("cls");
-         startMenu(); */
-      //  cout<<"Exiting the application...."<<endl;
+        /*  cout<<"\n\t\t\t\t\t\tYour score: "<<score<<endl;
+          getch();
+          system("cls");
+           startMenu(); */
+        //  cout<<"Exiting the application...."<<endl;
         //exit(0);
+    }
+    else if(option=='7')
+    {
+        //    system("color FD");
+          system("color FD");
+        bangla_typing();
+    }
+      else if(option=='8')
+    {
+       exit(0);
     }
     else
     {

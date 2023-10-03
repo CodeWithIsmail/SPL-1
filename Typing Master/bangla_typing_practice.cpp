@@ -1,10 +1,6 @@
-#include<bits/stdc++.h>
-#include<io.h>
-#include<fcntl.h>
-#include<windows.h>
-using namespace std;
+#include"AllHeaderFile.h"
 
-int correct=0,wrong=0;
+
 
 string avro_code(string unicode)
 {
@@ -28,8 +24,10 @@ string avro_code(string unicode)
     return "null";
 }
 
-int main()
+void bangla_typing()
 {
+       int correct=0,wrong=0;
+    system("cls");
     ifstream bangla_uni_file("bangla.txt");
     string code;
     while(getline(bangla_uni_file,code))
@@ -65,6 +63,10 @@ int main()
     cout<<"\n\t\t\t\t Correct Type: "<<correct<<"\n\t\t\t\t  Wrong Type: "<<wrong<<endl;
     cout<<"\n\t\t\t\t Accuracy: "<<accuracy<<endl;
 
+
+     cout<<"\n\n\n\t\tPress any key to back menu";
+    getch();
+    startMenu();
 
     // _setmode(_fileno(stdout),_O_U16TEXT);
     //   wcout<<L"\t\t \x0987\n";

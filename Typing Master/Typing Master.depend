@@ -5,7 +5,7 @@
 1694265926 source:e:\spl-1\typing master\set_cursor.cpp
 	"AllHeaderFile.h"
 
-1696266749 source:e:\spl-1\typing master\startmenu.cpp
+1696328887 source:e:\spl-1\typing master\startmenu.cpp
 	"AllHeaderFile.h"
 
 1692856940 e:\spl-1\typing master\set_cursor.h
@@ -115,7 +115,7 @@
 
 1692964013 e:\spl-1\typing master\performancehistory.h
 
-1696271177 e:\spl-1\typing master\allheaderfile.h
+1696328549 e:\spl-1\typing master\allheaderfile.h
 	<iostream>
 	<windows.h>
 	<conio.h>
@@ -140,5 +140,8 @@
 	"AllHeaderFile.h"
 
 1696271196 source:e:\spl-1\typing master\key_practice.cpp
+	"AllHeaderFile.h"
+
+1696328758 source:e:\spl-1\typing master\bangla_typing_practice.cpp
 	"AllHeaderFile.h"
 
