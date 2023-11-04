@@ -36,10 +36,10 @@ void bangla_typing()
 
         int unicode_int_value=stoi(code,0,16);
         wchar_t unicode_char=static_cast<wchar_t>(unicode_int_value);
-        wprintf(L"\n\t\t\t\t লেখুনঃ  %lc\n",unicode_char);
+        wprintf(L"\n\n\n\t\t\t\t\t\t\t লেখুনঃ  %lc\n",unicode_char);
 
         _setmode(_fileno(stdout),_O_TEXT);
-        cout<<"\n\t\t\t\t ";
+        cout<<"\n\t\t\t\t\t\t\t ";
         string input;
         cin>>input;
         _setmode(_fileno(stdout),_O_U16TEXT);
@@ -47,12 +47,12 @@ void bangla_typing()
         if(input==avro_code(code))
         {
             correct++;
-            wcout<<L"\n\t\t\t\t সঠিক হয়েছে! \n";
+            wcout<<L"\n\t\t\t\t\t\t\t সঠিক হয়েছে! \n";
         }
         else
         {
             wrong++;
-            wcout<<L"\n\t\t\t\t ভুল হয়েছে! \n";
+            wcout<<L"\n\t\t\t\t\t\t\t ভুল হয়েছে! \n";
         }
         Sleep(500);
         system("cls");
@@ -60,8 +60,9 @@ void bangla_typing()
     _setmode(_fileno(stdout),_O_TEXT);
     bangla_uni_file.close();
     double accuracy=(correct*100)/(correct+wrong);
-    cout<<"\n\t\t\t\t Correct Type: "<<correct<<"\n\t\t\t\t  Wrong Type: "<<wrong<<endl;
-    cout<<"\n\t\t\t\t Accuracy: "<<accuracy<<endl;
+    cout<<"\n\n\t\t\t\t Correct Type: "<<correct;
+    cout<<"\n\n\t\t\t\t  Wrong Type: "<<wrong;
+    cout<<"\n\n\t\t\t\t Accuracy: "<<accuracy<<" %";
 
 
      cout<<"\n\n\n\t\tPress any key to back menu";

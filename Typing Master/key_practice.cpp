@@ -14,8 +14,6 @@ void timer(int sec)
 
 void typing_task(char dataset[],int limit)
 {
-
-
     while (true)
     {
         int index=rand()%limit;
@@ -35,10 +33,10 @@ void typing_task(char dataset[],int limit)
             {
                 wrong++;
                 //    wrongPressCount[index]++;
-                moveCursor(40,9);
-                cout<<"Wrong Input. Try again.";
-                moveCursor(40,11);
-                cout<<"Use your "<<keyMapping(dataset[index])<<".";
+                //  moveCursor(40,9);
+                //   cout<<"Wrong Input. Try again.";
+                //   moveCursor(40,11);
+                //   cout<<"Use your "<<keyMapping(dataset[index])<<".";
             }
         }
         moveCursor(45,5);
@@ -48,8 +46,6 @@ void typing_task(char dataset[],int limit)
         moveCursor(40,11);
         cout<<"                                   ";
     }
-
-
 }
 
 void time_prac(char dataset[],int limit,int sec)
@@ -67,23 +63,28 @@ void time_prac(char dataset[],int limit,int sec)
     drawKeyboard();
     srand(time(NULL));
 
-
     thread timerThread(timer,sec);
     thread typingThread(typing_task,dataset,limit);;
 
     timerThread.join();
     typingThread.detach();
 
-
+    system("cls");
+    cout<<"\n\n\t\t\t\t\t Times up!!!";
+    cout<<"\n\n\t\t\t\t\t Press any key to see result";
+    getch();
+    system("cls");
+    cout<<"\n\n\t\t\t\t\t  Practice time: "<<sec<<" seconds";
+    cout<<"\n\n\t\t\t\t\t  Score: "<<score;
+    double accuracy=((score-wrong)*100)/score;
+    cout<<"\n\n\t\t\t\t\t  Total Key press:  "<<score+wrong;
+    cout<<"\n\n\t\t\t\t\t Wrong Key press:  "<<wrong;
+    cout<<"\n\n\t\t\t\t\t Accuracy:  "<<accuracy<<" %";
+    cout<<"\n\n\n\n\t\t\t\t Press any key to go back to Menu";
+    getch();
+    system("cls");
+    startMenu();
 }
-//  check=='1'? startMenu(): exit(0);
-//  return score;
-//  system("cls");
-//   cout<<"Your score: "<<score;
-//getch();
-//  system("cls");
-
-//    return 0;
 
 
 

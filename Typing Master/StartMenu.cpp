@@ -16,11 +16,11 @@ void startMenu()
     cout<<"\t\t\t\t\t\t 3. Games \n\n";
     cout<<"\t\t\t\t\t\t 4. Statistics \n\n";
     cout<<"\t\t\t\t\t\t 5. User Manual \n\n";
-    cout<<"\t\t\t\t\t\t 6. Key Practice \n\n";
+    cout<<"\t\t\t\t\t\t 6. Practice \n\n";
     _setmode(_fileno(stdout),_O_U16TEXT);
     wcout<<L"\t\t\t\t\t\t ৭। বাংলা টাইপিং অনুশীলন \n\n";
     _setmode(_fileno(stdout),_O_TEXT);
-      cout<<"\t\t\t\t\t\t 8. Exit \n\n\n";
+    cout<<"\t\t\t\t\t\t 8. Exit \n\n\n";
     cout<<"\t\t\t\t\t\t Select option: ";
     char option=getch();
 
@@ -30,8 +30,10 @@ void startMenu()
         TypingTutorial();
     }
     else if(option=='2')
+    {
         bangla_tutorial();
-    // not developed yet
+    }
+    // not fully developed yet
 
     else if(option=='3')
     {
@@ -50,7 +52,12 @@ void startMenu()
     }
     else if(option=='6')
     {
-        time_prac(dataset1,7,60);
+        system("cls");
+        int sec;
+        cout<<"\n\n\t\t\t\t Enter practice time in seconds: ";
+        cin>>sec;
+
+        time_prac(dataset1,7,sec);
         system("cls");
 
         /*  cout<<"\n\t\t\t\t\t\tYour score: "<<score<<endl;
@@ -63,12 +70,12 @@ void startMenu()
     else if(option=='7')
     {
         //    system("color FD");
-          system("color FD");
+        system("color FD");
         bangla_typing();
     }
-      else if(option=='8')
+    else if(option=='8')
     {
-       exit(0);
+        exit(0);
     }
     else
     {

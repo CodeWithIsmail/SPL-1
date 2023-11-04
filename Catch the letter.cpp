@@ -143,6 +143,11 @@ void game_play()
                     update_score();
                 }
             }
+            if(life<=0)
+        {
+            game_over();
+            return;
+        }
         }
         for(i=0; i<10; i++)
             draw_alphabet(i);
@@ -160,7 +165,7 @@ void game_play()
             else  keyPos[i][1]++;
 
         }
-        if(!life)
+        if(life<=0)
         {
             game_over();
             return;
@@ -171,6 +176,7 @@ void game_play()
 int main()
 {
     // drawBorder();
+    system("color ED");
     //  getch();
     // instructions();
     set_cursor(0,0);
