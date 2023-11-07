@@ -49,7 +49,9 @@ void startMenu();
 
 void TypingTutorial();
 void UserManual();
-void time_prac(char dataset[],int limit,int sec);
+void time_prac_key(int sec);
+void time_prac_word(int sec);
+
 void bangla_tutorial();
 void bangla_typing();
 //#endif // ALLHEADERFILE_H_INCLUDED

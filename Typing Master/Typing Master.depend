@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1696170468 source:e:\spl-1\typing master\main.cpp
+1699324365 source:e:\spl-1\typing master\main.cpp
 	"AllHeaderFile.h"
 
 1694265926 source:e:\spl-1\typing master\set_cursor.cpp
 	"AllHeaderFile.h"
 
-1696390983 source:e:\spl-1\typing master\startmenu.cpp
+1699325872 source:e:\spl-1\typing master\startmenu.cpp
 	"AllHeaderFile.h"
 
 1692856940 e:\spl-1\typing master\set_cursor.h
@@ -115,7 +115,7 @@
 
 1692964013 e:\spl-1\typing master\performancehistory.h
 
-1696328549 e:\spl-1\typing master\allheaderfile.h
+1699326228 e:\spl-1\typing master\allheaderfile.h
 	<iostream>
 	<windows.h>
 	<conio.h>
@@ -139,7 +139,7 @@
 1696390038 source:e:\spl-1\typing master\bangla_typing_tutorial.cpp
 	"AllHeaderFile.h"
 
-1696390038 source:e:\spl-1\typing master\key_practice.cpp
+1699325956 source:e:\spl-1\typing master\key_practice.cpp
 	"AllHeaderFile.h"
 
 1696390201 source:e:\spl-1\typing master\bangla_typing_practice.cpp

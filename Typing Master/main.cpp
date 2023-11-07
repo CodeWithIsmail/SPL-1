@@ -10,6 +10,8 @@ int main()
     system("color ED");
    //signIn();
     startMenu();
+  //  time_prac(20);
+ //  typing_task_word();
     //game2();
 
 }

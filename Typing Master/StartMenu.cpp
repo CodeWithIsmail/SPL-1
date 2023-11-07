@@ -10,16 +10,20 @@ void startMenu()
     cout<<"\t\t\t\t\t\t |     TYPING TUTOR       |\n";
     cout<<"\t\t\t\t\t\t --------------------------\n\n\n";
     cout<<"\t\t\t\t\t\t 1. Typing Tutorial \n\n";
+
     _setmode(_fileno(stdout),_O_U16TEXT);
     wcout<<L"\t\t\t\t\t\t ২। বাংলা টাইপিং \n\n";
     _setmode(_fileno(stdout),_O_TEXT);
+
     cout<<"\t\t\t\t\t\t 3. Games \n\n";
     cout<<"\t\t\t\t\t\t 4. Statistics \n\n";
     cout<<"\t\t\t\t\t\t 5. User Manual \n\n";
     cout<<"\t\t\t\t\t\t 6. Practice \n\n";
+
     _setmode(_fileno(stdout),_O_U16TEXT);
     wcout<<L"\t\t\t\t\t\t ৭। বাংলা টাইপিং অনুশীলন \n\n";
     _setmode(_fileno(stdout),_O_TEXT);
+
     cout<<"\t\t\t\t\t\t 8. Exit \n\n\n";
     cout<<"\t\t\t\t\t\t Select option: ";
     char option=getch();
@@ -54,10 +58,21 @@ void startMenu()
     {
         system("cls");
         int sec;
+        cout<<"\n\n\t\t\t\t Select practice type: ";
+        cout<<"\n\n\t\t\t\t 1. Key Drill ";
+        cout<<"\n\n\t\t\t\t 2. Word Drill ";
+        cout<<"\n\n\t\t\t\t 3. Text Drill ";
+        int type;
+        cout<<"\n\n\t\t\t\t Select practice type: ";
+        cin>>type;
+
         cout<<"\n\n\t\t\t\t Enter practice time in seconds: ";
         cin>>sec;
+        system("cls");
 
-        time_prac(dataset1,7,sec);
+        if(type==1)
+            time_prac_key(sec);
+        else  time_prac_word( sec);
         system("cls");
 
         /*  cout<<"\n\t\t\t\t\t\tYour score: "<<score<<endl;
@@ -66,6 +81,8 @@ void startMenu()
            startMenu(); */
         //  cout<<"Exiting the application...."<<endl;
         //exit(0);
+        system("cls");
+        startMenu();
     }
     else if(option=='7')
     {
