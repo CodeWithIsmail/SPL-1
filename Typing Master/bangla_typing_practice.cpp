@@ -2,9 +2,9 @@
 
 
 
-string avro_code(string unicode)
+string avro_code(string unicode,string code_name)
 {
-    ifstream bangla("Avro_Ban_Uni.txt");
+    ifstream bangla(code_name);
     string line;
     while(getline(bangla,line))
     {
@@ -24,11 +24,11 @@ string avro_code(string unicode)
     return "null";
 }
 
-void bangla_typing()
+void bangla_practice(string filename,string code_name)
 {
-       int correct=0,wrong=0;
-    system("cls");
-    ifstream bangla_uni_file("bangla.txt");
+    int correct=0,wrong=0;
+
+    ifstream bangla_uni_file(filename);
     string code;
     while(getline(bangla_uni_file,code))
     {
@@ -44,7 +44,7 @@ void bangla_typing()
         cin>>input;
         _setmode(_fileno(stdout),_O_U16TEXT);
 
-        if(input==avro_code(code))
+        if(input==avro_code(code,code_name))
         {
             correct++;
             wcout<<L"\n\t\t\t\t\t\t\t সঠিক হয়েছে! \n";
@@ -65,14 +65,35 @@ void bangla_typing()
     cout<<"\n\n\t\t\t\t Accuracy: "<<accuracy<<" %";
 
 
-     cout<<"\n\n\n\t\tPress any key to back menu";
+    cout<<"\n\n\n\t\tPress any key to back menu";
     getch();
     startMenu();
-
-    // _setmode(_fileno(stdout),_O_U16TEXT);
-    //   wcout<<L"\t\t \x0987\n";
-    //     wcout<<L"\t\t\t\t\t\t ব্যাঞ্জনবর্ণ লেখার নিয়মঃ \n\n";
-    //    wcout<<L"\t\t\t\t\t\t ক - k \n\n";
-    // _setmode(_fileno(stdout),_O_TEXT);
 }
+
+void bangla_typing()
+{
+       system("cls");
+    string filename="",code_name="";
+    _setmode(_fileno(stdout),_O_U16TEXT);
+
+    wcout<<L"\t\t\t\t\t\t 1. স্বরবর্ণ অনুশীলনঃ \n\n";
+    wcout<<L"\t\t\t\t\t\t 2. ব্যাঞ্জনবর্ণ অনুশীলনঃ \n\n";
+    wcout<<L"\t\t\t\t\t\t  অপশন সিলেক্ট করুনঃ\n\n";
+
+    char type=getch();
+    if(type=='1')
+    {
+        filename="bangla_1.txt";
+        code_name="Avro_Ban_Uni_1.txt";
+    }
+    else
+    {
+        filename="bangla.txt";
+        code_name="Avro_Ban_Uni.txt";
+    }
+    system("cls");
+    bangla_practice(filename,code_name);
+
+}
+
 

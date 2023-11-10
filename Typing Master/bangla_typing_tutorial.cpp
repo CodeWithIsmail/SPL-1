@@ -1,13 +1,42 @@
 #include"AllHeaderFile.h";
+void read_from_bangla_file(string filename);
 void bangla_tutorial()
 {
+    string filename="";
     system("cls");
+
     _setmode(_fileno(stdout),_O_U16TEXT);
 
-    wcout<<L"\t\t\t\t\t\t ব্যাঞ্জনবর্ণ লেখার নিয়মঃ \n\n";
-    wcout<<L"\t\t\t\t\t\t ব্যঞ্জনবর্ন  লিখতে নিচের ক্রম অনুসরণ করুন:\n\n";
+    wcout<<L"\t\t\t\t\t\t 1. স্বরবর্ণ লেখার নিয়মঃ \n\n";
+    wcout<<L"\t\t\t\t\t\t 2. ব্যাঞ্জনবর্ণ লেখার নিয়মঃ \n\n";
+    wcout<<L"\t\t\t\t\t\t  অপশন সিলেক্ট করুনঃ\n\n";
 
-    ifstream bangla("Avro_Ban_Uni.txt");
+    char type=getch();
+    if(type=='1')
+    {
+        system("cls");
+        filename="Avro_Ban_Uni_1.txt";
+        wcout<<L"\t\t\t\t\t\t স্বরবর্ণ লেখার নিয়মঃ \n\n";
+        wcout<<L"\t\t\t\t\t\t স্বরবরর্ণ  লিখতে নিচের ক্রম অনুসরণ করুন:\n\n";
+    }
+    else
+    {
+        system("cls");
+        filename="Avro_Ban_Uni.txt";
+        wcout<<L"\t\t\t\t\t\t ব্যাঞ্জনবর্ণ লেখার নিয়মঃ \n\n";
+        wcout<<L"\t\t\t\t\t\t ব্যঞ্জনবর্ন  লিখতে নিচের ক্রম অনুসরণ করুন:\n\n";
+    }
+    read_from_bangla_file(filename);
+
+    cout<<"\n\n\t\t\t\t\t\t Enter any key to go back menu:";
+    getch();
+    system("cls");
+    startMenu();
+}
+
+void read_from_bangla_file(string filename)
+{
+    ifstream bangla(filename);
     string line;
     while(getline(bangla,line))
     {
@@ -29,11 +58,7 @@ void bangla_tutorial()
 
         _setmode(_fileno(stdout),_O_TEXT);
 
-        cout<<avro_code<<"\n\n";
+        cout<<avro_code<<"\n";
     }
     bangla.close();
-    cout<<"\n\n\t\t\t\t\t\t Enter any key to go back menu:";
-    getch();
-    system("cls");
-    startMenu();
 }
