@@ -70,29 +70,104 @@ void bangla_practice(string filename,string code_name)
     startMenu();
 }
 
+void bangla_word_type(string filename)
+{
+    int correct=0,wrong=0;
+
+    ifstream bangla_uni_file(filename);
+    string code;
+    while(getline(bangla_uni_file,code))
+    {
+        _setmode(_fileno(stdout),_O_U16TEXT);
+        wprintf(L"\n\n\n\t\t\t\t\t\t\t লেখুনঃ  ");
+
+        for(int i=0; i<code.size(); i+=4)
+        {
+            string token="";
+            token+=code[i];
+            token+=code[i+1];
+            token+=code[i+2];
+            token+=code[i+3];
+        //    cout<<token<<endl;
+            int unicode_int_value=stoi(token,0,16);
+
+            wchar_t unicode_char=static_cast<wchar_t>(unicode_int_value);
+            _setmode(_fileno(stdout),_O_U16TEXT);
+            wprintf(L"%lc",unicode_char);
+        }
+        _setmode(_fileno(stdout),_O_TEXT);
+
+        string unicode;
+        getline(bangla_uni_file,unicode);
+
+      cout<<"\n\n\n\t\t\t\t\t\t\t\t ";
+        string input;
+        cin>>input;
+        _setmode(_fileno(stdout),_O_U16TEXT);
+
+        if(input==unicode)
+        {
+            correct++;
+            wcout<<L"\n\t\t\t\t\t\t\t সঠিক হয়েছে! \n";
+        }
+        else
+        {
+            wrong++;
+            wcout<<L"\n\t\t\t\t\t\t\t ভুল হয়েছে! \n";
+        }
+        Sleep(500);
+        system("cls");
+    }
+    _setmode(_fileno(stdout),_O_TEXT);
+    bangla_uni_file.close();
+
+    double accuracy=(correct*100)/(correct+wrong);
+    cout<<"\n\n\t\t\t\t Correct Type: "<<correct;
+    cout<<"\n\n\t\t\t\t  Wrong Type: "<<wrong;
+    cout<<"\n\n\t\t\t\t Accuracy: "<<accuracy<<" %";
+
+    cout<<"\n\n\n\t\tPress any key to back menu";
+    getch();
+    startMenu();
+
+}
+
 void bangla_typing()
 {
-       system("cls");
+    system("cls");
     string filename="",code_name="";
     _setmode(_fileno(stdout),_O_U16TEXT);
 
     wcout<<L"\t\t\t\t\t\t 1. স্বরবর্ণ অনুশীলনঃ \n\n";
     wcout<<L"\t\t\t\t\t\t 2. ব্যাঞ্জনবর্ণ অনুশীলনঃ \n\n";
+    wcout<<L"\t\t\t\t\t\t 3. শব্দ অনুশীলনঃ \n\n";
     wcout<<L"\t\t\t\t\t\t  অপশন সিলেক্ট করুনঃ\n\n";
+
+    _setmode(_fileno(stdout),_O_TEXT);
 
     char type=getch();
     if(type=='1')
     {
         filename="bangla_1.txt";
         code_name="Avro_Ban_Uni_1.txt";
+        system("cls");
+        bangla_practice(filename,code_name);
     }
-    else
+    else if(type=='2')
     {
         filename="bangla.txt";
         code_name="Avro_Ban_Uni.txt";
+        system("cls");
+        bangla_practice(filename,code_name);
     }
-    system("cls");
-    bangla_practice(filename,code_name);
+    else if(type=='3')
+    {
+        filename="bangla_word_1.txt";
+        system("cls");
+        bangla_word_type(filename);
+
+    }
+
 
 }
 

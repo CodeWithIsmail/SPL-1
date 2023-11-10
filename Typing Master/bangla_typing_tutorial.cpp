@@ -1,5 +1,6 @@
 #include"AllHeaderFile.h";
 void read_from_bangla_file(string filename);
+void new_read_method(string filename);
 void bangla_tutorial()
 {
     string filename="";
@@ -26,7 +27,7 @@ void bangla_tutorial()
         wcout<<L"\t\t\t\t\t\t ব্যাঞ্জনবর্ণ লেখার নিয়মঃ \n\n";
         wcout<<L"\t\t\t\t\t\t ব্যঞ্জনবর্ন  লিখতে নিচের ক্রম অনুসরণ করুন:\n\n";
     }
-    read_from_bangla_file(filename);
+    new_read_method(filename);
 
     cout<<"\n\n\t\t\t\t\t\t Enter any key to go back menu:";
     getch();
@@ -61,4 +62,29 @@ void read_from_bangla_file(string filename)
         cout<<avro_code<<"\n";
     }
     bangla.close();
+}
+
+void new_read_method(string filename)
+{
+    ifstream bangla_uni_file(filename);
+    string code;
+    _setmode(_fileno(stdout),_O_U16TEXT);
+    while(getline(bangla_uni_file,code))
+    {
+        for(int i=0; i<code.size(); i+=4)
+        {
+            string token="";
+            token+=code[i];
+            token+=code[i+1];
+            token+=code[i+2];
+            token+=code[i+3];
+            //    cout<<token<<endl;
+            int unicode_int_value=stoi(token,0,16);
+
+            wchar_t unicode_char=static_cast<wchar_t>(unicode_int_value);
+            _setmode(_fileno(stdout),_O_U16TEXT);
+            wprintf(L"%lc",unicode_char);
+        }
+        _setmode(_fileno(stdout),_O_TEXT);
+    }
 }

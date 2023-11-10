@@ -19,3 +19,4 @@ In today's digital age, where computers play a vital role in various aspects of 
 - https://www.unicode.org/charts/PDF/U0980.pdf (UTF-16 unicode chart for Bangla text)
 - https://www.rapidtables.com/convert/number/ascii-to-hex.html
 - https://codeverge.com/utf16-encode (text to UTF-16 code converter)
+- https://www.coderstool.com/utf16-encoding-decoding
