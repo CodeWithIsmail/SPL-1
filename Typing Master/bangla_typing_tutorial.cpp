@@ -16,7 +16,8 @@ void bangla_tutorial()
     if(type=='1')
     {
         system("cls");
-        filename="Avro_Ban_Uni_1.txt";
+      //  filename="Avro_Ban_Uni_1.txt";
+       filename="bangla_rule_3.txt";
         wcout<<L"\t\t\t\t\t\t স্বরবর্ণ লেখার নিয়মঃ \n\n";
         wcout<<L"\t\t\t\t\t\t স্বরবরর্ণ  লিখতে নিচের ক্রম অনুসরণ করুন:\n\n";
     }
