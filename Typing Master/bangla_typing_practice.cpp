@@ -149,14 +149,14 @@ void bangla_typing()
     if(type=='1')
     {
         filename="bangla_1.txt";
-        code_name="Avro_Ban_Uni_1.txt";
+        code_name="bangla_practice_1.txt";
         system("cls");
         bangla_practice(filename,code_name);
     }
     else if(type=='2')
     {
         filename="bangla.txt";
-        code_name="Avro_Ban_Uni.txt";
+        code_name="bangla_practice_2.txt";
         system("cls");
         bangla_practice(filename,code_name);
     }

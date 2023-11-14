@@ -10,16 +10,24 @@ void bangla_tutorial()
 
     wcout<<L"\t\t\t\t\t\t 1. স্বরবর্ণ লেখার নিয়মঃ \n\n";
     wcout<<L"\t\t\t\t\t\t 2. ব্যাঞ্জনবর্ণ লেখার নিয়মঃ \n\n";
+    wcout<<L"\t\t\t\t\t\t 3. ব্যঞ্জনবর্ণের সংক্ষিপ্ত রুপ (ফলা) ও অন্যান্য লেখার নিয়মঃ \n\n";
+    wcout<<L"\t\t\t\t\t\t 4. যুক্তাক্ষর লেখার নিয়মঃ \n\n";
     wcout<<L"\t\t\t\t\t\t  অপশন সিলেক্ট করুনঃ\n\n";
 
     char type=getch();
+    system("cls");
+
     if(type=='1')
     {
-        system("cls");
-      //  filename="Avro_Ban_Uni_1.txt";
-       filename="bangla_rule_3.txt";
-        wcout<<L"\t\t\t\t\t\t স্বরবর্ণ লেখার নিয়মঃ \n\n";
-        wcout<<L"\t\t\t\t\t\t স্বরবরর্ণ  লিখতে নিচের ক্রম অনুসরণ করুন:\n\n";
+        filename="bangla_tutorial_1.txt";
+    }
+    else if(type=='2')
+    {
+        filename="bangla_tutorial_2.txt";
+    }
+else if(type=='3')
+    {
+        filename="bangla_tutorial_3.txt";
     }
     else
     {
