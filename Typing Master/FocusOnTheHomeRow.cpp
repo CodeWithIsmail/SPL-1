@@ -1,6 +1,6 @@
 #include "AllHeaderFile.h"
 
-//char dataset1[7]= {'a','s','d','f','j','k','l'};
+char dataset1[7]= {'a','s','d','f','j','k','l'};
 void reviewHomeRow();
 void lessonNew1()
 {
@@ -17,10 +17,10 @@ void lessonNew1()
         startMenu();
     else if(lesson=='1')
         reviewHomeRow();
-    else if(lesson=='2');
-//        keyDrill(dataset1,7,1,2);
-    else if(lesson=='3');
-//        wordDrill(dataset1,7,1,3);
+    else if(lesson=='2')
+        keyDrill(dataset1,7,1,2);
+    else if(lesson=='3')
+        wordDrill(dataset1,7,1,3);
     else
         exit(0);
 }

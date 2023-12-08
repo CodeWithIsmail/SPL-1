@@ -1,75 +1,30 @@
+#include <iostream>
+#include <io.h>
+#include <fcntl.h>
+#include <stdio.h>
 #include<bits/stdc++.h>
-#include<io.h>
-#include<fcntl.h>
-#include<windows.h>
 using namespace std;
-
-int correct=0,wrong=0;
-
-string avro_code(string unicode)
-{
-    ifstream bangla("Avro_Ban_Uni.txt");
-    string line;
-    while(getline(bangla,line))
-    {
-        bool check=0;
-        istringstream comma_separated(line);
-        string temp;
-        while(getline(comma_separated,temp,','))
-        {
-            if(check)
-            {
-                bangla.close();
-                return temp;
-            }
-            if(temp==unicode) check=1;
-        }
-    }
-    return "null";
-}
-
 int main()
 {
-    ifstream bangla_uni_file("bangla.txt");
-    string code;
-    while(getline(bangla_uni_file,code))
+    _setmode(_fileno(stdout), _O_U16TEXT); // Set console to output UTF-16 text
+    _setmode(_fileno(stdin), _O_U16TEXT);
+    wstring input;
+    getline(wcin,input);
+    wcout <<  input << endl;
+
+    wstring output = L"আমি";
+
+    wstringstream ss;
+    for (wchar_t character : input)
     {
-        _setmode(_fileno(stdout),_O_U16TEXT);
-
-        int unicode_int_value=stoi(code,0,16);
-        wchar_t unicode_char=static_cast<wchar_t>(unicode_int_value);
-        wprintf(L"\n\t\t\t\t লেখুনঃ  %lc\n",unicode_char);
-
-        _setmode(_fileno(stdout),_O_TEXT);
-        cout<<"\n\t\t\t\t ";
-        string input;
-        cin>>input;
-        _setmode(_fileno(stdout),_O_U16TEXT);
-
-        if(input==avro_code(code))
-        {
-            correct++;
-            wcout<<L"\n\t\t\t\t সঠিক হয়েছে! \n";
-        }
-        else
-        {
-            wrong++;
-            wcout<<L"\n\t\t\t\t ভুল হয়েছে! \n";
-        }
-        Sleep(500);
-        system("cls");
+        ss << hex << setw(4) << setfill(L'0') << static_cast<unsigned int>(character) << L" ";
     }
-    _setmode(_fileno(stdout),_O_TEXT);
-    bangla_uni_file.close();
-    double accuracy=(correct*100)/(correct+wrong);
-    cout<<"\n\t\t\t\t Correct Type: "<<correct<<"\n\t\t\t\t  Wrong Type: "<<wrong<<endl;
-    cout<<"\n\t\t\t\t Accuracy: "<<accuracy<<endl;
+    wstring hexRepresentation = ss.str();
 
 
-    // _setmode(_fileno(stdout),_O_U16TEXT);
-    //   wcout<<L"\t\t \x0987\n";
-    //     wcout<<L"\t\t\t\t\t\t ব্যাঞ্জনবর্ণ লেখার নিয়মঃ \n\n";
-    //    wcout<<L"\t\t\t\t\t\t ক - k \n\n";
-    // _setmode(_fileno(stdout),_O_TEXT);
+    if (input == output)
+        wcout << L"The strings are equal." << endl;
+    else
+        wcout << L"The strings are not equal." << endl;
+    wcout <<hexRepresentation<< endl;
 }
-

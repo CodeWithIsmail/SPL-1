@@ -1,5 +1,5 @@
 #include "AllHeaderFile.h"
-char dataset1[7]= {'a','s','d','f','j','k','l'};
+//char dataset1[7]= {'a','s','d','f','j','k','l'};
 void startMenu()
 {
 
