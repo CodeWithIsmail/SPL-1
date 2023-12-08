@@ -2,7 +2,7 @@
 
 void drawKeyboard()
 {
-    moveCursor(10,20);
+    moveCursor(10,24);
     cout <<"Keyboard :\n";
     cout <<
          "\t\t     ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------'\n" <<

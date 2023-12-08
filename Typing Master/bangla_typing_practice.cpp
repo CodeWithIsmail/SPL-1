@@ -32,6 +32,7 @@ void bangla_practice(string filename,string code_name)
     string code;
     while(getline(bangla_uni_file,code))
     {
+
         _setmode(_fileno(stdout),_O_U16TEXT);
 
         int unicode_int_value=stoi(code,0,16);
@@ -78,8 +79,10 @@ void bangla_word_type(string filename)
     string code;
     while(getline(bangla_uni_file,code))
     {
+           drawKeyboard();
         _setmode(_fileno(stdout),_O_U16TEXT);
-        wprintf(L"\n\n\n\t\t\t\t\t\t\t লেখুনঃ  ");
+        moveCursor(50,5);
+        wprintf(L"লেখুনঃ  ");
 
         for(int i=0; i<code.size(); i+=4)
         {
@@ -97,26 +100,31 @@ void bangla_word_type(string filename)
         }
         _setmode(_fileno(stdout),_O_TEXT);
 
+
+
         string unicode;
         getline(bangla_uni_file,unicode);
 
       cout<<"\n\n\n\t\t\t\t\t\t\t\t ";
         string input;
+        moveCursor(50,7);
         cin>>input;
         _setmode(_fileno(stdout),_O_U16TEXT);
 
+         moveCursor(50,9);
         if(input==unicode)
         {
             correct++;
-            wcout<<L"\n\t\t\t\t\t\t\t সঠিক হয়েছে! \n";
+            wcout<<L"সঠিক হয়েছে! \n";
         }
         else
         {
             wrong++;
-            wcout<<L"\n\t\t\t\t\t\t\t ভুল হয়েছে! \n";
+            wcout<<L"ভুল হয়েছে! \n";
         }
         Sleep(500);
         system("cls");
+      _setmode(_fileno(stdout),_O_TEXT);
     }
     _setmode(_fileno(stdout),_O_TEXT);
     bangla_uni_file.close();

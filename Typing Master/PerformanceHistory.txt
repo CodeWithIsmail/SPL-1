@@ -47,3 +47,11 @@ Common Word,,06-Nov-2023  05:05 PM,179,17,90%
 Common Word,,06-Nov-2023  05:10 PM,172,10,94%
 Common Word,,06-Nov-2023  05:12 PM,169,7,95%
 Game: Fast Typer,,07-Nov-2023  08:05 AM,24
+Common Word,,15-Nov-2023  02:04 PM,167,5,97%
+Common Word,,17-Nov-2023  07:16 PM,179,17,90%
+Common Word,,17-Nov-2023  07:17 PM,171,9,94%
+Common Word,,30-Nov-2023  06:16 PM,175,13,92%
+2.3,,30-Nov-2023  06:41 PM,103,9,91,103
+Common Word,,07-Dec-2023  11:59 PM,173,11,93%
+Common Word,,08-Dec-2023  12:03 PM,181,19,89%
+Common Word,,08-Dec-2023  12:08 PM,176,14,92%
