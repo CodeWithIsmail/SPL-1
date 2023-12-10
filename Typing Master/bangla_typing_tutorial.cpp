@@ -1,4 +1,5 @@
 #include"AllHeaderFile.h";
+using namespace std;
 void read_from_bangla_file(string filename);
 void new_read_method(string filename);
 void bangla_tutorial()

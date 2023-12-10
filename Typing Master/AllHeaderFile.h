@@ -12,7 +12,7 @@
 #include<io.h>
 #include<fcntl.h>
 #include <codecvt>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 string keyMapping(char input);
@@ -38,9 +38,6 @@ void lessonNew4();
 void lessonNew5();
 void mostCommonWord();
 
-void signIn();
-void signUp();
-
 void history();
 void statistics();
 void performanceAnalysis();
@@ -56,4 +53,6 @@ void time_prac_word(int sec);
 
 void bangla_tutorial();
 void bangla_typing();
+
+void loginsystem();
 //#endif // ALLHEADERFILE_H_INCLUDED

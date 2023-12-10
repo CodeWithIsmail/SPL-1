@@ -1,66 +1,146 @@
-#include "AllHeaderFile.h"
+#include"AllHeaderFile.h"
 
-void signIn()
+vector<string> comma_seperate( string s, char delimiter)
+{
+    vector<string> tokens;
+    stringstream ss(s);
+    string token;
+    while (getline(ss, token, delimiter))
+    {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
+
+bool UserExist( string username)
+{
+    ifstream file("users.txt");
+    string line;
+    while (getline(file, line))
+    {
+        vector<string> parts = comma_seperate(line, ',');
+        if (parts[0] == username)
+        {
+            file.close();
+            return true;
+        }
+    }
+    file.close();
+    return false;
+}
+
+void signUp()
+{
+       system("cls");
+        moveCursor(47,4);
+    cout<<"  --------------------------\n";
+    cout<<"\t\t\t\t\t\t |     TYPING TUTOR       |\n";
+    cout<<"\t\t\t\t\t\t --------------------------\n\n\n";
+    string username, password;
+    moveCursor(40,10);
+    cout << "Enter username: ";
+    cin >> username;
+
+    if (UserExist(username))
+    {
+        moveCursor(40,15);
+        cout << "Username already exists. Please choose another username.\n";
+      Sleep(700);
+      signUp();
+    }
+    moveCursor(40,12);
+    cout << "Enter password: ";
+    cin >> password;
+
+    ofstream file("users.txt", ios::app);
+    file << username << "," << password << "\n";
+    file.close();
+    moveCursor(40,15);
+    Sleep(800);
+    cout << "Account created successfully!\n";
+
+}
+
+void login()
 {
     system("cls");
-    moveCursor(40,5);
-    cout<<"--------------------------";
-    moveCursor(40,6);
-    cout<<"|     TYPING TUTOR       |";
-    moveCursor(40,7);
-    cout<<"--------------------------";
+     moveCursor(47,4);
+    cout<<"  --------------------------\n";
+    cout<<"\t\t\t\t\t\t |     TYPING TUTOR       |\n";
+    cout<<"\t\t\t\t\t\t --------------------------\n\n\n";
+    string username, password;
+    moveCursor(40,10);
+    cout << "Enter username: ";
+    cin >> username;
 
-    moveCursor(42,11);
-    cout<<"Enter Username: ";
-    string name;
-    cin>>name;
-    moveCursor(42,13);
-    cout<<"Enter Password: ";
-    string password;
-    cin>>password;
-
-    bool checkName=false,checkPassword=false;
-
-    ifstream users("UserList.txt");
-
-    string line;
-    while (getline(users, line))
+    if (!UserExist(username))
     {
-        if(line==name)
-            checkName=true;
-        if(line==password)
-            checkPassword=true;
-        if(checkName== true && checkPassword==true)
-            break;
+        moveCursor(40,14);
+          cout << "No user found. Try again\n";
+          Sleep(700);
+        login();
     }
-    users.close();
+    moveCursor(40,12);
+    cout << "Enter password: ";
+    cin >> password;
 
-    if(checkName==true && checkPassword==true)
+    ifstream file("users.txt");
+    string line;
+    bool found = false;
+    while (getline(file, line))
     {
-        system("cls");
-        moveCursor(25,7);
-        cout<<"Welcome to Typing Tutor, "<<name;
-        moveCursor(25,10);
-        cout<<"Press any key for Start Menu";
-        char ch;
-        ch=getch();
-        system("cls");
-        startMenu();
+        vector<string> parts = comma_seperate(line, ',');
+        if (parts[0] == username && parts[1] == password)
+        {
+            found = true;
+            break;
+        }
+    }
+    file.close();
+    moveCursor(40,15);
+    Sleep(800);
+    if (found)
+    {
+        cout << "Login successful!\n";
+           Sleep(700);
     }
     else
     {
-        system("cls");
-        moveCursor(25,7);
-        cout<<"Username or Password mismatch! Press 0 to exit the application or any other key try again.";
-        char ch=getch();
-        if(ch=='0')
-            exit(0);
-        else
-            signIn();
+        cout << "Incorrect password. Try again\n";
+           Sleep(700);
+        login();
     }
-
 }
-void signUp()
+
+void loginsystem()
 {
+    system("color FD");
+    system("cls");
+    moveCursor(47,4);
+    cout<<"  --------------------------\n";
+    cout<<"\t\t\t\t\t\t |     TYPING TUTOR       |\n";
+    cout<<"\t\t\t\t\t\t --------------------------\n\n\n";
 
+    moveCursor(40,10);
+    cout << "Choose option:\n";
+    moveCursor(40,12);
+    cout << "1. Sign Up\n";
+    moveCursor(40,14);
+    cout << "2. Login\n";
+    moveCursor(40,16);
+
+    char ch=getche();
+
+    if(ch=='1')
+        signUp();
+    else if(ch=='2')
+        login();
+    else
+    {
+        moveCursor(40,19);
+        cout<<"Wrong Input. Try again";
+        loginsystem();
+    }
 }
+
+

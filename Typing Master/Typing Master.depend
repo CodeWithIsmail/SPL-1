@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1699324365 source:e:\spl-1\typing master\main.cpp
+1702220492 source:e:\spl-1\typing master\main.cpp
 	"AllHeaderFile.h"
 
 1694265926 source:e:\spl-1\typing master\set_cursor.cpp
@@ -79,12 +79,12 @@
 
 1692329712 e:\spl-1\typing master\commonwords.h
 
-1694272424 source:e:\spl-1\typing master\commonwords.cpp
+1702220197 source:e:\spl-1\typing master\commonwords.cpp
 	"AllHeaderFile.h"
 
 1692355477 e:\spl-1\typing master\loginsystem.h
 
-1694306469 source:e:\spl-1\typing master\loginsystem.cpp
+1702220844 source:e:\spl-1\typing master\loginsystem.cpp
 	"AllHeaderFile.h"
 
 1692367915 e:\spl-1\typing master\fasttypergame.h
@@ -115,7 +115,7 @@
 
 1692964013 e:\spl-1\typing master\performancehistory.h
 
-1702217046 e:\spl-1\typing master\allheaderfile.h
+1702220446 e:\spl-1\typing master\allheaderfile.h
 	<iostream>
 	<windows.h>
 	<conio.h>
@@ -127,6 +127,7 @@
 	<io.h>
 	<fcntl.h>
 	<codecvt>
+	<bits/stdc++.h>
 
 1694265648 source:e:\spl-1\typing master\word catcher.cpp
 	"AllHeaderFile.h"
@@ -137,12 +138,12 @@
 1694281608 source:e:\spl-1\typing master\manual.cpp
 	"AllHeaderFile.h"
 
-1699953479 source:e:\spl-1\typing master\bangla_typing_tutorial.cpp
+1702220341 source:e:\spl-1\typing master\bangla_typing_tutorial.cpp
 	"AllHeaderFile.h"
 
 1702217046 source:e:\spl-1\typing master\key_practice.cpp
 	"AllHeaderFile.h"
 
-1702218478 source:e:\spl-1\typing master\bangla_typing_practice.cpp
+1702218522 source:e:\spl-1\typing master\bangla_typing_practice.cpp
 	"AllHeaderFile.h"
 

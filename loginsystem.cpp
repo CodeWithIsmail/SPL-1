@@ -2,7 +2,7 @@
 
 using namespace std;
 
-vector<string> split( string s, char delimiter) {
+vector<string> comma_seperate( string s, char delimiter) {
     vector<string> tokens;
     stringstream ss(s);
     string token;
@@ -16,7 +16,7 @@ bool UserExist( string username) {
     ifstream file("users.txt");
     string line;
     while (getline(file, line)) {
-        vector<string> parts = split(line, ',');
+        vector<string> parts = comma_seperate(line, ',');
         if (parts[0] == username) {
             file.close();
             return true;
@@ -63,7 +63,7 @@ void login() {
     string line;
     bool found = false;
     while (getline(file, line)) {
-        vector<string> parts = split(line, ',');
+        vector<string> parts = comma_seperate(line, ',');
         if (parts[0] == username && parts[1] == password) {
             found = true;
             break;
