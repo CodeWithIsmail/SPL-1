@@ -10,6 +10,7 @@ void timer(int sec)
         sec--;
         this_thread::sleep_for(chrono::seconds(1));
     }
+
 }
 
 void typing_task_key()
@@ -50,17 +51,18 @@ void typing_task_key()
 void typing_task_word()
 {
       // srand(time(NULL));
-
+   ifstream file("randomword.txt");
     while (1)
     {
-        int word_size=rand()%4+3;
-        string word="";
-        for(int i=0; i<word_size; i++)
+     //   int word_size=rand()%4+3;
+        string word;
+        getline(file,word);
+    /*    for(int i=0; i<word_size; i++)
         {
             int random_index=rand()%26;
             word+='a'+random_index;
         }
-
+*/
         moveCursor(45,5);
         cout<<word<<endl;
 
@@ -155,6 +157,7 @@ void time_prac_key(int sec)
 
     timerThread.join();
     typingThread.detach();
+
 
     system("cls");
     cout<<"\n\n\t\t\t\t\t Times up!!!";

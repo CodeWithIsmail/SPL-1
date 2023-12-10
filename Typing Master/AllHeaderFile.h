@@ -11,6 +11,8 @@
 #include<iomanip>
 #include<io.h>
 #include<fcntl.h>
+#include <codecvt>
+
 using namespace std;
 
 string keyMapping(char input);
