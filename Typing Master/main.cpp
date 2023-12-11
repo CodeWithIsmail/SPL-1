@@ -9,7 +9,8 @@ int main()
     //system("color 8E");
    system("color ED");
    //signIn();
-    startMenu();
+ //  bangla_game();
+   startMenu();
   //  time_prac(20);
  //  typing_task_word();
     //game2();

@@ -254,9 +254,30 @@ string RandomWordGen(char dataset[],int limit)
     }
     return out;
 }
-
-
-
+int edit_distance(string a,string b)
+{
+    int n = a.size(), m = b.size();
+    int dp[n + 1][m + 1];
+    int i,j;
+    for (i = 0; i <= n; i++)
+    {
+        for (j = 0; j <= m; j++)
+        {
+            if (i == 0)
+                dp[i][j] = j;
+            else if (j == 0)
+                dp[i][j] = i;
+            else if (a[i - 1] == b[j - 1])
+                dp[i][j] = dp[i - 1][j - 1];
+            else if (a[i - 1] != b[j - 1])
+            {
+                int mn = min(dp[i - 1][j], min(dp[i][j - 1], dp[i - 1][j - 1])) + 1;
+                dp[i][j] = mn;
+            }
+        }
+    }
+    return dp[n][m];
+}
 
 
 

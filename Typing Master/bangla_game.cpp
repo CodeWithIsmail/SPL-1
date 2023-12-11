@@ -1,20 +1,16 @@
 #include "AllHeaderFile.h"
 
-char letter[26]= {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-
-void game1()
+void bangla_game()
 {
     system("cls");
     cout<<"\n\n\n\t\t\t\t\t FAST TYPER";
-    cout<<"\n\n\n\t\t\t\t\t How many 6 letter words can you type in 60 seconds?";
     cout<<"\n\n\n\t\t\t\t\t Press any key to start the game!";
     getch();
 
     system("cls");
-    Border();
+    string filename="bangla_word_1.txt";
+    ifstream file(filename);
 
-    ifstream file("FastTyperGame.txt");
-    string word;
     int score=0;
 
     auto startTime = chrono::high_resolution_clock::now();
@@ -26,54 +22,71 @@ void game1()
         {
             break;
         }
-        clearScreen();
+        system("cls");
+        Border();
+        drawKeyboard();
 
-        if(getline(file, word))
-            getline(file,word);
-        else
-            word=RandomWordGen(letter,26);
 
         moveCursor(40,5);
         cout<<"Score :"<<score;
         moveCursor(70,5);
         int remain=60-duration.count();
         cout<<"Remaining time: "<<remain;
+
+
+        string code;
+        getline(file,code);
+
+
+        _setmode(_fileno(stdout),_O_U16TEXT);
+        _setmode(_fileno(stdin),_O_U16TEXT);
+
         moveCursor(55,15);
-        cout<<"Type this:";
-        moveCursor(55,17);
-        cout<<word;
-        moveCursor(55,19);
-
-        string input;
-        int index=0,count=0;
-        cin>>input;
-        /*
-        while(index<6)
+        wprintf(L"লেখুনঃ  ");
+        for(int i=0; i<code.size(); i+=4)
         {
-            auto currentTime = chrono::high_resolution_clock::now();
-            chrono::duration<double> elapsedSeconds = currentTime - startTime;
-            if (elapsedSeconds.count() >= 60.0)
-            {
-                break;
-            }
-
-            char ch=_getch();
-            if(ch==word[index])
-            {
-                cout<<ch;
-                index++;
-                count++;
-            }
-            else
-            {
-                break;
-            }
+            string token=""; // 4 digit represent each char
+            token+=code[i];
+            token+=code[i+1];
+            token+=code[i+2];
+            token+=code[i+3];
+            int unicode_int_value=stoi(token,0,16);
+            wchar_t unicode_char=static_cast<wchar_t>(unicode_int_value);
+            wprintf(L"%lc",unicode_char);
         }
-        */
-        if(input==word)
-            score+=word.size()*5;
-        else score-=edit_distance(word,input)*5;
+
+        wstring input;
+        moveCursor(58,17);
+        wcin>>input;
+        moveCursor(58,19);
+        wcout   << input << endl;
+
+        wstringstream ss;
+        for (wchar_t character : input)
+        {
+            ss << hex << setw(4) << setfill(L'0') << static_cast<unsigned int>(character) << L"";
+        }
+        wstring hexRepresentation = ss.str();
+        wstring_convert<codecvt_utf8<wchar_t>> converter;
+        string normalString = converter.to_bytes(hexRepresentation);
+
+        //    moveCursor(55,21);
+        if(normalString==code)
+        {
+            //    wcout<<L"সঠিক হয়েছে! \n";
+            score+=(code.size()/4)*5;
+        }
+        else
+        {
+            //   wcout<<L"ভুল হয়েছে! \n";
+            score-=(edit_distance(normalString,code)/4)*5;
+        }
+        _setmode(_fileno(stdout),_O_TEXT);
+
+        Sleep(500);
+
     }
+    _setmode(_fileno(stdout),_O_TEXT);
     file.close();
 
     system("cls");
@@ -81,7 +94,7 @@ void game1()
 
     int highestScore=0;
     string highest,temp;
-    ifstream scorefile("scoreList.txt");
+    ifstream scorefile("BanglaScoreList.txt");
     if(getline(scorefile,temp))
     {
         istringstream str(temp);
@@ -92,7 +105,7 @@ void game1()
     if(score>highestScore)
     {
         cout<<"\n\n\t\t\t\t\t Congratulations!! New Highest Score!!";
-        ofstream scoreList("ScoreList.txt");
+        ofstream scoreList("BanglaScoreList.txt");
         string sc=to_string(score)+",,"+DateFind()+"\n";
         scoreList<<sc;
         scoreList.close();
@@ -104,7 +117,7 @@ void game1()
     cout<<"\n\n\t\t\t\t\t Your Score is: "<<score;
 
     ofstream performance("PerformanceHistory.txt",ios::app);
-    string write="Game: Fast Typer,,"+DateFind()+","+to_string(score)+"\n";
+    string write="Game: Fast Typer Bangla,,"+DateFind()+","+to_string(score)+"\n";
     performance<<write;
     performance.close();
 
@@ -115,13 +128,14 @@ void game1()
         if(ch=='0')
             startMenu();
         else if(ch=='1')
-            game1();
+            bangla_game();
         else if(ch=='2')
             exit(0);
         else
             cout<<"t\t\t\t Wrong Input. Try again.\n";
     }
 }
+/*
 void Border()
 {
     drawBorder(35,51,3,7,"+","+");
@@ -140,4 +154,4 @@ void clearScreen()
     cout<<"       ";
 }
 
-
+*/

@@ -42,7 +42,26 @@ void startMenu()
     else if(option=='3')
     {
         system("color F1");
-        game1();
+        system("cls");
+        moveCursor(50,15);
+        cout<<"Select language:";
+        moveCursor(50,17);
+        cout<<"1. English";
+        moveCursor(50,19);
+        cout<<"2. Bangla";
+        char ln=getche();
+
+        if(ln=='1')
+            game1();
+        else if(ln=='2')
+            bangla_game();
+        else
+        {
+            cout<<"Wrong choice. Try again";
+            startMenu();
+
+        }
+
     }
     else if(option=='4')
     {

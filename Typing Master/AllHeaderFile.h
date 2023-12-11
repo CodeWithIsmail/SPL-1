@@ -37,10 +37,11 @@ void lessonNew3();
 void lessonNew4();
 void lessonNew5();
 void mostCommonWord();
-
+int edit_distance(string a,string b);
 void history();
 void statistics();
 void performanceAnalysis();
+void bangla_game();
 
 void moveCursor(int x,int y);
 
