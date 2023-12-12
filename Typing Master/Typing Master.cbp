@@ -40,6 +40,7 @@
 		<Unit filename="Statistics.cpp" />
 		<Unit filename="TypingTutorial.cpp" />
 		<Unit filename="Word Catcher.cpp" />
+		<Unit filename="bangla_game.cpp" />
 		<Unit filename="bangla_typing_practice.cpp" />
 		<Unit filename="bangla_typing_tutorial.cpp" />
 		<Unit filename="commonWords.cpp" />

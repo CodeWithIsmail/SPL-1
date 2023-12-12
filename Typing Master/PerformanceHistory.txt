@@ -83,3 +83,4 @@ Game: Fast Typer Bangla,,11-Dec-2023  11:46 AM,375
 Game: Fast Typer Bangla,,11-Dec-2023  11:49 AM,330
 Game: Fast Typer Bangla,,11-Dec-2023  11:50 AM,320
 Game: Fast Typer Bangla,,11-Dec-2023  11:56 AM,280
+Game: Fast Typer,,11-Dec-2023  12:57 PM,-335

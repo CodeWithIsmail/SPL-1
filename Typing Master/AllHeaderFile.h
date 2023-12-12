@@ -12,6 +12,7 @@
 #include<io.h>
 #include<fcntl.h>
 #include <codecvt>
+#include<cstdlib>
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,6 +25,7 @@ string RandomWordGen(char dataset[],int limit );
 void drawKeyboard();
 void drawHistogram(char dataset[],int size,int frequency[]);
 void drawBorder(int x1,int x2,int y1,int y2,string ch1,string ch2);
+int main();
 
 void game1();
 void Border();
