@@ -15,7 +15,8 @@
 #include<cstdlib>
 #include<bits/stdc++.h>
 using namespace std;
-
+void bangla_homepage();
+void english_homepage();
 string keyMapping(char input);
 void lesson(char input);
 void keyDrill(char dataset[],int limit,int lessonNum,int partNum);

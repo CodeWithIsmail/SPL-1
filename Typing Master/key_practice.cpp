@@ -131,9 +131,6 @@ void time_prac_word(int sec)
     cout<<"\n\n\t\t\t\t\t Accuracy:  "<<accuracy<<" %";
     cout<<"\n\n\n\n\t\t\t\t Press any key to go back to Menu";
     Sleep(1000);
-    //exit(0);
-    system("g++ main.cpp -o my_program");
-    system("./my_program");
     getch();
     system("cls");
     return;

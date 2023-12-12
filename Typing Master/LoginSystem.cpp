@@ -117,17 +117,23 @@ void loginsystem()
     system("color FD");
     system("cls");
     moveCursor(47,4);
-    cout<<"  --------------------------\n";
-    cout<<"\t\t\t\t\t\t |     TYPING TUTOR       |\n";
-    cout<<"\t\t\t\t\t\t --------------------------\n\n\n";
+    cout<<"Software Project Lab 1\n";
+    moveCursor(50,6);
+    cout<<"TYPING MASTER";
+    moveCursor(40,8);
+    cout<<"An interactive typing tutor and typing game";
+    moveCursor(50,12);
+    cout<<"Welcome!";
+     moveCursor(40,14);
+     cout<<"Login with your account. If you don't have an account, Sign Up first!";
 
-    moveCursor(40,10);
+    moveCursor(48,17);
     cout << "Choose option:\n";
-    moveCursor(40,12);
+    moveCursor(48,19);
     cout << "1. Sign Up\n";
-    moveCursor(40,14);
+    moveCursor(48,21);
     cout << "2. Login\n";
-    moveCursor(40,16);
+    moveCursor(40,23);
 
     char ch=getche();
 
@@ -137,7 +143,6 @@ void loginsystem()
         login();
     else
     {
-        moveCursor(40,19);
         cout<<"Wrong Input. Try again";
         loginsystem();
     }
