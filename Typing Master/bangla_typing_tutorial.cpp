@@ -6,36 +6,37 @@ void bangla_tutorial()
 {
     string filename="";
     system("cls");
+    cout<<"\n\n\n\n";
 
     _setmode(_fileno(stdout),_O_U16TEXT);
-
+    _setmode(_fileno(stdin),_O_U16TEXT);
     wcout<<L"\t\t\t\t\t\t 1. স্বরবর্ণ লেখার নিয়মঃ \n\n";
     wcout<<L"\t\t\t\t\t\t 2. ব্যাঞ্জনবর্ণ লেখার নিয়মঃ \n\n";
     wcout<<L"\t\t\t\t\t\t 3. ব্যঞ্জনবর্ণের সংক্ষিপ্ত রুপ (ফলা) ও অন্যান্য লেখার নিয়মঃ \n\n";
-    wcout<<L"\t\t\t\t\t\t 4. যুক্তাক্ষর লেখার নিয়মঃ \n\n";
     wcout<<L"\t\t\t\t\t\t  অপশন সিলেক্ট করুনঃ\n\n";
 
-    char type=getch();
+    wstring option;
+    wcin >> option;
+    string type=bangla_tounicode(option);
+
     system("cls");
 
-    if(type=='1')
+    if(type=="09e7")
     {
         filename="bangla_tutorial_1.txt";
     }
-    else if(type=='2')
+    else if(type=="09e8")
     {
         filename="bangla_tutorial_2.txt";
     }
-else if(type=='3')
+    else if(type=="09e9")
     {
         filename="bangla_tutorial_3.txt";
     }
     else
     {
-        system("cls");
-        filename="Avro_Ban_Uni.txt";
-        wcout<<L"\t\t\t\t\t\t ব্যাঞ্জনবর্ণ লেখার নিয়মঃ \n\n";
-        wcout<<L"\t\t\t\t\t\t ব্যঞ্জনবর্ন  লিখতে নিচের ক্রম অনুসরণ করুন:\n\n";
+        wcout<<L"\t\t\t\t\t\t  ভুল ইনপুট। আবার চেষ্টা করুনঃ\n\n";
+        bangla_tutorial();
     }
     new_read_method(filename);
 
@@ -97,4 +98,18 @@ void new_read_method(string filename)
         }
         _setmode(_fileno(stdout),_O_TEXT);
     }
+}
+string bangla_tounicode(wstring key)
+{
+    // get the 4 digit hex code of input
+    wstringstream ss;
+    for (wchar_t character : key)
+    {
+        ss << hex << setw(4) << setfill(L'0') << static_cast<unsigned int>(character) << L"";
+    }
+    wstring hexRepresentation = ss.str();
+    wstring_convert<codecvt_utf8<wchar_t>> converter;
+    string normalString = converter.to_bytes(hexRepresentation);
+
+    return normalString;
 }

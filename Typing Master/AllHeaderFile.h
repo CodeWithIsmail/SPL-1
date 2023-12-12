@@ -59,4 +59,9 @@ void bangla_tutorial();
 void bangla_typing();
 
 void loginsystem();
+
+string bangla_tounicode(wstring key);
+
+
+
 //#endif // ALLHEADERFILE_H_INCLUDED
