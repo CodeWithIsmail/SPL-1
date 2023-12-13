@@ -10,7 +10,7 @@ int main()
    system("color ED");
     //signIn();
     // bangla_game();
-  startMenu();
+ startMenu();
     // time_prac(20);
     // typing_task_word();
     //game2();

@@ -1,12 +1,12 @@
 //#ifndef ALLHEADERFILE_H_INCLUDED
 //#define ALLHEADERFILE_H_INCLUDED
 #pragma once
+
 #include<iostream>
 #include<windows.h>
 #include<conio.h>
 #include<fstream>
 #include<time.h>
-#include<thread>
 #include<chrono>
 #include<iomanip>
 #include<io.h>
@@ -14,7 +14,9 @@
 #include <codecvt>
 #include<cstdlib>
 #include<bits/stdc++.h>
+
 using namespace std;
+
 void bangla_homepage();
 void english_homepage();
 string keyMapping(char input);
@@ -57,7 +59,7 @@ void time_prac_word(int sec);
 
 void bangla_tutorial();
 void bangla_typing();
-
+string RandomWord();
 void loginsystem();
 
 string bangla_tounicode(wstring key);
