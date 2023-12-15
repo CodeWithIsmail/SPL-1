@@ -86,11 +86,9 @@ void new_read_method(string filename)
         {
             string token = "";
             token = code.substr(i, 4); // take 4 digit hexadecimal unicode
-
             int unicode_int_value = stoi(token, 0, 16); // convert the hexadecimal unicode into integer
-
-            wchar_t unicode_char = static_cast<wchar_t>(unicode_int_value); // converting unicode code to wide character
-
+            wchar_t unicode_char = static_cast<wchar_t>(unicode_int_value);
+            // converting unicode code to wide character
             wprintf(L"%lc", unicode_char); // print the wide character
         }
     }

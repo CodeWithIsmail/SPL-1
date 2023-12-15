@@ -233,7 +233,8 @@ void wordDrill(char dataset[], int limit, int lessonNum, int partNum)
     drawHistogram(dataset, limit, wrongPressCount);
 
     ofstream performance("PerformanceHistory.txt", ios::app);
-    string write = to_string(lessonNum) + "." + to_string(partNum) + ",," + DateFind() + "," + to_string(totalKey) + "," + to_string(wrong) + "," + to_string(accuracy) + "," + to_string(score) + "\n";
+    string write = to_string(lessonNum) + "." + to_string(partNum) + ",," + DateFind() + "," +
+    to_string(totalKey) + "," + to_string(wrong) + "," + to_string(accuracy) + "," + to_string(score) + "\n";
 
     performance << write;
     performance.close();

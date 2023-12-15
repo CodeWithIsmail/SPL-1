@@ -11,13 +11,13 @@ void bangla_practice_key(string filename)
         drawKeyboard();
         _setmode(_fileno(stdout), _O_U16TEXT); // Set console to output UTF-16 text
         _setmode(_fileno(stdin), _O_U16TEXT);  // // Set console to input UTF-16 text
+  moveCursor(50, 5);
 
         // read 4 digit hex code and then convert it to bangla char
         int unicode_int_value = stoi(code, 0, 16);
         wchar_t unicode_char = static_cast<wchar_t>(unicode_int_value);
-
-        moveCursor(50, 5);
         wprintf(L" লেখুনঃ  %lc\n", unicode_char);
+
         moveCursor(59, 7);
         wstring input;
         wcin >> input;

@@ -1,5 +1,22 @@
 #include "AllHeaderFile.h"
 
+int shiftAmount=19;
+string encrypt(string password, int shift)
+{
+    string encryptedPassword = "";
+    for (auto c : password)
+    {
+        char base = isupper(c) ? 'A' : 'a';
+        c = ((c - base + shift) % 26) + base;
+        encryptedPassword += c;
+    }
+    return encryptedPassword;
+}
+
+string decrypt(string encryptedPassword, int shift)
+{
+    return encrypt(encryptedPassword, 26 - shift);
+}
 vector<string> comma_seperate(string s, char delimiter)
 {
     vector<string> tokens;
@@ -52,6 +69,8 @@ void signUp()
     cout << "Enter password: ";
     cin >> password;
 
+    password=encrypt(password,shiftAmount);
+
     ofstream file("users.txt", ios::app);
     file << username << "," << password << "\n";
     file.close();
@@ -84,13 +103,15 @@ void login()
     cout << "Enter password: ";
     cin >> password;
 
+
+
     ifstream file("users.txt");
     string line;
     bool found = false;
     while (getline(file, line))
     {
         vector<string> parts = comma_seperate(line, ',');
-        if (parts[0] == username && parts[1] == password)
+        if (parts[0] == username && decrypt(parts[1],shiftAmount) == password)
         {
             found = true;
             break;
