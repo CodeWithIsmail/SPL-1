@@ -55,9 +55,9 @@ void signUp()
     cout << "\t\t\t\t\t\t --------------------------\n\n\n";
     string username, password;
     moveCursor(40, 10);
+
     cout << "Enter username: ";
     cin >> username;
-
     if (UserExist(username))
     {
         moveCursor(40, 15);
@@ -89,9 +89,9 @@ void login()
     cout << "\t\t\t\t\t\t --------------------------\n\n\n";
     string username, password;
     moveCursor(40, 10);
+
     cout << "Enter username: ";
     cin >> username;
-
     if (!UserExist(username))
     {
         moveCursor(40, 14);
@@ -99,12 +99,10 @@ void login()
         Sleep(700);
         login();
     }
+
     moveCursor(40, 12);
     cout << "Enter password: ";
     cin >> password;
-
-
-
     ifstream file("users.txt");
     string line;
     bool found = false;
