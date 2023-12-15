@@ -1,102 +1,5 @@
 #include"AllHeaderFile.h"
 
-int score=0,wrong=0,total=0;
-
-void timer(int sec)
-{
-//    int sec = 60;
-    while (sec>0)
-    {
-        sec--;
-        this_thread::sleep_for(chrono::seconds(1));
-    }
-
-}
-
-void typing_task_key()
-{
-      // srand(time(NULL));
-    while (true)
-    {
-        int random_index=rand()%26;
-        char key='a'+random_index;
-
-        moveCursor(45,5);
-        cout<<key<<endl;
-        char ch=getch();
-        total++;
-        if(ch==key)
-        {
-            score++;
-        }
-        else
-        {
-            wrong++;
-            //    wrongPressCount[index]++;
-            //  moveCursor(40,9);
-            //   cout<<"Wrong Input. Try again.";
-            //   moveCursor(40,11);
-            //   cout<<"Use your "<<keyMapping(dataset[index])<<".";
-
-        }
-        moveCursor(45,5);
-        cout<<"     "<<endl;
-        /*  moveCursor(40,9);
-          cout<<"                                  ";
-          moveCursor(40,11);
-          cout<<"                                   "; */
-    }
-}
-
-void typing_task_word()
-{
-      // srand(time(NULL));
-   ifstream file("randomword.txt");
-    while (1)
-    {
-     //   int word_size=rand()%4+3;
-        string word;
-        getline(file,word);
-    /*    for(int i=0; i<word_size; i++)
-        {
-            int random_index=rand()%26;
-            word+='a'+random_index;
-        }
-*/
-        moveCursor(45,5);
-        cout<<word<<endl;
-
-        string input;
-        moveCursor(45,8);
-        cin>>input;
-
-        total++;
-        if(input==word)
-        {
-            score++;
-        }
-        else
-        {
-            wrong++;
-            //    wrongPressCount[index]++;
-            //  moveCursor(40,9);
-            //   cout<<"Wrong Input. Try again.";
-            //   moveCursor(40,11);
-            //   cout<<"Use your "<<keyMapping(dataset[index])<<".";
-        }
-
-        moveCursor(45,5);
-        cout<<"                "<<endl;
-        moveCursor(45,8);
-        cout<<"                "<<endl;
-    }
-    /*    moveCursor(40,9);
-        cout<<"                                  ";
-        moveCursor(40,11);
-        cout<<"                                   "; */
-}
-
-
 void time_prac_word(int sec)
 {
     system("cls");
@@ -108,35 +11,75 @@ void time_prac_word(int sec)
     getch();
 
     system("cls");
-    //  drawBorder(40,50,3,7,"-","|");
-    drawKeyboard();
     srand(time(NULL));
+    int elapsed_time=0;
+    int score=0,wrong=0,total=0,correct=0;
 
-    thread timerThread(timer,sec);
-    thread typingThread(typing_task_word);
+    drawKeyboard();
+    drawBorder(40,55,2,11,"*","*");
+    ifstream file("randomword.txt");
 
-    timerThread.join();
-    typingThread.detach();
+    auto startTime = chrono::high_resolution_clock::now();
+    while (elapsed_time<sec)
+    {
+        string word;
+        getline(file,word);
+        moveCursor(45,5);
+        cout<<word<<endl;
+
+        string input;
+        moveCursor(45,8);
+        cin>>input;
+
+        auto endTime = chrono::high_resolution_clock::now();
+        chrono::duration<double> duration = endTime - startTime;
+        elapsed_time=duration.count();
+
+        if(elapsed_time>=sec)
+            break;
+
+        total++;
+        if(input==word)
+        {
+            correct++;
+        }
+        else
+        {
+            wrong++;
+        }
+
+        moveCursor(45,5);
+        cout<<"                "<<endl;
+        moveCursor(45,8);
+        cout<<"                "<<endl;
+
+    }
+    file.close();
 
     system("cls");
     cout<<"\n\n\t\t\t\t\t Times up!!!";
     cout<<"\n\n\t\t\t\t\t Press any key to see result";
     getch();
     system("cls");
-    cout<<"\n\n\t\t\t\t\t  Practice time: "<<sec<<" seconds";
-    cout<<"\n\n\t\t\t\t\t  Score: "<<score;
-    double accuracy=((score-wrong)*100)/score;
-    cout<<"\n\n\t\t\t\t\t  Total Key press:  "<<score+wrong;
-    cout<<"\n\n\t\t\t\t\t Wrong Key press:  "<<wrong;
-    cout<<"\n\n\t\t\t\t\t Accuracy:  "<<accuracy<<" %";
+
+    double GrossSpeed = (total  * 60 )/ sec; // speed in WPM
+    double NetSpeed = (correct *60) / sec ;
+    int accuracy = (correct * 100) / total;
+
+    cout << "\n\n\n\t\t\t\t\t Gross Speed: " << GrossSpeed << " WPM";
+    cout << "\n\n\t\t\t\t\t Net Speed: " << NetSpeed << " WPM";
+    cout << "\n\n\t\t\t\t\t Total word type: " << total;
+    cout << "\n\n\t\t\t\t\t Wrong word type: " << wrong;
+    cout << "\n\n\t\t\t\t\t Accuracy: " << accuracy << "%";
+    cout << "\n\n\t\t\t\t\t";
+    accuracy > 93 ? cout << " Very Good\n" : cout << " Try to improve\n";
+    cout << endl;
+
     cout<<"\n\n\n\n\t\t\t\t Press any key to go back to Menu";
-    Sleep(1000);
     getch();
     system("cls");
-    return;
-    //startMenu();
+    english_homepage();
 }
-
 
 void time_prac_key(int sec)
 {
@@ -149,33 +92,64 @@ void time_prac_key(int sec)
     getch();
 
     system("cls");
-    //  drawBorder(40,50,3,7,"-","|");
-    drawKeyboard();
+
     srand(time(NULL));
+    int elapsed_time=0;
+    int score=0,wrong=0,total=0;
 
-    thread timerThread(timer,sec);
-    thread typingThread(typing_task_key);
+    drawKeyboard();
+    drawBorder(40,50,2,8,"*","*");
+    auto startTime = chrono::high_resolution_clock::now();
+    while (elapsed_time<sec)
+    {
+        int random_index=rand()%26;
+        char key='a'+random_index;
+        moveCursor(45,5);
+        cout<<key<<endl;
+        char ch=getche();
 
-    timerThread.join();
-    typingThread.detach();
+        auto endTime = chrono::high_resolution_clock::now();
+        chrono::duration<double> duration = endTime - startTime;
+        elapsed_time=duration.count();
 
+        if(elapsed_time>=sec)
+            break;
+        total++;
+        if(ch==key)
+        {
+            score++;
+        }
+        else
+        {
+            wrong++;
 
+        }
+        moveCursor(45,5);
+        cout<<"     "<<endl;
+    }
     system("cls");
     cout<<"\n\n\t\t\t\t\t Times up!!!";
     cout<<"\n\n\t\t\t\t\t Press any key to see result";
     getch();
     system("cls");
-    cout<<"\n\n\t\t\t\t\t  Practice time: "<<sec<<" seconds";
-    cout<<"\n\n\t\t\t\t\t  Score: "<<score;
-    double accuracy=((score-wrong)*100)/score;
-    cout<<"\n\n\t\t\t\t\t  Total Key press:  "<<score+wrong;
-    cout<<"\n\n\t\t\t\t\t Wrong Key press:  "<<wrong;
-    cout<<"\n\n\t\t\t\t\t Accuracy:  "<<accuracy<<" %";
+
+    double GrossSpeed = ((total / 5) * 60 )/ sec; // speed in WPM
+    double NetSpeed = ((score / 5)*60) / sec ;
+    int accuracy = (score * 100) / total;
+
+    cout << "\n\n\n\t\t\t\t\t Gross Speed: " << GrossSpeed << " WPM";
+    cout << "\n\n\t\t\t\t\t Net Speed: " << NetSpeed << " WPM";
+    cout << "\n\n\t\t\t\t\t Total Key Press: " << total;
+    cout << "\n\n\t\t\t\t\t Wrong Key Press: " << wrong;
+    cout << "\n\n\t\t\t\t\t Accuracy: " << accuracy << "%";
+    cout << "\n\n\t\t\t\t\t";
+    accuracy > 93 ? cout << " Very Good\n" : cout << " Try to improve\n";
+    cout << endl;
+
     cout<<"\n\n\n\n\t\t\t\t Press any key to go back to Menu";
-    exit(0);
     getch();
     system("cls");
-    return;
+    english_homepage();
 }
 
 

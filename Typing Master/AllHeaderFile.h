@@ -51,7 +51,7 @@ void bangla_game();
 void moveCursor(int x,int y);
 
 void startMenu();
-
+void paragraph_type(int timesec);
 void TypingTutorial();
 void UserManual();
 void time_prac_key(int sec);

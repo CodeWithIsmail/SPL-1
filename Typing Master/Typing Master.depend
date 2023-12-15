@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1702620532 source:e:\spl-1\typing master\main.cpp
+1702654786 source:e:\spl-1\typing master\main.cpp
 	"AllHeaderFile.h"
 
 1702396728 source:e:\spl-1\typing master\set_cursor.cpp
 	"AllHeaderFile.h"
 
-1702392180 source:e:\spl-1\typing master\startmenu.cpp
+1702667221 source:e:\spl-1\typing master\startmenu.cpp
 	"AllHeaderFile.h"
 
 1692856940 e:\spl-1\typing master\set_cursor.h
@@ -84,7 +84,7 @@
 
 1692355477 e:\spl-1\typing master\loginsystem.h
 
-1702620520 source:e:\spl-1\typing master\loginsystem.cpp
+1702621741 source:e:\spl-1\typing master\loginsystem.cpp
 	"AllHeaderFile.h"
 
 1692367915 e:\spl-1\typing master\fasttypergame.h
@@ -115,7 +115,7 @@
 
 1692964013 e:\spl-1\typing master\performancehistory.h
 
-1702447847 e:\spl-1\typing master\allheaderfile.h
+1702648471 e:\spl-1\typing master\allheaderfile.h
 	<iostream>
 	<windows.h>
 	<conio.h>
@@ -141,12 +141,15 @@
 1702612289 source:e:\spl-1\typing master\bangla_typing_tutorial.cpp
 	"AllHeaderFile.h"
 
-1702384709 source:e:\spl-1\typing master\key_practice.cpp
+1702666986 source:e:\spl-1\typing master\key_practice.cpp
 	"AllHeaderFile.h"
 
 1702612289 source:e:\spl-1\typing master\bangla_typing_practice.cpp
 	"AllHeaderFile.h"
 
 1702273673 source:e:\spl-1\typing master\bangla_game.cpp
+	"AllHeaderFile.h"
+
+1702650089 source:e:\spl-1\typing master\paragraph_type.cpp
 	"AllHeaderFile.h"
 
