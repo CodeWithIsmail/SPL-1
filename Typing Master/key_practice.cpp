@@ -24,6 +24,7 @@ void time_prac_word(int sec)
     {
         string word;
         getline(file,word);
+        if(word=="") word=RandomWord();
         moveCursor(45,5);
         cout<<word<<endl;
 

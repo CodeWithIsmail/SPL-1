@@ -25,10 +25,10 @@ void history()
     username.close();
 
     cout << "\t User: " << name << endl;
-    cout << "\t______________________________________________________________________________________________________________________\n\n";
+    cout <<"____________________________________________________________________________________________________________________\n\n";
 
-    cout << "\t Tutorial Number \t\t Date \t\t Total Key Press \t Wrong Key Press \t Accuracy \t Score\n\n";
-    cout << "\t_______________________________________________________________________________________________________________________\n\n";
+    cout << "Tutorial Number                   Date     Total Key Press     Wrong Key Press    Accuracy     Score\n\n";
+    cout << "____________________________________________________________________________________________________________________\n\n";
 
     string fname = "PerformanceHistory.txt";
     ifstream performance(fname);
@@ -37,8 +37,12 @@ void history()
     {
         istringstream is(line);
         string temp;
+        getline(is, temp, ',');
+          cout << temp;
+       if(temp[0]=='G' || temp[0]=='C') cout<<" ";
+       else cout<<"      ";
         while (getline(is, temp, ','))
-            cout << setw(10) << right << temp;
+            cout << setw(15) << right << temp;
         cout << "\n\n";
     }
     performance.close();
