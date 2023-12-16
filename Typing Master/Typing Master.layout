@@ -2,29 +2,69 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="set_Cursor.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+	<File name="manual.cpp" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="30" topLine="0" />
+			<Cursor1 position="1517" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="bangla_game.cpp" open="1" top="1" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3649" topLine="34" />
+			<Cursor1 position="94" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="key_practice.cpp" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="littleFingerKeys.cpp" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1844" topLine="0" />
+			<Cursor1 position="145" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="bangla_typing_tutorial.cpp" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+	<File name="bangla_typing_practice.cpp" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2217" topLine="83" />
+			<Cursor1 position="5589" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="StartMenu.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+	<File name="Word Catcher.cpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2345" topLine="72" />
+			<Cursor1 position="209" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="FastTyperGame.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3406" topLine="1" />
+		</Cursor>
+		<Folding>
+			<Collapse line="35" />
+			<Collapse line="39" />
+			<Collapse line="63" />
+			<Collapse line="109" />
+			<Collapse line="117" />
+			<Collapse line="129" />
+			<Collapse line="142" />
+			<Collapse line="148" />
+		</Folding>
+	</File>
+	<File name="TypingTutorial.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="488" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="indexFingerKeys.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="658" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="AllHeaderFile.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1237" topLine="42" />
+		</Cursor>
+	</File>
+	<File name="drawing.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1127" topLine="31" />
+		</Cursor>
+	</File>
+	<File name="ringFingerKeys.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1163" topLine="5" />
 		</Cursor>
 	</File>
 	<File name="dataset.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
@@ -55,59 +95,14 @@
 			<Collapse line="275" />
 		</Folding>
 	</File>
-	<File name="commonWords.cpp" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+	<File name="middleFingerKeys.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="54" topLine="12" />
+			<Cursor1 position="1195" topLine="7" />
 		</Cursor>
 	</File>
-	<File name="Word Catcher.cpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+	<File name="bangla_typing_tutorial.cpp" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="209" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ringFingerKeys.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1163" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="manual.cpp" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1517" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="FocusOnTheHomeRow.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="123" topLine="33" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="94" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="LoginSystem.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2498" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="drawing.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1127" topLine="31" />
-		</Cursor>
-	</File>
-	<File name="littleFingerKeys.cpp" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="145" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="paragraph_type.cpp" open="1" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2451" topLine="60" />
-		</Cursor>
-	</File>
-	<File name="indexFingerKeys.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="658" topLine="9" />
+			<Cursor1 position="2217" topLine="83" />
 		</Cursor>
 	</File>
 	<File name="getDate.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
@@ -115,44 +110,57 @@
 			<Cursor1 position="338" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="bangla_typing_practice.cpp" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="commonWords.cpp" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5589" topLine="0" />
+			<Cursor1 position="54" topLine="12" />
 		</Cursor>
 	</File>
-	<File name="middleFingerKeys.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+	<File name="StartMenu.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1195" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="FastTyperGame.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3406" topLine="1" />
-		</Cursor>
-		<Folding>
-			<Collapse line="35" />
-			<Collapse line="39" />
-			<Collapse line="63" />
-			<Collapse line="109" />
-			<Collapse line="117" />
-			<Collapse line="129" />
-			<Collapse line="142" />
-			<Collapse line="148" />
-		</Folding>
-	</File>
-	<File name="AllHeaderFile.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1237" topLine="42" />
-		</Cursor>
-	</File>
-	<File name="TypingTutorial.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="488" topLine="10" />
+			<Cursor1 position="2345" topLine="72" />
 		</Cursor>
 	</File>
 	<File name="Statistics.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1204" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="LoginSystem.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2498" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="bangla_game.cpp" open="1" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3649" topLine="34" />
+		</Cursor>
+	</File>
+	<File name="key_practice.cpp" open="1" top="1" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1427" topLine="20" />
+		</Cursor>
+		<Folding>
+			<Collapse line="43" />
+			<Collapse line="47" />
+			<Collapse line="85" />
+			<Collapse line="104" />
+			<Collapse line="119" />
+			<Collapse line="123" />
+		</Folding>
+	</File>
+	<File name="set_Cursor.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="30" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="paragraph_type.cpp" open="1" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2451" topLine="60" />
+		</Cursor>
+	</File>
+	<File name="FocusOnTheHomeRow.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="123" topLine="33" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

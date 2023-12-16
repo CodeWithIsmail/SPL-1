@@ -42,8 +42,8 @@ void bangla_homepage()
     wcout << L"\t\t\t\t\t\t ৩। বাংলা টাইপিং গেইম\n\n";
     _setmode(_fileno(stdout), _O_TEXT);
     cout << "\t\t\t\t\t\t 4. Performance Statsitics \n\n";
-    cout << "\t\t\t\t\t\t 5. User Manual \n\n";
-    cout << "\t\t\t\t\t\t 6. Exit \n\n";
+    //  cout << "\t\t\t\t\t\t 5. User Manual \n\n";
+    //  cout << "\t\t\t\t\t\t 6. Exit \n\n";
 
     _setmode(_fileno(stdout), _O_U16TEXT);
     _setmode(_fileno(stdin), _O_U16TEXT);
@@ -86,13 +86,13 @@ void bangla_homepage()
     else if (normalString == "09ea")
     {
         statistics();
-    }
+    } /*
     else if (normalString == "09eb")
     {
         UserManual();
     }
     else if (normalString == "09ec")
-        exit(0);
+        exit(0); */
     else
     {
         cout << "Wrong Choice. Try again.";
@@ -111,7 +111,7 @@ void english_homepage()
     cout << "\t\t\t\t\t\t 1. Typing Tutorial \n\n";
     cout << "\t\t\t\t\t\t 2. Typing Practice \n\n";
     cout << "\t\t\t\t\t\t 3. Typing Games \n\n";
-    cout << "\t\t\t\t\t\t 4. Statistics \n\n";
+    cout << "\t\t\t\t\t\t 4. Performance Statistics \n\n";
 
     char option = getche();
     if (option == '1')
@@ -125,7 +125,6 @@ void english_homepage()
         cout << "\n\n\t\t\t\t Select practice type: ";
         cout << "\n\n\t\t\t\t 1. Key Drill ";
         cout << "\n\n\t\t\t\t 2. Word Drill ";
-        cout << "\n\n\t\t\t\t 3. Text Drill ";
         cout << "\n\n\t\t\t\t Select practice type: ";
 
         int type, sec;
@@ -136,9 +135,14 @@ void english_homepage()
 
         if (type == 1)
             time_prac_key(sec);
-         else
+        else if(type==2)
             time_prac_word(sec);
-
+        else
+        {
+            cout<<"Wrong Input. Try again.\n";
+            Sleep(500);
+            english_homepage();
+        }
         system("cls");
         english_homepage();
     }
