@@ -153,3 +153,169 @@
 1702650089 source:e:\spl-1\typing master\paragraph_type.cpp
 	"AllHeaderFile.h"
 
+1702754760 source:e:\spl-1-main\typing master\bangla_game.cpp
+	"AllHeaderFile.h"
+
+1702754760 e:\spl-1-main\typing master\allheaderfile.h
+	<iostream>
+	<windows.h>
+	<conio.h>
+	<fstream>
+	<time.h>
+	<chrono>
+	<iomanip>
+	<io.h>
+	<fcntl.h>
+	<codecvt>
+	<cstdlib>
+	<bits/stdc++.h>
+
+1702754761 source:e:\spl-1-main\typing master\bangla_typing_practice.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\bangla_typing_tutorial.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\commonwords.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\dataset.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\drawing.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1-main\typing master\fasttypergame.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1-main\typing master\focusonthehomerow.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\getdate.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\indexfingerkeys.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\key_practice.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\littlefingerkeys.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1-main\typing master\loginsystem.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\main.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\manual.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\middlefingerkeys.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\paragraph_type.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\ringfingerkeys.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1-main\typing master\set_cursor.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1-main\typing master\startmenu.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1-main\typing master\statistics.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1-main\typing master\typingtutorial.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1-main\typing master\word catcher.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1 final\typing master\bangla_game.cpp
+	"AllHeaderFile.h"
+
+1702754760 e:\spl-1 final\typing master\allheaderfile.h
+	<iostream>
+	<windows.h>
+	<conio.h>
+	<fstream>
+	<time.h>
+	<chrono>
+	<iomanip>
+	<io.h>
+	<fcntl.h>
+	<codecvt>
+	<cstdlib>
+	<bits/stdc++.h>
+
+1702754761 source:e:\spl-1 final\typing master\bangla_typing_practice.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\bangla_typing_tutorial.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\commonwords.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\dataset.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\drawing.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1 final\typing master\fasttypergame.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1 final\typing master\focusonthehomerow.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\getdate.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\indexfingerkeys.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\key_practice.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\littlefingerkeys.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\manual.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\middlefingerkeys.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\paragraph_type.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\ringfingerkeys.cpp
+	"AllHeaderFile.h"
+
+1702754761 source:e:\spl-1 final\typing master\set_cursor.cpp
+	"AllHeaderFile.h"
+
+1702755590 source:e:\spl-1 final\typing master\startmenu.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1 final\typing master\statistics.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1 final\typing master\typingtutorial.cpp
+	"AllHeaderFile.h"
+
+1702754760 source:e:\spl-1 final\typing master\word catcher.cpp
+	"AllHeaderFile.h"
+
+1702755363 source:e:\spl-1 final\typing master\loginsystem.cpp
+	"AllHeaderFile.h"
+
+1702755375 source:e:\spl-1 final\typing master\main.cpp
+	"AllHeaderFile.h"
+

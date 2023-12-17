@@ -29,6 +29,7 @@ void startMenu()
 }
 void bangla_homepage()
 {
+
     system("cls");
     system("color ED");
 
@@ -44,6 +45,10 @@ void bangla_homepage()
     cout << "\t\t\t\t\t\t 4. Performance Statsitics \n\n";
     //  cout << "\t\t\t\t\t\t 5. User Manual \n\n";
     //  cout << "\t\t\t\t\t\t 6. Exit \n\n";
+    cin.clear(); // Clear any error flags
+
+    // Ignore remaining characters in the input buffer
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     _setmode(_fileno(stdout), _O_U16TEXT);
     _setmode(_fileno(stdin), _O_U16TEXT);
@@ -68,7 +73,7 @@ void bangla_homepage()
 
     moveCursor(40, 23);
     //  cout << normalString << " ";
-    Sleep(2000);
+//    Sleep(2000);
     if (normalString == "09e7")
     {
         system("color FD");

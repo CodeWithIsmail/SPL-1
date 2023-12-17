@@ -1,5 +1,5 @@
 #include "AllHeaderFile.h"
-
+void login();
 int shiftAmount=19;
 string encrypt(string password, int shift)
 {
@@ -78,6 +78,8 @@ void signUp()
     moveCursor(40, 15);
     Sleep(800);
     cout << "Account created successfully!\n";
+    Sleep(500);
+    login();
 }
 
 void login()
@@ -96,7 +98,7 @@ void login()
     {
         moveCursor(40, 14);
         cout << "No user found. Try again\n";
-        Sleep(700);
+       //. Sleep(700);
         login();
     }
 
@@ -117,16 +119,17 @@ void login()
     }
     file.close();
     moveCursor(40, 15);
-    Sleep(800);
+   // Sleep(800);
     if (found)
     {
         cout << "Login successful!\n";
-        Sleep(700);
+     //   Sleep(700);
+        startMenu();
     }
     else
     {
         cout << "Incorrect password. Try again\n";
-        Sleep(700);
+     //   Sleep(700);
         login();
     }
 }
